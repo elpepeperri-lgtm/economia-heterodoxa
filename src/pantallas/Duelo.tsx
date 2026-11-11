@@ -7,7 +7,7 @@ import { registrarDuelo, registrarRespuesta } from '../motor/progreso.ts';
 import { Glosario, T, useGlosario } from '../motor/Glosario.tsx';
 import { Avance, fraseBien, Pregunta } from '../motor/Pregunta.tsx';
 import { Personaje, type Estado } from '../personajes/Personaje.tsx';
-import { Escena, Objeto, Proyectil } from '../escenas/Escenas.tsx';
+import { Escena, Objeto, Proyectil, Publico } from '../escenas/Escenas.tsx';
 import { Avatar } from './Avatar.tsx';
 
 const BASE = 20;
@@ -221,20 +221,28 @@ function Ring({ duelo, alSalir }: { duelo: TDuelo; alSalir: () => void }) {
       <Glosario terminos={duelo.glosario} reinicio={`${fase}-${iCaso}-${iPreg}-${paso}`}>
         <div className="arena" ref={arena} data-juntos={fase === 'tregua' || fase === 'fin' || undefined}>
           {LADOS.map((l) => <div className={`esc esc-${l}`} key={l}><Escena escuela={esc[l]} lado={l} /></div>)}
+          <Publico />
 
           <button className="salir" onClick={alSalir} aria-label="Salir del duelo">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 5L19 19M19 5L5 19" /></svg>
           </button>
 
           {enPelea && (
-            <div className="barras" role="group" aria-label={`Poder explicativo en este caso: ${nombre.a} ${poder.a} de 100, ${nombre.b} ${poder.b} de 100`}>
+            <div className="hud" role="group" aria-label={`Poder explicativo en este caso: ${nombre.a} ${poder.a} de 100, ${nombre.b} ${poder.b} de 100`}>
               {LADOS.map((l) => (
-                <div className="barra" data-lado={l} key={l} aria-hidden="true">
-                  <span className="barra-nombre">{nombre[l]} <b key={poder[l]}>{poder[l]}</b></span>
-                  <span className="barra-pista"><span className="barra-relleno" style={{ transform: `scaleX(${poder[l] / 100})` }} /></span>
+                <div className="hud-lado" data-lado={l} key={l} aria-hidden="true" style={{ gridColumn: l === 'a' ? 1 : 3, gridRow: 1 }}>
+                  <span className="hud-retrato"><Personaje id={duelo[l].economista} mira={l === 'a' ? 'der' : 'izq'} escuela={esc[l]} /></span>
+                  <span className="hud-placa">{nombre[l]}</span>
+                  <span className="hud-fila">
+                    <span className="barra-pista"><span className="barra-relleno" style={{ transform: `scaleX(${poder[l] / 100})` }} /></span>
+                    <i key={poder[l]}>{poder[l]}</i>
+                  </span>
                 </div>
               ))}
-              <span className="barras-pie rotulo" aria-hidden="true">poder explicativo</span>
+              <span className="hud-centro" aria-hidden="true" style={{ gridColumn: 2, gridRow: 1 }}>
+                <b>Asalto {iCaso + 1}/{duelo.casos.length}</b>
+                <small>poder<br />explicativo</small>
+              </span>
             </div>
           )}
 

@@ -1,53 +1,51 @@
-.inicio { display: grid; grid-template-columns: minmax(0, 1fr); gap: 26px; padding: 28px 18px calc(28px + env(safe-area-inset-bottom)); }
+.inicio { display: grid; grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 26px 16px calc(28px + env(safe-area-inset-bottom)); background: radial-gradient(130% 50% at 50% 0, #3a3478, var(--papel)); min-height: 100dvh; align-content: start; }
 
 .inicio-cabeza { display: grid; gap: 12px; }
-.inicio-cabeza .rotulo { color: var(--tinta-2); max-width: 22em; }
-.inicio-cabeza h1 { font-size: clamp(2.6rem, 15.6vw, 5rem); line-height: .84; letter-spacing: -.05em; text-transform: uppercase; }
+.inicio-cabeza .rotulo { max-width: 22em; }
+.inicio-cabeza h1 { font-size: clamp(3.2rem, 19vw, 6rem); line-height: .82; text-transform: uppercase; text-shadow: 0 4px 0 var(--oscuro); }
 .inicio-cabeza h1 span { display: block; }
 .inicio-cabeza h1 span:first-child { color: var(--esc-marxista); }
-.inicio-cabeza h1 span:last-child { color: var(--esc-neoclasica); padding-left: .55em; }
-.inicio-bajada { font-size: 1.08rem; max-width: 26em; }
+.inicio-cabeza h1 span:last-child { color: var(--amarillo); padding-left: .5em; }
+.inicio-bajada { font-size: 1.12rem; max-width: 26em; }
 
-.cartel { border: 3px solid var(--tinta); border-radius: 3px; background: var(--papel); box-shadow: 7px 7px 0 var(--tinta); }
-.cartel-ring { position: relative; height: 172px; overflow: hidden; background: var(--tinta); border-bottom: 3px solid var(--tinta); }
+.cartel { border: 4px solid var(--oscuro); border-radius: 14px; overflow: hidden; background: var(--pergamino); color: var(--oscuro); box-shadow: 0 7px 0 var(--oscuro); }
+.cartel-ring { position: relative; height: 190px; overflow: hidden; background: linear-gradient(#4a4fa8, #b79fd6); border-bottom: 4px solid var(--oscuro); }
 .cartel-mitad { position: absolute; inset: 0; }
-.cartel-a { background: var(--a); clip-path: polygon(0 0, 57% 0, 43% 100%, 0 100%); }
-.cartel-b { background: var(--b); clip-path: polygon(58% 0, 100% 0, 100% 100%, 44% 100%); }
-.cartel-mitad .pj { position: absolute; bottom: -6px; width: 142px; }
-.cartel-a .pj { left: 4%; }
-.cartel-b .pj { right: 4%; }
+.cartel-a { background: linear-gradient(to right, var(--a), transparent 62%); }
+.cartel-b { background: linear-gradient(to left, var(--b), transparent 62%); }
+.cartel-mitad .pj { position: absolute; bottom: -8px; width: 160px; }
+.cartel-a .pj { left: 0; }
+.cartel-b .pj { right: 0; }
 .cartel-vs {
-  position: absolute; left: 50%; top: 50%; translate: -50% -50%; rotate: -8deg;
-  width: 58px; height: 58px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--pj-papel); color: var(--pj-tinta); border: 3px solid var(--pj-tinta);
-  font-family: var(--titulos); font-weight: 800; font-size: 1.6rem; letter-spacing: -.04em;
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; rotate: -8deg; width: 84px; height: 84px; display: grid; place-items: center;
+  background: var(--amarillo); color: var(--rojo-2); font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 2rem; text-transform: uppercase;
+  clip-path: polygon(50% 0, 61% 20%, 85% 10%, 79% 35%, 100% 50%, 79% 64%, 86% 90%, 61% 80%, 50% 100%, 39% 80%, 14% 90%, 21% 64%, 0 50%, 21% 35%, 15% 10%, 39% 20%);
 }
-.cartel-texto { display: grid; gap: 10px; padding: 16px 16px 20px; --acento: var(--esc-marxista); }
-.cartel-texto .rotulo { color: var(--tinta-2); }
-.cartel-texto h2 { font-size: clamp(1.8rem, 8.5vw, 2.3rem); }
-.cartel-texto .boton { margin-top: 4px; width: calc(100% - 5px); }
-.cartel-marca { font-size: .86rem; color: var(--tinta-2); }
+.cartel-texto { display: grid; gap: 10px; padding: 14px 16px 22px; }
+.cartel-texto .rotulo { color: var(--rojo-2); }
+.cartel-texto h2 { font-size: clamp(2rem, 9.5vw, 2.6rem); text-transform: uppercase; }
+.cartel-texto p { font-weight: 600; }
+.cartel-texto .boton { margin-top: 4px; }
+.cartel-marca { font-size: .9rem; color: #5a5475; }
 
-.caja { display: grid; gap: 8px; padding-top: 16px; border-top: 3px solid var(--tinta); }
+.caja { display: grid; gap: 8px; padding-top: 16px; border-top: 3px dashed #4d4680; }
 .caja-fila { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
-.caja h2 { font-size: 1.25rem; }
-.caja-xp { font-family: var(--titulos); font-weight: 800; font-size: 1.6rem; font-variant-numeric: tabular-nums; }
-.caja-xp span { font-size: .8rem; }
-.caja-vacia { color: var(--tinta-2); font-size: .96rem; }
+.caja h2 { font-size: 1.5rem; text-transform: uppercase; }
+.caja-xp { font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.9rem; color: var(--amarillo); font-variant-numeric: tabular-nums; }
+.caja-xp span { font-size: .9rem; }
+.caja-nivel { font-size: 1rem; }
+.caja-vacia { color: var(--tinta-2); font-size: 1rem; }
 .caja-lista { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
-.caja-lista li { padding: 8px 12px; background: var(--tinta); color: var(--papel); font-family: var(--titulos); font-weight: 700; border-radius: 2px; }
+.caja-lista li { padding: 6px 14px 7px; background: var(--pergamino); color: var(--oscuro); font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.15rem; text-transform: uppercase; clip-path: var(--rasgado); }
 
 .inicio-pie { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 4px 16px; }
 
 /* Créditos */
 .creditos { display: grid; gap: 20px; padding: 22px 18px 32px; }
-.creditos h1 { font-size: 2.4rem; }
-.creditos h2 { font-size: 1.3rem; margin-bottom: 8px; }
+.creditos h1 { font-size: 2.6rem; text-transform: uppercase; }
+.creditos h2 { font-size: 1.5rem; margin-bottom: 8px; color: var(--amarillo); text-transform: uppercase; }
 .creditos-lista { margin: 0; padding: 0; list-style: none; display: grid; gap: 16px; }
 .creditos-lista li { display: grid; grid-template-columns: 84px 1fr; gap: 14px; align-items: start; }
-.creditos-lista h3 { font-size: 1.1rem; margin-bottom: 4px; }
-.creditos-lista p, .creditos > section > p { font-size: .9rem; }
-.creditos-fuentes { margin: 0; padding-left: 18px; font-size: .86rem; display: grid; gap: 6px; word-break: break-word; }
-
-.caja-nivel { font-size: .95rem; }
-.inicio .cartel + .cartel { margin-top: -6px; }
+.creditos-lista h3 { font-size: 1.25rem; margin-bottom: 4px; }
+.creditos-lista p, .creditos > section > p { font-size: .95rem; }
+.creditos-fuentes { margin: 0; padding-left: 18px; font-size: .9rem; display: grid; gap: 6px; word-break: break-word; }

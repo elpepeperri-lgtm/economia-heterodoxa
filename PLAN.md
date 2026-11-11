@@ -49,6 +49,9 @@ Final: tregua, apretón de manos, y la herramienta ganada cae en la caja.
 
 ## Dirección visual
 
+> **Cambio del 2026-11-11:** Andrés pidió otro estilo con una imagen de referencia. La dirección vigente es **«Cómic de pelea»**: noche azul, tarjetas de pergamino rasgado, contorno grueso, marcador con retratos y barras, globos de diálogo, carteles rojos y botones amarillos. Tipografías: Barlow Condensed (títulos, itálica gruesa) y Barlow Semi Condensed (lectura). Un solo tema (oscuro). Los personajes siguen siendo SVG por piezas, ahora con color y sombra. Lo de abajo queda como historia.
+
+
 - **A. Imprenta popular (elegida)**: cartel de imprenta y grabado latinoamericano. Papel crema, tinta casi negra, un solo color de acento por escuela en tinta plana, trazo grueso irregular, textura de papel. Títulos condensados de cartel + una serif cómoda para leer.
 - **B. Cuaderno de tiza**: pizarra oscura, trazo de tiza, diagramas dibujados a mano. Bonita, pero cansa en lecturas largas y se parece a otras apps educativas.
 

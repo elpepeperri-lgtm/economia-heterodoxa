@@ -4,6 +4,8 @@ Bitácora para retomar el proyecto sin releer todo. Lo más reciente va arriba.
 
 ## Estado actual
 
+- **Estilo nuevo «Cómic de pelea» (2026-11-11):** aplicado a todo el juego a partir de la imagen de referencia de Andrés. Personajes redibujados en SVG con color y sombra (Andrés eligió «dibújalos tú en código»; no hay ilustraciones generadas). Se quitó el tema claro: ahora hay un solo tema. Archivos: `diseno/base.css`, `motor/piezas.css`, `pantallas/duelo.css`, `pantallas/inicio.css`, `personajes/`, `escenas/Escenas.tsx`. Falta que Andrés lo vea en el celular y diga si los personajes le sirven así.
+
 - **Etapa 2 (motor reutilizable): entregada el 2026-11-11, esperando a Andrés para empezar la etapa 3.**
 - Etapa 1 (un duelo completo): aprobada y publicada. Etapa 0 (plan): aprobada. Ver PLAN.md.
 

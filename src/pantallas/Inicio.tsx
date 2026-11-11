@@ -10,12 +10,6 @@ export function Inicio({ irADuelo, irACreditos }: { irADuelo: (id: string) => vo
   useEffect(() => { void cargar().then((p) => setProg({ ...p })); }, []);
   const niv = nivel(prog?.xp ?? 0);
 
-  function cambiarTema() {
-    const raiz = document.documentElement;
-    const oscuroAhora = raiz.dataset.tema ? raiz.dataset.tema === 'oscuro' : window.matchMedia('(prefers-color-scheme: dark)').matches;
-    raiz.dataset.tema = oscuroAhora ? 'claro' : 'oscuro';
-    try { localStorage.setItem('eh-tema', raiz.dataset.tema); } catch { /* nada */ }
-  }
 
   return (
     <main className="inicio pantalla">
@@ -60,7 +54,6 @@ export function Inicio({ irADuelo, irACreditos }: { irADuelo: (id: string) => vo
 
       <footer className="inicio-pie">
         <button className="enlace" onClick={irACreditos}>Créditos y fuentes</button>
-        <button className="enlace" onClick={cambiarTema}>Cambiar a claro u oscuro</button>
       </footer>
     </main>
   );
