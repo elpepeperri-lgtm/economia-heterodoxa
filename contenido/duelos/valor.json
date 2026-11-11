@@ -1,0 +1,386 @@
+{
+  "id": "valor",
+  "titulo": "Marx contra los neoclásicos",
+  "pregunta": "¿De dónde sale el valor de las cosas?",
+  "a": {
+    "economista": "marx",
+    "escuela": "Escuela marxista",
+    "nombreCorto": "Marx",
+    "lema": "Sigan el rastro del trabajo."
+  },
+  "b": {
+    "economista": "marshall",
+    "escuela": "Escuela neoclásica",
+    "nombreCorto": "Marshall",
+    "lema": "Hacen falta las dos hojas de la tijera."
+  },
+  "casos": [
+    {
+      "id": "tinto",
+      "objeto": "tinto",
+      "titulo": "El tinto de la esquina",
+      "mecanica": "¿Quién lo diría?",
+      "historia": "Doña Rosa vende tinto en la esquina a $1.500. A dos cuadras, otro puesto lo vende casi igual. Nadie se puso de acuerdo, pero el precio se parece en todo el barrio. ¿Por qué vale eso y no otra cosa?",
+      "preguntas": [
+        {
+          "id": "valor-01",
+          "tipo": "quien",
+          "dificultad": 1,
+          "enunciado": "¿Quién diría esto?",
+          "cita": {
+            "texto": "No importa si doña Rosa es rápida o lenta colando. Lo que cuenta es el tiempo que se necesita normalmente para producir ese tinto.",
+            "tipo": "idea",
+            "autor": "idea, no cita"
+          },
+          "opciones": [
+            {
+              "texto": "Marx",
+              "correcta": true,
+              "porque": "Es su idea del tiempo de trabajo socialmente necesario: el que se requiere en condiciones normales de producción, no el de cada persona."
+            },
+            {
+              "texto": "Marshall",
+              "correcta": false,
+              "porque": "Tentaba porque Marshall también le da peso al costo de producir. Pero medir ese costo en tiempo de trabajo «normal» es el sello de Marx."
+            }
+          ],
+          "explicacion": "Para Marx, lo que fija la magnitud del valor es la cantidad de trabajo socialmente necesario. Si doña Rosa se demora el doble, su tinto no vale el doble.",
+          "ataca": "a",
+          "mueve": { "a": 25, "b": 5 },
+          "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-02",
+          "tipo": "quien",
+          "dificultad": 1,
+          "enunciado": "¿Y esto otro, quién lo diría?",
+          "cita": {
+            "texto": "Discutir si el valor lo gobierna la utilidad o el costo de producción es como discutir si es la hoja de arriba o la de abajo de una tijera la que corta el papel.",
+            "tipo": "cita",
+            "autor": "Alfred Marshall",
+            "obra": "Principios de economía, libro V, cap. III",
+            "anio": 1890,
+            "nota": "Traducción propia del inglés"
+          },
+          "opciones": [
+            {
+              "texto": "Marx",
+              "correcta": false,
+              "porque": "Tentaba porque Marx también habla de utilidad y de costo. Pero para él el valor tiene una sola sustancia, el trabajo; no dos hojas que cortan juntas."
+            },
+            {
+              "texto": "Marshall",
+              "correcta": true,
+              "porque": "Es su imagen más famosa: la demanda (qué tanto se desea) y la oferta (qué tanto cuesta) fijan el precio juntas, como dos hojas de tijera."
+            }
+          ],
+          "explicacion": "Marshall junta dos tradiciones: el costo de producción de los clásicos y la utilidad de los marginalistas. De ese cruce sale el famoso dibujo de oferta y demanda.",
+          "ataca": "b",
+          "mueve": { "a": 5, "b": 30 },
+          "fuentes": [
+            "https://www.econlib.org/library/Marshall/marP.html?chapter_num=31",
+            "https://www.exploring-economics.org/es/orientacion/economia-neoclasica/"
+          ],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-03",
+          "tipo": "quien",
+          "dificultad": 2,
+          "enunciado": "Ojo con esta, que tiene maña. ¿Quién lo escribió?",
+          "cita": {
+            "texto": "Nada puede tener valor sin ser un objeto de utilidad.",
+            "tipo": "cita",
+            "autor": "Karl Marx",
+            "obra": "El capital, tomo I, cap. 1",
+            "anio": 1867,
+            "nota": "Traducción propia de la edición en inglés"
+          },
+          "opciones": [
+            {
+              "texto": "Marx",
+              "correcta": true,
+              "porque": "Sorpresa: es de «El capital». Para Marx, si algo no le sirve a nadie, el trabajo que tiene adentro no cuenta como trabajo y no crea valor."
+            },
+            {
+              "texto": "Marshall",
+              "correcta": false,
+              "porque": "Suena a neoclásico, por eso tentaba. Pero la frase es de Marx: la utilidad es para él la condición del valor, aunque no su medida."
+            }
+          ],
+          "explicacion": "Primera pista de que no todo es pelea: los dos aceptan que algo inútil no vale. Difieren en qué mide el valor una vez que la cosa sirve.",
+          "ataca": "a",
+          "mueve": { "a": 15, "b": 15 },
+          "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"],
+          "estado": "ok"
+        }
+      ],
+      "veredicto": "Con algo que se puede producir una y otra vez, como el tinto, las dos explican parecido: a la larga, el precio ronda lo que cuesta hacerlo. El propio Marshall decía que, cuanto más largo el plazo, más pesa el costo de producción."
+    },
+    {
+      "id": "diamante",
+      "objeto": "diamante",
+      "titulo": "El agua y el diamante",
+      "mecanica": "Elige el contraataque",
+      "historia": "Adam Smith dejó un acertijo en 1776: nada es más útil que el agua y casi no se puede cambiar por nada. Un diamante casi no sirve para nada y se cambia por muchísimo. ¿Cómo así?",
+      "preguntas": [
+        {
+          "id": "valor-04",
+          "tipo": "opcion",
+          "dificultad": 2,
+          "enunciado": "Los neoclásicos contraatacan. ¿Cuál es su respuesta al acertijo?",
+          "opciones": [
+            {
+              "texto": "No importa lo útil que sea el agua en total, sino cuánto te aporta un vaso más cuando ya tienes mucha.",
+              "correcta": true,
+              "porque": "Esa es la utilidad marginal: la de la última unidad. Como agua hay mucha, un balde más aporta poco; un diamante más, muchísimo."
+            },
+            {
+              "texto": "El diamante vale más porque cuesta más trabajo encontrarlo.",
+              "correcta": false,
+              "porque": "Tentaba porque es una respuesta seria, pero es la del otro lado: así contestan Marx y los clásicos. Los neoclásicos miran el deseo por la última unidad."
+            },
+            {
+              "texto": "La gente es irracional y paga de más por lo que brilla.",
+              "correcta": false,
+              "porque": "Tentaba por sentido común, pero esta escuela supone lo contrario: personas que comparan con cabeza fría lo que ganan y lo que les cuesta."
+            }
+          ],
+          "explicacion": "Según esta lectura, a Smith le faltó distinguir entre utilidad total y utilidad marginal. El agua gana en la primera; el diamante, en la segunda.",
+          "ataca": "b",
+          "mueve": { "a": 0, "b": 35 },
+          "fuentes": [
+            "https://www.econlib.org/library/Enc/Marginalism.html",
+            "https://www.econlib.org/library/Smith/smWN.html?chapter_num=7"
+          ],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-05",
+          "tipo": "opcion",
+          "dificultad": 2,
+          "enunciado": "Marx no se queda callado. ¿Cómo explica él que el diamante valga tanto?",
+          "opciones": [
+            {
+              "texto": "Porque los joyeros se ponen de acuerdo para subir el precio.",
+              "correcta": false,
+              "porque": "Tentaba porque los acuerdos de precios existen. Pero en «El capital» Marx explica el diamante por el trabajo que cuesta hallarlo, no por un pacto."
+            },
+            {
+              "texto": "Porque son muy escasos y hallarlos cuesta, en promedio, muchísimo tiempo de trabajo.",
+              "correcta": true,
+              "porque": "Así lo dice en el capítulo 1: como aparecen muy rara vez en la superficie de la tierra, en una piedrita hay metido mucho trabajo."
+            },
+            {
+              "texto": "Porque los ricos los desean con locura.",
+              "correcta": false,
+              "porque": "Tentaba porque el deseo es real. Pero para Marx el deseo explica que el diamante se venda, no cuánto vale: eso lo mide el trabajo."
+            }
+          ],
+          "explicacion": "Los dos hablan de escasez, pero la usan distinto: para Marx, lo escaso exige más trabajo; para los neoclásicos, lo escaso se desea más en la última unidad.",
+          "ataca": "a",
+          "mueve": { "a": 20, "b": 0 },
+          "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-06",
+          "tipo": "vf",
+          "dificultad": 3,
+          "enunciado": "Jevons, uno de los padres de esta escuela, escribió esto. Entonces, para él, el trabajo no influye para nada en el valor.",
+          "cita": {
+            "texto": "La reflexión y la indagación repetidas me han llevado a la opinión, algo novedosa, de que el valor depende enteramente de la utilidad.",
+            "tipo": "cita",
+            "autor": "William Stanley Jevons",
+            "obra": "La teoría de la economía política, cap. I",
+            "anio": 1871,
+            "nota": "Traducción propia del inglés"
+          },
+          "opciones": [
+            {
+              "texto": "Verdadero",
+              "correcta": false,
+              "porque": "Tentaba por la palabra «enteramente». Pero en ese mismo capítulo Jevons aclara que el trabajo sí determina a menudo el valor, solo que de manera indirecta."
+            },
+            {
+              "texto": "Falso",
+              "correcta": true,
+              "porque": "Jevons dice que el trabajo influye de manera indirecta: al hacer que haya más o menos de un bien, cambia qué tan útil resulta una unidad más."
+            }
+          ],
+          "explicacion": "Para Jevons el trabajo llega al valor dando un rodeo: cambia la cantidad disponible, y la cantidad cambia la utilidad de la última unidad.",
+          "ataca": "b",
+          "mueve": { "a": 5, "b": 15 },
+          "avatar": "jevons",
+          "fuentes": ["https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5"],
+          "estado": "ok"
+        }
+      ],
+      "veredicto": "Aquí la escuela neoclásica saca ventaja: la idea de «la última unidad» resuelve el acertijo que Smith dejó abierto. Marx tiene respuesta para el diamante, pero por qué el agua vale tan poco siendo tan útil se contesta más limpio con la tijera."
+    },
+    {
+      "id": "costura",
+      "objeto": "costura",
+      "titulo": "El salario de la costurera",
+      "mecanica": "Detecta el supuesto escondido",
+      "historia": "Yolanda cose camisetas en un taller. Trabaja su jornada y le pagan el día. El dueño vende las camisetas y le queda ganancia. Todo fue legal y de mutuo acuerdo. Entonces, ¿de dónde salió la ganancia?",
+      "preguntas": [
+        {
+          "id": "valor-07",
+          "tipo": "opcion",
+          "dificultad": 3,
+          "enunciado": "Según Marx, ¿qué es exactamente lo que el dueño le compra a Yolanda?",
+          "opciones": [
+            {
+              "texto": "Las camisetas que ella cose.",
+              "correcta": false,
+              "porque": "Tentaba porque parece un pago por producto. Pero para Marx el dueño no compra camisetas: compra la capacidad de trabajar, y lo que salga es de él."
+            },
+            {
+              "texto": "Su capacidad de trabajar durante el día.",
+              "correcta": true,
+              "porque": "Marx la llama fuerza de trabajo: las capacidades físicas y mentales de la persona, que el dueño usa durante la jornada."
+            },
+            {
+              "texto": "Cada hora de trabajo, pagada por todo lo que produce.",
+              "correcta": false,
+              "porque": "Tentaba porque así se ve en la nómina. Para Marx el salario cubre lo que cuesta sostener a la trabajadora y a su familia, no todo lo que ella crea."
+            }
+          ],
+          "explicacion": "Esta es la jugada clave de Marx: separar el trabajo que Yolanda hace de la capacidad de trabajar que vende. Entre las dos cosas hay una diferencia.",
+          "ataca": "a",
+          "mueve": { "a": 25, "b": 0 },
+          "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch06.htm"],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-08",
+          "tipo": "opcion",
+          "dificultad": 3,
+          "enunciado": "En el ejemplo de «El capital», el obrero repone el valor de su salario en 6 horas, pero la jornada es de 12. ¿Qué pasa con las otras 6?",
+          "opciones": [
+            {
+              "texto": "Crean valor nuevo que se queda el dueño.",
+              "correcta": true,
+              "porque": "Eso es la plusvalía: el valor que el obrero crea por encima de lo que cuesta su salario. Para Marx, de ahí sale la ganancia."
+            },
+            {
+              "texto": "Se le pagan aparte, como horas extras.",
+              "correcta": false,
+              "porque": "Tentaba porque hoy la ley habla de horas extras. Pero en el ejemplo las 12 horas son la jornada normal, ya cubierta por el salario del día."
+            },
+            {
+              "texto": "No producen nada: son tiempo muerto.",
+              "correcta": false,
+              "porque": "Tentaba si uno piensa en el cansancio. Pero en el ejemplo el obrero sigue hilando igual: esas horas producen, solo que ya no para reponer su salario."
+            }
+          ],
+          "explicacion": "Marx insiste en que el valor de la fuerza de trabajo y el valor que ella crea en la jornada son dos magnitudes distintas. La diferencia es la plusvalía.",
+          "ataca": "a",
+          "mueve": { "a": 25, "b": 0 },
+          "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm"],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-09",
+          "tipo": "supuesto",
+          "dificultad": 4,
+          "enunciado": "El lado neoclásico responde así. ¿Qué da por sentado sin decirlo?",
+          "cita": {
+            "texto": "Si Yolanda aceptó ese salario fue porque le convenía. Dos personas libres hicieron un trato; nadie obligó a nadie.",
+            "tipo": "idea",
+            "autor": "idea, no cita"
+          },
+          "opciones": [
+            {
+              "texto": "Que el dueño del taller es mala persona.",
+              "correcta": false,
+              "porque": "Tentaba porque esto se lee como pelea moral. Pero el argumento no habla del carácter de nadie, y la crítica de Marx mira clases, no personas buenas o malas."
+            },
+            {
+              "texto": "Que las dos partes llegan al trato con opciones parecidas.",
+              "correcta": true,
+              "porque": "Marx responde que Yolanda es «libre» en dos sentidos: libre de vender su capacidad de trabajar y sin otro medio para vivir. O sea, tiene que venderla."
+            },
+            {
+              "texto": "Que el salario lo fija el gobierno.",
+              "correcta": false,
+              "porque": "Tentaba porque existe el salario mínimo. Pero el argumento habla de un trato entre dos personas, sin Estado de por medio."
+            }
+          ],
+          "explicacion": "La escuela neoclásica parte de individuos que eligen. Marx parte de clases: unos tienen el taller y las máquinas, otros solo su capacidad de trabajar.",
+          "ataca": "b",
+          "mueve": { "a": 10, "b": 5 },
+          "fuentes": [
+            "https://www.marxists.org/archive/marx/works/1867-c1/ch06.htm",
+            "https://www.exploring-economics.org/es/orientacion/economia-neoclasica/",
+            "https://www.exploring-economics.org/en/orientation/marxist-political-economy/"
+          ],
+          "estado": "ok"
+        },
+        {
+          "id": "valor-10",
+          "tipo": "supuesto",
+          "dificultad": 4,
+          "enunciado": "Ahora al revés, que aquí nadie se salva. ¿Qué da por sentado Marx?",
+          "cita": {
+            "texto": "Toda la ganancia del dueño sale del trabajo de Yolanda que no se le paga.",
+            "tipo": "idea",
+            "autor": "idea, no cita"
+          },
+          "opciones": [
+            {
+              "texto": "Que solo el trabajo crea valor nuevo.",
+              "correcta": true,
+              "porque": "Es la base de su teoría del valor, y es justo lo más discutido: sus problemas lógicos dividen incluso a los marxistas; algunos conservan el análisis sin ella."
+            },
+            {
+              "texto": "Que las camisetas no le sirven a nadie.",
+              "correcta": false,
+              "porque": "Tentaba si se olvida el primer asalto. Marx supone lo contrario: sin utilidad no hay valor. Las camisetas tienen que servirle a alguien."
+            },
+            {
+              "texto": "Que Yolanda trabaja más lento que las demás.",
+              "correcta": false,
+              "porque": "Tentaba por el ejemplo de doña Rosa. Pero Marx razona con el trabajo normal o promedio; el ritmo de una persona no cambia el argumento."
+            }
+          ],
+          "explicacion": "Toda escuela se para sobre algún supuesto. El de Marx es que el trabajo es la única fuente de valor nuevo; si eso se cae, hay que rearmar la explicación de la ganancia.",
+          "ataca": "b",
+          "mueve": { "a": -10, "b": 10 },
+          "fuentes": ["https://www.exploring-economics.org/en/orientation/marxist-political-economy/"],
+          "estado": "ok"
+        }
+      ],
+      "veredicto": "En el taller, Marx ve algo que la otra esquina deja borroso: quién necesita el trabajo, quién es dueño y quién se queda con la diferencia. La escuela neoclásica explica bien el precio de la camiseta, pero trata el salario como un trato entre iguales."
+    }
+  ],
+  "tregua": {
+    "coinciden": [
+      "Lo que no le sirve a nadie no vale, por más trabajo que tenga. Lo dice Marx en la primera sección de «El capital».",
+      "El costo de producir importa. Marshall dice que cuanto más largo el plazo, más pesa el costo de producción en el valor.",
+      "Vienen de la misma casa: Adam Smith ya decía que el trabajo es la medida real del valor de cambio, y Marshall armó su síntesis juntando el costo de los clásicos con la utilidad de los marginalistas."
+    ],
+    "choque": "Marx busca el valor en la producción y mira clases: quién trabaja y quién es dueño. La escuela neoclásica lo busca en el intercambio y mira individuos que comparan utilidad y costo. Donde una ve explotación, la otra ve un trato.",
+    "ve": {
+      "a": "El taller por dentro: la jornada, el poder y quién se queda con lo producido.",
+      "b": "La escasez, el deseo y cómo cambia una decisión con «una unidad más»."
+    },
+    "noVe": {
+      "a": "Su teoría del valor carga debates lógicos que dividen hasta a los propios marxistas.",
+      "b": "Tiende a ver individuos sueltos; el poder, las clases y la historia se le salen del cuadro."
+    },
+    "fuentes": [
+      "https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm",
+      "https://www.econlib.org/library/Marshall/marP.html?chapter_num=31",
+      "https://www.econlib.org/library/Smith/smWN.html?chapter_num=8",
+      "https://www.exploring-economics.org/es/orientacion/economia-neoclasica/",
+      "https://www.exploring-economics.org/en/orientation/marxist-political-economy/"
+    ]
+  },
+  "herramienta": {
+    "nombre": "Reloj y tijeras",
+    "uso": "Ante cualquier precio, hazte dos preguntas. Con el reloj: ¿cuánto trabajo hay detrás y quién se quedó con qué? Con las tijeras: ¿qué tan escaso es y cuánto lo desea la gente?"
+  }
+}

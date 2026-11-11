@@ -1,0 +1,35 @@
+[
+  {
+    "id": "marx",
+    "nombre": "Karl Marx",
+    "iniciales": "KM",
+    "nace": 1818,
+    "muere": 1883,
+    "escuela": "marxista",
+    "aporte": "Autor de «El capital» (1867). Explica el valor por el trabajo y la ganancia por la plusvalía.",
+    "wikidata": "Q9061",
+    "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"]
+  },
+  {
+    "id": "marshall",
+    "nombre": "Alfred Marshall",
+    "iniciales": "AM",
+    "nace": 1842,
+    "muere": 1924,
+    "escuela": "neoclasica",
+    "aporte": "Autor de «Principios de economía» (1890). Junta costo y utilidad en el cruce de oferta y demanda.",
+    "wikidata": "Q13529",
+    "fuentes": ["https://www.econlib.org/library/Marshall/marP.html?chapter_num=31"]
+  },
+  {
+    "id": "jevons",
+    "nombre": "William Stanley Jevons",
+    "iniciales": "WJ",
+    "nace": 1835,
+    "muere": 1882,
+    "escuela": "neoclasica",
+    "aporte": "Autor de «La teoría de la economía política» (1871). Sostiene que el valor depende de la utilidad.",
+    "foto": false,
+    "fuentes": ["https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5"]
+  }
+]

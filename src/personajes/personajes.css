@@ -1,0 +1,79 @@
+/* Personajes por piezas. Solo se animan transform y opacity. */
+.pj { display: block; width: 100%; height: auto; overflow: visible; }
+.pj * { transform-box: fill-box; }
+.pj .t { stroke: var(--pj-tinta); stroke-width: 3.5; stroke-linejoin: round; stroke-linecap: round; }
+.pj .t-tinta { fill: var(--pj-tinta); }
+.pj .t-papel { fill: var(--pj-papel); }
+.pj .t-pelo { fill: var(--pj-pelo); }
+.pj .t-acento { fill: var(--pj-acento); }
+.pj .t-linea { fill: none; }
+.pj .t-fina { fill: none; stroke-width: 2; opacity: .55; }
+.pj .t-ceja { fill: none; stroke-width: 6; }
+.pj .t-brazo { fill: none; stroke-width: 17; }
+.pj .t-brazo-borde { fill: none; stroke: var(--pj-papel); stroke-width: 23; stroke-linecap: round; }
+.pj .t-hoja { fill: none; stroke: var(--pj-papel); stroke-width: 5; stroke-linecap: round; }
+.pj .pj-ojos ellipse, .pj .pj-boca { fill: var(--pj-tinta); }
+.pj[data-quien='marx'] { --pj-acento: #c5382b; }
+.pj[data-quien='marshall'] { --pj-acento: #1d5c86; }
+
+.pj-todo { transform-origin: 50% 100%; }
+.pj-cuerpo { transform-origin: 50% 100%; }
+.pj-cabeza { transform-origin: 50% 90%; }
+.pj-ojos { transform-origin: 50% 50%; }
+.pj-boca { transform-origin: 50% 50%; }
+.pj-cejas { transform-origin: 50% 50%; }
+.pj[data-quien='marx'] .pj-brazo { transform-origin: 0% 0%; }
+.pj[data-quien='marshall'] .pj-brazo { transform-origin: 100% 0%; }
+.pj-hoja-2 { transform-origin: 100% 100%; }
+
+/* Reposo: respira, parpadea y hace su tic. */
+.pj-cabeza { animation: respirar 3.4s ease-in-out infinite; }
+.pj-ojos { animation: parpadear 4.6s infinite; }
+.pj[data-quien='marshall'] .pj-ojos { animation-duration: 5.3s; animation-delay: -2s; }
+.pj[data-quien='marx'] .pj-cejas { animation: cenio 7s infinite; }
+.pj[data-quien='marshall'] .pj-hoja-2 { animation: tijeretazo 5.5s infinite; }
+@keyframes respirar { 50% { transform: translateY(-2.5px); } }
+@keyframes parpadear { 0%, 93%, 100% { transform: scaleY(1); } 96% { transform: scaleY(.1); } }
+@keyframes cenio { 0%, 80%, 100% { transform: none; } 86%, 94% { transform: translateY(4px); } }
+@keyframes tijeretazo { 0%, 84%, 100% { transform: none; } 88%, 96% { transform: rotate(-22deg); } 92% { transform: none; } }
+
+/* Hablar */
+.pj[data-estado='hablar'] .pj-boca { animation: hablar .26s steps(2, jump-none) infinite; }
+.pj[data-estado='hablar'] .pj-cabeza { animation: cabecear .9s ease-in-out infinite; }
+@keyframes hablar { from { transform: scaleY(1); } to { transform: scaleY(3.4); } }
+@keyframes cabecear { 50% { transform: translateY(-3px) rotate(2deg); } }
+
+/* Pensar */
+.pj[data-estado='pensar'] .pj-cabeza { animation: pensar 2.6s ease-in-out infinite; }
+.pj[data-estado='pensar'] .pj-cejas { transform: translateY(-4px); }
+@keyframes pensar { 0%, 100% { transform: rotate(-5deg); } 50% { transform: rotate(-8deg) translateY(-2px); } }
+
+/* Atacar: el brazo lanza y el cuerpo acompaña. */
+.pj[data-estado='atacar'] .pj-brazo { animation: lanzar .55s var(--suave) both; }
+.pj[data-estado='atacar'] .pj-todo { animation: embestir .55s var(--suave) both; }
+@keyframes lanzar { 0% { transform: none; } 35% { transform: rotate(calc(var(--dir) * 55deg)); } 70%, 100% { transform: rotate(calc(var(--dir) * -75deg)); } }
+@keyframes embestir { 35% { transform: translateX(calc(var(--dir) * -6px)) rotate(calc(var(--dir) * -3deg)); } 70% { transform: translateX(calc(var(--dir) * 10px)) rotate(calc(var(--dir) * 4deg)); } }
+
+/* Recibir golpe: sacudón de caricatura, sin crueldad. */
+.pj[data-estado='golpe'] .pj-todo { animation: sacudon .6s var(--suave) both; }
+.pj[data-estado='golpe'] .pj-ojos { transform: scaleY(.25); animation: none; }
+@keyframes sacudon {
+  20% { transform: translateX(calc(var(--dir) * -12px)) rotate(calc(var(--dir) * -8deg)); }
+  50% { transform: translateX(calc(var(--dir) * 5px)) rotate(calc(var(--dir) * 4deg)); }
+  75% { transform: translateX(calc(var(--dir) * -3px)); }
+}
+
+/* Celebrar */
+.pj[data-estado='celebrar'] .pj-todo { animation: brincar .5s var(--rebote) 2 both; }
+.pj[data-estado='celebrar'] .pj-brazo { transform: rotate(calc(var(--dir) * -120deg)); transition: transform .25s var(--rebote); }
+.pj[data-estado='celebrar'] .pj-cejas { transform: translateY(-5px); animation: none; }
+@keyframes brincar { 50% { transform: translateY(-16px) scaleY(1.03); } }
+
+/* Darse la mano */
+.pj[data-estado='mano'] .pj-brazo { transform: rotate(calc(var(--dir) * -62deg)); transition: transform .5s var(--rebote); }
+.pj[data-estado='mano'] .pj-cejas { transform: translateY(-4px); animation: none; }
+.pj[data-estado='mano'] .pj-todo { animation: apreton .5s ease-in-out 3 .6s; }
+@keyframes apreton { 50% { transform: translateY(-4px); } }
+
+.pj[data-quien='marx'] { --dir: 1; }
+.pj[data-quien='marshall'] { --dir: -1; }
