@@ -4,6 +4,11 @@ Bitácora para retomar el proyecto sin releer todo. Lo más reciente va arriba.
 
 ## Estado actual
 
+- **Etapa 3, tanda 1 (2026-11-11): duelo «Keynes contra Hayek» hecho** (`contenido/duelos/crisis.json`, 10 preguntas, 3 casos: restaurante vacío, torres a medio hacer, papa y alcaldía). Escuelas nuevas: keynesiana y austriaca, con personajes, escenas (obra pública, café vienés), objetos (plato, obra, papa) y proyectiles. Fotos de Keynes y Hayek con licencia libre. Jugado completo a 360 px sin errores ni desborde; la vista del ring solo se revisó en capturas recortadas.
+- **PDF de Andrés** (`investigacion/`, fuera de git; texto en `investigacion/base.txt`): 35 escuelas, 17 duelos, 152 preguntas. Se usa como guion de cada tanda; lo de nivel B o «verificar» se contrasta con fuentes antes de entrar al juego. Buscar en base.txt con grep, no releer el PDF.
+- Pendiente de la tanda 1: la carta de Keynes a Hayek sobre «Camino de servidumbre» no se usó porque solo se confirmó en Wikipedia. Los duelos salen en orden alfabético en el inicio (crisis antes que valor). Faltan los tipos unir/ordenar/completar y los modos «¿Quién es?», «Unir» y «Lecturas cortas».
+- Siguiente tanda sugerida: Prebisch contra Ricardo (nivel A en el PDF).
+
 - **Estilo nuevo «Cómic de pelea» (2026-11-11):** aplicado a todo el juego a partir de la imagen de referencia de Andrés. Personajes redibujados en SVG con color y sombra (Andrés eligió «dibújalos tú en código»; no hay ilustraciones generadas). Se quitó el tema claro: ahora hay un solo tema. Archivos: `diseno/base.css`, `motor/piezas.css`, `pantallas/duelo.css`, `pantallas/inicio.css`, `personajes/`, `escenas/Escenas.tsx`. Falta que Andrés lo vea en el celular y diga si los personajes le sirven así.
 
 - **Etapa 2 (motor reutilizable): entregada el 2026-11-11, esperando a Andrés para empezar la etapa 3.**

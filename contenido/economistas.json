@@ -8,7 +8,9 @@
     "escuela": "marxista",
     "aporte": "Autor de «El capital» (1867). Explica el valor por el trabajo y la ganancia por la plusvalía.",
     "wikidata": "Q9061",
-    "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"]
+    "fuentes": [
+      "https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm"
+    ]
   },
   {
     "id": "marshall",
@@ -19,7 +21,9 @@
     "escuela": "neoclasica",
     "aporte": "Autor de «Principios de economía» (1890). Junta costo y utilidad en el cruce de oferta y demanda.",
     "wikidata": "Q13529",
-    "fuentes": ["https://www.econlib.org/library/Marshall/marP.html?chapter_num=31"]
+    "fuentes": [
+      "https://www.econlib.org/library/Marshall/marP.html?chapter_num=31"
+    ]
   },
   {
     "id": "jevons",
@@ -30,6 +34,34 @@
     "escuela": "neoclasica",
     "aporte": "Autor de «La teoría de la economía política» (1871). Sostiene que el valor depende de la utilidad.",
     "foto": false,
-    "fuentes": ["https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5"]
+    "fuentes": [
+      "https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5"
+    ]
+  },
+  {
+    "id": "keynes",
+    "nombre": "John Maynard Keynes",
+    "iniciales": "JK",
+    "nace": 1883,
+    "muere": 1946,
+    "escuela": "keynesiana",
+    "aporte": "Autor de la «Teoría general» (1936). Explica el desempleo por falta de demanda y pide que el Estado gaste en las crisis.",
+    "wikidata": "Q9317",
+    "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Keynes.html"
+    ]
+  },
+  {
+    "id": "hayek",
+    "nombre": "Friedrich Hayek",
+    "iniciales": "FH",
+    "nace": 1899,
+    "muere": 1992,
+    "escuela": "austriaca",
+    "aporte": "Premio Nobel en 1974. Explica los precios como avisos que reparten conocimiento, y las crisis por el crédito artificialmente barato.",
+    "wikidata": "Q1325",
+    "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Hayek.html"
+    ]
   }
 ]

@@ -89,3 +89,11 @@
 .pj[data-estado='mano'] .pj-cejas { transform: translateY(-4px); animation: none; }
 .pj[data-estado='mano'] .pj-todo { animation: apreton .5s ease-in-out 3 .6s; }
 @keyframes apreton { 50% { transform: translateY(-4px); } }
+
+/* Tics de Keynes (levanta las cejas) y Hayek (mece su etiqueta de precio). */
+.pj[data-quien='keynes'] .pj-cejas { animation: ceja-sube 6.4s infinite; }
+.pj[data-quien='hayek'] .pj-ojos { animation-duration: 5.8s; animation-delay: -1s; }
+.pj-etiqueta { transform-origin: 100% 100%; }
+.pj[data-quien='hayek'] .pj-etiqueta { animation: mecer-etiqueta 4.4s ease-in-out infinite; }
+@keyframes ceja-sube { 0%, 84%, 100% { transform: none; } 88%, 95% { transform: translateY(-5px); } }
+@keyframes mecer-etiqueta { 50% { transform: rotate(-9deg); } }

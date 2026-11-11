@@ -2,3 +2,6 @@ node_modules
 dist
 dev-dist
 *.log
+
+# Investigacion base de Andres (queda solo en el computador)
+investigacion/

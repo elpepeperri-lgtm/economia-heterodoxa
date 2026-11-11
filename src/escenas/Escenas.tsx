@@ -67,7 +67,47 @@ function Pizarra({ ancla }: { ancla: string }) {
   );
 }
 
-const ESCENAS: Record<EscuelaId, (p: { ancla: string }) => ReactElement> = { marxista: Fabrica, neoclasica: Pizarra };
+/** Escuela keynesiana: obra pública, con tanque de agua, tubería y una llave que gotea gasto. */
+function Obra({ ancla }: { ancla: string }) {
+  return (
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
+      <path className="esc-lejos" d="M104 300V168H150V138H200V300Z" />
+      <path className="esc-asta" d="M34 300L46 176M98 300L86 176M38 250H94M42 212H90" />
+      <path className="esc-piedra" d="M26 100H106V176H26Z" />
+      <path className="esc-agua" d="M29 134H103V173H29Z" />
+      <path className="esc-piedra-2" d="M96 100H106V176H96Z" />
+      <path className="esc-muro" d="M18 100L66 68L114 100Z" />
+      <path className="esc-tubo-borde" d="M106 156H152V206" />
+      <path className="esc-tubo" d="M106 156H152V206" />
+      <path className="esc-color" d="M140 204H164V216H140Z" />
+      <path className="esc-agua esc-gota" d="M152 222C146 231 146 237 152 237C158 237 158 231 152 222Z" />
+      <Bandera x={174} y={176} alto={104} />
+    </svg>
+  );
+}
+
+/** Escuela austriaca: café vienés con toldo, taza en el letrero y pizarra de precios en la puerta. */
+function Cafe({ ancla }: { ancla: string }) {
+  return (
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
+      <path className="esc-lejos" d="M0 300V172H36V146H70V300Z" />
+      <g className="esc-humo">
+        <circle cx="128" cy="62" r="9" />
+        <circle cx="142" cy="46" r="12" />
+      </g>
+      <path className="esc-piedra" d="M70 300V124H204V300Z" />
+      <path className="esc-piedra-2" d="M188 124H204V300H188ZM64 112H208V126H64Z" />
+      <path className="esc-piedra" d="M112 84H160L155 112H117Z" />
+      <path className="esc-emblema" d="M160 90C172 90 172 104 158 104" />
+      <path className="esc-ventanas" d="M86 142H120V176H86ZM146 142H180V176H146Z" />
+      <path className="esc-color" d="M78 190H194L206 220H66Z" />
+      <path className="esc-muro" d="M124 232H154V300H124ZM84 236H112V280H84Z" />
+      <path className="esc-tiza" d="M90 248H106M90 258H101M90 268H106" />
+    </svg>
+  );
+}
+
+const ESCENAS: Record<EscuelaId, (p: { ancla: string }) => ReactElement> = { marxista: Fabrica, neoclasica: Pizarra, keynesiana: Obra, austriaca: Cafe };
 
 /** La escena de una escuela, anclada al lado del ring que le toque. */
 export function Escena({ escuela, lado }: { escuela: EscuelaId; lado: 'a' | 'b' }) {
@@ -118,27 +158,70 @@ export function Objeto({ tipo }: { tipo: ObjetoId }) {
           <circle className="ob-papel" cx="19" cy="34" r="5" />
         </g>
       )}
+      {tipo === 'plato' && (
+        <g className="ob">
+          <circle className="ob-papel" cx="40" cy="44" r="23" />
+          <circle cx="40" cy="44" r="13" />
+          <path d="M9 22V68M3 22V34C3 40 15 40 15 34V22" />
+          <path d="M72 68V22C63 30 63 42 72 46" />
+        </g>
+      )}
+      {tipo === 'obra' && (
+        <g className="ob">
+          <path className="ob-color" d="M16 54H58V70H16Z" />
+          <path d="M16 70V24H58V70M16 39H58M16 54H58M37 24V70" />
+          <path d="M58 24V8H78M70 8V18M6 70H74" />
+          <path className="ob-lleno" d="M66 18H74V25H66Z" />
+        </g>
+      )}
+      {tipo === 'papa' && (
+        <g className="ob">
+          <path className="ob-color" d="M22 28C13 44 13 62 24 71H54C65 62 65 44 56 28Z" />
+          <path d="M24 28C32 22 46 22 54 28M27 26L21 15M51 26L57 15M30 44H34M40 56H44" />
+          <path className="ob-papel" d="M44 38H74V56H44Z" />
+          <path d="M51 47H67" />
+        </g>
+      )}
     </svg>
   );
 }
 
-/** Los golpes son argumentos: la escuela marxista lanza un reloj de fábrica; la neoclásica, sus curvas cruzadas. */
+/** Los golpes son argumentos: reloj de fábrica (marxista), curvas cruzadas (neoclásica), gota de gasto (keynesiana) y etiqueta de precio (austriaca). */
+const PROYECTILES: Record<EscuelaId, ReactElement> = {
+  marxista: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="26" r="18" />
+      <circle className="ob-papel" cx="24" cy="26" r="12.500" />
+      <path d="M24 17V26L30 30M19 4H29M24 4V8" />
+    </g>
+  ),
+  neoclasica: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="24" r="21" />
+      <circle className="ob-papel" cx="24" cy="24" r="15.500" />
+      <path d="M14 15C19 25 25 30 34 32M14 32C22 30 28 24 33 15" />
+    </g>
+  ),
+  keynesiana: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="24" r="21" />
+      <path className="ob-agua" d="M24 9C17 20 13 26 13 30A11 11 0 0 0 35 30C35 26 31 20 24 9Z" />
+    </g>
+  ),
+  austriaca: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="24" r="21" />
+      <path className="ob-papel" d="M11 23L23 11H37V25L25 37Z" />
+      <circle cx="31.500" cy="16.500" r="2" />
+      <path d="M19 24L25 30" />
+    </g>
+  ),
+};
+
 export function Proyectil({ escuela }: { escuela: EscuelaId }) {
   return (
     <svg viewBox="0 0 48 48" aria-hidden="true" style={{ ['--ob-color' as string]: `var(--esc-${escuela})` }}>
-      {escuela === 'marxista' ? (
-        <g className="ob">
-          <circle className="ob-color" cx="24" cy="26" r="18" />
-          <circle className="ob-papel" cx="24" cy="26" r="12.500" />
-          <path d="M24 17V26L30 30M19 4H29M24 4V8" />
-        </g>
-      ) : (
-        <g className="ob">
-          <circle className="ob-color" cx="24" cy="24" r="21" />
-          <circle className="ob-papel" cx="24" cy="24" r="15.500" />
-          <path d="M14 15C19 25 25 30 34 32M14 32C22 30 28 24 33 15" />
-        </g>
-      )}
+      {PROYECTILES[escuela]}
     </svg>
   );
 }

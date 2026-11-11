@@ -1,0 +1,491 @@
+{
+ "id": "crisis",
+ "titulo": "Keynes contra Hayek",
+ "pregunta": "¿Cómo se sale de una crisis?",
+ "resumen": "Tres casos: un restaurante vacío, unas torres a medio hacer y el bulto de papa.",
+ "minutos": 4,
+ "a": {
+  "economista": "keynes",
+  "escuelaId": "keynesiana",
+  "nombreCorto": "Keynes",
+  "lema": "Si nadie gasta, nadie vende."
+ },
+ "b": {
+  "economista": "hayek",
+  "escuelaId": "austriaca",
+  "nombreCorto": "Hayek",
+  "lema": "Nadie sabe tanto como los precios."
+ },
+ "casos": [
+  {
+   "id": "restaurante",
+   "objeto": "plato",
+   "titulo": "El restaurante vacío",
+   "mecanica": "¿Quién lo diría?",
+   "historia": "En el barrio corrió el rumor de que vienen despidos. Por si acaso, todos se aprietan: nadie sale a almorzar. El restaurante de don Julio queda vacío y él despide a la mesera y al cocinero. Ahora ellos tampoco salen a almorzar.",
+   "dicen": {
+    "a": "Si nadie gasta, nadie vende.",
+    "b": "Sin ahorro no hay con qué invertir."
+   },
+   "preguntas": [
+    {
+     "id": "crisis-01",
+     "tipo": "quien",
+     "dificultad": 1,
+     "enunciado": "¿Quién diría esto?",
+     "cita": {
+      "texto": "Un acto de ahorro individual significa, por así decirlo, la decisión de no cenar hoy.",
+      "tipo": "cita",
+      "autor": "John Maynard Keynes",
+      "obra": "Teoría general del empleo, el interés y el dinero, cap. 16",
+      "anio": 1936,
+      "nota": "Traducción propia del inglés"
+     },
+     "opciones": [
+      {
+       "texto": "Keynes",
+       "correcta": true,
+       "porque": "Es su manera de decir que lo que uno ahorra hoy es una venta que alguien dejó de hacer hoy. Y nadie le avisa a don Julio que esa cena vendrá después."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": false,
+       "porque": "Tentaba porque Hayek habla mucho de ahorro. Pero él lo defiende como la base de la inversión; el que lo mira como una cena que no se vendió es Keynes."
+      }
+     ],
+     "explicacion": "Para Keynes, ahorrar hoy no obliga a nadie a gastar mañana. Si todos se aprietan a la vez, caen las ventas, cae el ingreso y al final hay menos de dónde ahorrar.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 5
+     },
+     "fuentes": [
+      "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch16.htm"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-02",
+     "tipo": "quien",
+     "dificultad": 1,
+     "enunciado": "¿Y esto otro, quién lo diría?",
+     "cita": {
+      "texto": "Lo que la gente guarda es lo que se puede prestar para montar locales y comprar máquinas. Si se invierte sin ahorro de verdad detrás, tarde o temprano el negocio se cae.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Keynes",
+       "correcta": false,
+       "porque": "Tentaba porque Keynes también habla de inversión. Pero para él la inversión depende sobre todo de que el empresario espere vender, no de cuánto se ahorró antes."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": true,
+       "porque": "Para la escuela austriaca, la inversión sana es la que está respaldada por ahorro real. La que no lo está termina siendo mala inversión."
+      }
+     ],
+     "explicacion": "Hayek mira el otro lado del ahorro: es lo que deja recursos libres para invertir. Por eso desconfía de la inversión que nace de crédito fácil y no de ahorro.",
+     "ataca": "b",
+     "mueve": {
+      "a": 5,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.exploring-economics.org/en/orientation/austrian-economics/",
+      "https://www.econlib.org/library/Enc/bios/Hayek.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-03",
+     "tipo": "vf",
+     "dificultad": 2,
+     "enunciado": "Keynes sostenía que la oferta siempre crea su propia demanda: todo lo que se produce termina encontrando comprador.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": false,
+       "porque": "Tentaba porque la frase aparece en su libro. Pero Keynes la cita para discutirla: es la doctrina de los economistas anteriores, conocida como ley de Say."
+      },
+      {
+       "texto": "Falso",
+       "correcta": true,
+       "porque": "Esa es la ley de Say, y Keynes escribió la «Teoría general» contra ella. Para él, el empleo depende de la demanda efectiva, y esa demanda puede quedarse corta."
+      }
+     ],
+     "explicacion": "El restaurante de don Julio es el ejemplo: hay comida, hay cocinero y hay ganas de trabajar, pero no hay clientes. Para Keynes eso puede durar mucho tiempo.",
+     "ataca": "a",
+     "mueve": {
+      "a": 15,
+      "b": 5
+     },
+     "fuentes": [
+      "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch03.htm"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Este caso se le da mejor a Keynes: lo que es prudente para una familia puede hundir al barrio si todos lo hacen a la vez. Pero la pregunta de Hayek queda en pie: sin ahorro, ¿con qué se invierte mañana?"
+  },
+  {
+   "id": "torres",
+   "objeto": "obra",
+   "titulo": "Las torres a medio hacer",
+   "mecanica": "Elige el contraataque",
+   "historia": "Hace unos años el crédito estaba regalado y en la ciudad arrancaron diez torres de apartamentos al tiempo. Luego subieron los intereses, no aparecieron compradores y hoy quedan esqueletos de cemento y obreros sin trabajo.",
+   "dicen": {
+    "a": "Falta quien compre. Hay que mover la demanda.",
+    "b": "Sobró crédito barato. Se construyó de más."
+   },
+   "preguntas": [
+    {
+     "id": "crisis-04",
+     "tipo": "opcion",
+     "dificultad": 2,
+     "enunciado": "¿Cómo explica Hayek las torres abandonadas?",
+     "opciones": [
+      {
+       "texto": "El crédito artificialmente barato dio una señal falsa y se arrancaron proyectos largos sin ahorro que los respaldara.",
+       "correcta": true,
+       "porque": "Es su teoría del ciclo: el interés bajo hace parecer rentables obras de muchos años. Cuando la señal se corrige, quedan a medias. A eso se le llama mala inversión."
+      },
+      {
+       "texto": "La gente dejó de gastar de un momento a otro y por eso todo se frenó.",
+       "correcta": false,
+       "porque": "Tentaba porque también es una explicación de la crisis. Pero es la de Keynes: él mira la caída del gasto, no el exceso de crédito de antes."
+      },
+      {
+       "texto": "Los constructores fueron demasiado ambiciosos.",
+       "correcta": false,
+       "porque": "Tentaba porque suena a sentido común. Pero Hayek no culpa al carácter de nadie: dice que los constructores siguieron una señal de precios que estaba dañada."
+      }
+     ],
+     "explicacion": "Para Hayek el problema no empieza en la caída sino en el auge: el interés es un precio, y si se lo abarata a la fuerza, engaña a quienes deciden qué construir.",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 30
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Hayek.html",
+      "https://www.exploring-economics.org/en/orientation/austrian-economics/"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-05",
+     "tipo": "opcion",
+     "dificultad": 3,
+     "enunciado": "Hayek dice que la caída es un reajuste necesario. Elige el contraataque de Keynes.",
+     "opciones": [
+      {
+       "texto": "Mientras se reajusta, bajan los sueldos y el gasto, se vende todavía menos y la crisis se alarga.",
+       "correcta": true,
+       "porque": "Keynes se oponía a salir de la crisis bajando salarios: menos salario es menos consumo, y menos consumo es menos demanda para todos."
+      },
+      {
+       "texto": "Las torres nunca debieron construirse.",
+       "correcta": false,
+       "porque": "Tentaba porque es una crítica a las torres. Pero ese es justamente el argumento de Hayek, no una respuesta contra él."
+      },
+      {
+       "texto": "El Estado debió fijar por decreto el precio de los apartamentos.",
+       "correcta": false,
+       "porque": "Tentaba porque Keynes pide que el Estado actúe. Pero lo que él propone es sostener el gasto y el empleo, no fijar precios uno por uno."
+      }
+     ],
+     "explicacion": "Keynes no discute tanto cómo empezó el lío. Discute que se arregle solo y pronto: mientras tanto hay gente sin trabajo que tampoco puede comprar.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 0
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Keynes.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-06",
+     "tipo": "vf",
+     "dificultad": 3,
+     "enunciado": "Para Hayek, la mejor manera de evitar la caída es evitar el auge artificial que la provoca.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": true,
+       "porque": "En su explicación, la caída es la cuenta de cobro del auge. Sin crédito inflado no habría torres de más y, por tanto, tampoco derrumbe."
+      },
+      {
+       "texto": "Falso",
+       "correcta": false,
+       "porque": "Tentaba pensar que Hayek solo habla de la caída. Pero su teoría pone la causa antes, en los años buenos en que el crédito estaba regalado."
+      }
+     ],
+     "explicacion": "Por eso Hayek desconfía de «reactivar» con más crédito barato: para él sería curar la resaca con otro trago. Sus críticos responden que esa teoría no explica bien todas las crisis.",
+     "ataca": "b",
+     "mueve": {
+      "a": 5,
+      "b": 15
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Hayek.html",
+      "https://www.exploring-economics.org/en/orientation/austrian-economics/"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Aquí cada uno explica una mitad. Hayek cuenta mejor cómo empezó el problema: el auge con crédito regalado. Keynes cuenta mejor por qué después no se arregla solo: sin compradores, nadie contrata."
+  },
+  {
+   "id": "plaza",
+   "objeto": "papa",
+   "titulo": "La papa y la alcaldía",
+   "mecanica": "Detecta el supuesto escondido",
+   "historia": "En plena mala racha, una helada daña la cosecha y el bulto de papa sube en la plaza. En la alcaldía discuten: ¿contratar gente para arreglar vías y ponerle tope al precio de la papa, o no meterse?",
+   "dicen": {
+    "a": "Que el Estado gaste cuando nadie más gasta.",
+    "b": "Ningún escritorio sabe lo que sabe la plaza."
+   },
+   "preguntas": [
+    {
+     "id": "crisis-07",
+     "tipo": "quien",
+     "dificultad": 2,
+     "enunciado": "Cambia «estaño» por «papa». ¿Quién lo diría?",
+     "cita": {
+      "texto": "Todo lo que los usuarios de estaño necesitan saber es que parte del estaño que solían consumir ahora se emplea con más provecho en otra parte.",
+      "tipo": "cita",
+      "autor": "Friedrich Hayek",
+      "obra": "El uso del conocimiento en la sociedad, sección V",
+      "anio": 1945,
+      "nota": "Traducción propia del inglés"
+     },
+     "opciones": [
+      {
+       "texto": "Keynes",
+       "correcta": false,
+       "porque": "Tentaba porque Keynes también escribió sobre precios. Pero su mirada va a los grandes totales: gasto, empleo, ingreso. La señal de cada precio es tema de Hayek."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": true,
+       "porque": "Es su ejemplo más famoso. Quien compra no necesita saber de la helada: el precio le avisa que hay menos y él solo ajusta lo que lleva."
+      }
+     ],
+     "explicacion": "Para Hayek, los precios son un sistema para comunicar información que está repartida entre millones de personas. Si se les pone tope, el aviso deja de llegar.",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Essays/hykKnw.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-08",
+     "tipo": "opcion",
+     "dificultad": 3,
+     "enunciado": "Keynes escribió que hasta enterrar botellas con billetes, y dejar que empresas las desentierren, bajaría el desempleo. ¿Qué quería decir?",
+     "opciones": [
+      {
+       "texto": "Que en una crisis lo urgente es que alguien gaste; aunque, aclaró, sería más sensato construir casas.",
+       "correcta": true,
+       "porque": "Es una exageración a propósito. Un gasto inicial pone a circular ingreso varias veces: eso es el multiplicador. Y Keynes mismo dice que mejor gastar en algo útil."
+      },
+      {
+       "texto": "Que el gasto inútil es mejor que el gasto útil.",
+       "correcta": false,
+       "porque": "Tentaba porque el ejemplo es absurdo. Pero Keynes dice lo contrario: es mejor construir casas. Solo afirma que hasta eso sería mejor que no hacer nada."
+      },
+      {
+       "texto": "Que los billetes valen más cuando están escondidos.",
+       "correcta": false,
+       "porque": "Tentaba por lo de enterrar. Pero el punto no son los billetes sino el trabajo y los sueldos que se mueven al ir a buscarlos."
+      }
+     ],
+     "explicacion": "Arreglar las vías del municipio es la versión sensata: los obreros contratados almuerzan donde don Julio, don Julio vuelve a contratar, y el gasto da varias vueltas.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 5
+     },
+     "fuentes": [
+      "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch10.htm"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-09",
+     "tipo": "supuesto",
+     "dificultad": 4,
+     "enunciado": "El lado keynesiano dice esto. ¿Qué da por sentado sin decirlo?",
+     "cita": {
+      "texto": "Que la alcaldía gaste lo que haga falta hasta que vuelva el empleo.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Que quien decide el gasto sabe dónde hace falta y cuándo parar.",
+       "correcta": true,
+       "porque": "Ahí golpea Hayek: ese conocimiento está repartido y no cabe en una oficina. También advirtió que sostener el empleo con más y más dinero termina en inflación."
+      },
+      {
+       "texto": "Que la gente no quiere trabajar.",
+       "correcta": false,
+       "porque": "Tentaba porque se habla de desempleo. Pero Keynes parte de lo contrario: hay gente que quiere trabajar y no encuentra dónde."
+      },
+      {
+       "texto": "Que los precios no cambian nunca.",
+       "correcta": false,
+       "porque": "Tentaba porque Hayek habla de precios. Pero el argumento keynesiano no necesita precios quietos: necesita que alguien gaste."
+      }
+     ],
+     "explicacion": "La crítica de Hayek no es que el gasto no mueva nada. Es que nadie tiene toda la información para dirigirlo bien, y que es fácil pasarse.",
+     "ataca": "b",
+     "mueve": {
+      "a": -5,
+      "b": 15
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Hayek.html",
+      "https://www.econlib.org/library/Essays/hykKnw.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "crisis-10",
+     "tipo": "supuesto",
+     "dificultad": 4,
+     "enunciado": "Ahora el lado austriaco dice esto. ¿Qué da por sentado?",
+     "cita": {
+      "texto": "Lo mejor es no meterse. La caída es un reajuste sano y los precios se encargan.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Que el reajuste será corto y que la gente puede aguantar mientras llega.",
+       "correcta": true,
+       "porque": "Ahí golpea Keynes: él escribía viendo años de desempleo en Gran Bretaña, que llegó a rondar el 20 %. Para él, esperar también tiene un costo."
+      },
+      {
+       "texto": "Que el Estado nunca se equivoca.",
+       "correcta": false,
+       "porque": "Tentaba por confusión de bandos. Hayek piensa lo contrario: desconfía de lo que el Estado puede saber."
+      },
+      {
+       "texto": "Que a nadie le gusta la papa.",
+       "correcta": false,
+       "porque": "Esta era para descansar. El argumento no depende de los gustos, sino de cuánto tarda el mercado en acomodarse."
+      }
+     ],
+     "explicacion": "Las dos posturas esconden una apuesta. Keynes apuesta a que el Estado sabrá gastar bien; Hayek, a que el mercado se acomodará a tiempo.",
+     "ataca": "a",
+     "mueve": {
+      "a": 15,
+      "b": -5
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Keynes.html",
+      "https://www.econlib.org/library/Enc/bios/Hayek.html"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Empate peleado. Hayek explica por qué ponerle tope a la papa apaga el aviso que da el precio. Keynes explica por qué contratar gente en plena mala racha puede volver a prender el barrio. Son herramientas para problemas distintos."
+  }
+ ],
+ "tregua": {
+  "coinciden": [
+   "Ninguno quería una economía dirigida desde un escritorio. Keynes escribió en la «Teoría general» que la decisión descentralizada y la responsabilidad individual tienen ventajas que hay que conservar.",
+   "Los dos rechazan la idea de una economía que vive en calma y equilibrio. Para Keynes la demanda puede faltar; para Hayek el mercado es un proceso lleno de incertidumbre.",
+   "Pensaron la misma tragedia: la crisis de los años treinta. Hayek llegó a Londres a comienzos de esa década y allí discutió con Keynes."
+  ],
+  "choque": "Keynes mira los grandes totales: cuánto se gasta y cuánta gente tiene empleo. Si faltan, que el Estado empuje. Hayek mira cada precio como un aviso: si el Estado empuja, daña los avisos y prepara la siguiente crisis.",
+  "ve": {
+   "a": "Que lo que es sensato para cada uno puede ser un desastre si todos lo hacen a la vez.",
+   "b": "Que nadie tiene toda la información, y que los precios la van repartiendo."
+  },
+  "noVe": {
+   "a": "Sus críticos señalan que sostener el empleo a punta de gasto puede terminar en inflación.",
+   "b": "Sus críticos señalan que su teoría del ciclo tiene problemas lógicos y no explica bien todas las crisis."
+  },
+  "fuentes": [
+   "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch24.htm",
+   "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch03.htm",
+   "https://www.econlib.org/library/Enc/bios/Hayek.html",
+   "https://www.econlib.org/library/Enc/bios/Keynes.html",
+   "https://www.exploring-economics.org/en/orientation/austrian-economics/"
+  ]
+ },
+ "herramienta": {
+  "nombre": "Llave y etiqueta",
+  "uso": "Ante una crisis, hazte dos preguntas. Con la llave de agua: ¿está faltando quien gaste, y quién podría abrir el chorro? Con la etiqueta de precio: ¿qué aviso están dando los precios, y quién lo está tapando?"
+ },
+ "glosario": [
+  {
+   "termino": "demanda efectiva",
+   "significado": "Lo que la gente y las empresas de verdad están dispuestas a gastar. Para Keynes, de eso depende cuánto empleo hay."
+  },
+  {
+   "termino": "demanda",
+   "significado": "Las ganas de comprar algo, respaldadas con plata para pagarlo."
+  },
+  {
+   "termino": "ley de Say",
+   "significado": "La idea de que todo lo que se produce encuentra comprador, porque producir ya genera el ingreso para comprar."
+  },
+  {
+   "termino": "multiplicador",
+   "significado": "Un gasto da varias vueltas: el obrero le paga al tendero y el tendero al panadero. El ingreso total crece más que el gasto inicial."
+  },
+  {
+   "termino": "mala inversión",
+   "significado": "Proyectos que parecían buen negocio solo porque el crédito estaba artificialmente barato."
+  },
+  {
+   "termino": "crédito",
+   "significado": "Plata prestada que hay que devolver con intereses."
+  },
+  {
+   "termino": "interés",
+   "significado": "El precio de pedir plata prestada."
+  },
+  {
+   "termino": "inflación",
+   "significado": "Cuando casi todos los precios suben al tiempo y la plata alcanza para menos."
+  },
+  {
+   "termino": "auge",
+   "significado": "La época buena del ciclo: mucho crédito, muchas obras y muchas ventas."
+  }
+ ],
+ "bibliografia": [
+  {
+   "titulo": "John Maynard Keynes, «Teoría general del empleo, el interés y el dinero» (1936), caps. 3, 10, 16 y 24",
+   "url": "https://www.marxists.org/reference/subject/economics/keynes/general-theory/"
+  },
+  {
+   "titulo": "Friedrich Hayek, «El uso del conocimiento en la sociedad» (1945)",
+   "url": "https://www.econlib.org/library/Essays/hykKnw.html"
+  },
+  {
+   "titulo": "Econlib, biografía de John Maynard Keynes",
+   "url": "https://www.econlib.org/library/Enc/bios/Keynes.html"
+  },
+  {
+   "titulo": "Econlib, biografía de Friedrich Hayek",
+   "url": "https://www.econlib.org/library/Enc/bios/Hayek.html"
+  },
+  {
+   "titulo": "Exploring Economics, «Austrian Economics»",
+   "url": "https://www.exploring-economics.org/en/orientation/austrian-economics/"
+  }
+ ]
+}

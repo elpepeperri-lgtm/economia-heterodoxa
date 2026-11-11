@@ -1,5 +1,47 @@
 [
   {
+    "id": "crisis",
+    "titulo": "Keynes contra Hayek",
+    "pregunta": "¿Cómo se sale de una crisis?",
+    "resumen": "Tres casos: un restaurante vacío, unas torres a medio hacer y el bulto de papa.",
+    "minutos": 4,
+    "preguntas": 10,
+    "a": {
+      "economista": "keynes",
+      "escuelaId": "keynesiana",
+      "nombreCorto": "Keynes",
+      "lema": "Si nadie gasta, nadie vende."
+    },
+    "b": {
+      "economista": "hayek",
+      "escuelaId": "austriaca",
+      "nombreCorto": "Hayek",
+      "lema": "Nadie sabe tanto como los precios."
+    },
+    "bibliografia": [
+      {
+        "titulo": "John Maynard Keynes, «Teoría general del empleo, el interés y el dinero» (1936), caps. 3, 10, 16 y 24",
+        "url": "https://www.marxists.org/reference/subject/economics/keynes/general-theory/"
+      },
+      {
+        "titulo": "Friedrich Hayek, «El uso del conocimiento en la sociedad» (1945)",
+        "url": "https://www.econlib.org/library/Essays/hykKnw.html"
+      },
+      {
+        "titulo": "Econlib, biografía de John Maynard Keynes",
+        "url": "https://www.econlib.org/library/Enc/bios/Keynes.html"
+      },
+      {
+        "titulo": "Econlib, biografía de Friedrich Hayek",
+        "url": "https://www.econlib.org/library/Enc/bios/Hayek.html"
+      },
+      {
+        "titulo": "Exploring Economics, «Austrian Economics»",
+        "url": "https://www.exploring-economics.org/en/orientation/austrian-economics/"
+      }
+    ]
+  },
+  {
     "id": "valor",
     "titulo": "Marx contra los neoclásicos",
     "pregunta": "¿De dónde sale el valor de las cosas?",

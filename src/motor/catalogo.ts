@@ -5,16 +5,18 @@
 export const ESCUELAS = {
   marxista: { nombre: 'Escuela marxista', golpe: '¡TIC!' },
   neoclasica: { nombre: 'Escuela neoclásica', golpe: '¡ZAS!' },
+  keynesiana: { nombre: 'Escuela keynesiana', golpe: '¡SPLASH!' },
+  austriaca: { nombre: 'Escuela austriaca', golpe: '¡CLIN!' },
 } as const;
 export type EscuelaId = keyof typeof ESCUELAS;
 export const ESCUELA_IDS = Object.keys(ESCUELAS) as [EscuelaId, ...EscuelaId[]];
 
 /** Objetos que pueden ir en el centro del ring (dibujados en escenas/Escenas.tsx). */
-export const OBJETOS = ['tinto', 'diamante', 'costura'] as const;
+export const OBJETOS = ['tinto', 'diamante', 'costura', 'plato', 'obra', 'papa'] as const;
 export type ObjetoId = (typeof OBJETOS)[number];
 
 /** Economistas con caricatura (dibujados en personajes/Personaje.tsx). Solo personas ya fallecidas. */
-export const CON_CARICATURA = ['marx', 'marshall'] as const;
+export const CON_CARICATURA = ['marx', 'marshall', 'keynes', 'hayek'] as const;
 
 export const colorEscuela = (id: string) => `var(--esc-${id})`;
 

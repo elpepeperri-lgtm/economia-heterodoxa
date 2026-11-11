@@ -16,6 +16,8 @@
   /* Un color por escuela. */
   --esc-marxista: #d92b34;
   --esc-neoclasica: #2f6fe0;
+  --esc-keynesiana: #14a89a;
+  --esc-austriaca: #ee8422;
   --acento: var(--amarillo);
   /* Tintas de los personajes. */
   --pj-tinta: #15112a;
