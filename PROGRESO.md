@@ -7,7 +7,22 @@ Bitácora para retomar el proyecto sin releer todo. Lo más reciente va arriba.
 - **Etapa 1 (un duelo completo): entregada, esperando comentarios de Andrés.** Este duelo define el nivel de calidad del resto.
 - Etapa 0 (plan): aprobada. Ver PLAN.md.
 
+## Segunda vuelta del duelo (2026-11-11, tras comentarios de Andrés)
+
+Andrés pidió: más animado, menos simple, más fácil de entender, y que sea un sitio web publicado. Hecho en el duelo:
+
+- Globos de diálogo: los personajes hablan por turnos al abrir cada caso, al acertar o fallar, en el veredicto y en la tregua (campo `dicen` del JSON).
+- Más movimiento: estallido de golpe (¡TIC!, ¡ZAS!), temblor de la arena, papelitos al acertar, marcas que se acumulan junto al objeto, número de la barra que rebota.
+- Pantalla «Cómo se juega» (20 segundos) antes del primer asalto.
+- Glosario: las palabras subrayadas se tocan y abren su significado (campo `glosario` del JSON).
+- Explicación más corta tras responder; la frase en disputa es un globo que se inclina hacia quien la dijo.
+- `jugar.bat`: doble clic para abrir el juego (PowerShell bloquea `npm`; usar `npm.cmd`).
+
+Pendiente de esta vuelta: **publicar el sitio** (Andrés debe crear cuenta en GitHub) y que Andrés confirme si ahora sí tiene el nivel que quiere antes de la etapa 2. Las capturas automáticas del panel salieron recortadas: lo nuevo se comprobó por medidas y recorrido automático, no a ojo en pantalla completa.
+
 ## Cómo probar
+
+- Lo más fácil: doble clic en `jugar.bat`.
 
 - En el computador: `npm run dev` y abrir la dirección «Local» que aparece.
 - En el celular (misma red wifi): `npm run dev` y abrir en el celular la dirección «Network». Si Windows pregunta por el firewall, permitir.

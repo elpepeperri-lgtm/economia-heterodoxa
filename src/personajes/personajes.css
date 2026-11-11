@@ -77,3 +77,7 @@
 
 .pj[data-quien='marx'] { --dir: 1; }
 .pj[data-quien='marshall'] { --dir: -1; }
+
+/* El cuerpo también respira un poco. */
+.pj-cuerpo { animation: mecer 4.8s ease-in-out infinite; }
+@keyframes mecer { 50% { transform: scaleY(1.018); } }

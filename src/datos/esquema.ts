@@ -42,6 +42,8 @@ export const Caso = z.object({
   titulo: z.string(),
   mecanica: z.string(),
   historia: z.string().max(420),
+  /** Lo que dice cada personaje al abrir el caso (globo corto). */
+  dicen: z.object({ a: z.string().max(60), b: z.string().max(60) }),
   preguntas: z.array(Pregunta).min(2),
   veredicto: z.string().min(40),
 });
@@ -68,6 +70,8 @@ export const Duelo = z.object({
     fuentes: z.array(url).min(1),
   }),
   herramienta: z.object({ nombre: z.string(), uso: z.string() }),
+  /** Palabras que se explican al tocarlas. */
+  glosario: z.array(z.object({ termino: z.string(), significado: z.string().max(140) })),
 });
 
 export const Economista = z.object({
