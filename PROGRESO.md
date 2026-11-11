@@ -18,7 +18,9 @@ Andrés pidió: más animado, menos simple, más fácil de entender, y que sea u
 - Explicación más corta tras responder; la frase en disputa es un globo que se inclina hacia quien la dijo.
 - `jugar.bat`: doble clic para abrir el juego (PowerShell bloquea `npm`; usar `npm.cmd`).
 
-Pendiente de esta vuelta: **publicar el sitio** (Andrés debe crear cuenta en GitHub) y que Andrés confirme si ahora sí tiene el nivel que quiere antes de la etapa 2. Las capturas automáticas del panel salieron recortadas: lo nuevo se comprobó por medidas y recorrido automático, no a ojo en pantalla completa.
+**Publicado (2026-11-11):** https://elpepeperri-lgtm.github.io/economia-heterodoxa/ · código en https://github.com/elpepeperri-lgtm/economia-heterodoxa (público). Cada `git push` a `main` vuelve a publicar solo (`.github/workflows/publicar.yml`). Los commits usan el correo anónimo de GitHub, no el Gmail.
+
+Pendiente de esta vuelta: que Andrés confirme si ahora sí tiene el nivel que quiere antes de la etapa 2. Las capturas automáticas del panel salieron recortadas: lo nuevo se comprobó por medidas y recorrido automático, no a ojo en pantalla completa.
 
 ## Cómo probar
 
