@@ -1,0 +1,67 @@
+/* Piezas reutilizables: pregunta, opciones, devolución y glosario. Las usan todos los modos de juego. */
+.enunciado { font-size: 1.28rem; line-height: 1.12; letter-spacing: -.01em; text-wrap: balance; }
+
+.cabecera-pregunta { display: flex; justify-content: space-between; align-items: center; gap: 12px; }
+.puntos { display: flex; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.puntos li { width: 18px; height: 8px; border: 2px solid var(--tinta); border-radius: 1px; }
+.puntos li[data-estado='hecha'] { background: var(--tinta); }
+.puntos li[data-estado='actual'] { background: var(--tinta); width: 30px; }
+
+.cita { margin: 0; padding: 12px 14px; background: var(--papel-2); border-left: 6px solid var(--tinta); display: grid; gap: 8px; }
+.cita p { font-size: 1.08rem; line-height: 1.35; }
+.cita[data-tipo='cita'] p { font-style: italic; }
+.cita footer { font-size: .76rem; color: var(--tinta-2); line-height: 1.3; animation: aparecer .3s both; }
+.cita-avatar { width: 54px; }
+
+.opciones { display: grid; gap: 10px; }
+.opciones[data-tipo='quien'], .opciones[data-tipo='vf'] { grid-template-columns: 1fr 1fr; }
+.opcion {
+  display: flex; align-items: center; gap: 12px; text-align: left;
+  min-height: 58px; padding: 10px 12px;
+  background: var(--papel); border: 2.5px solid var(--tinta); border-radius: 3px;
+  font-family: var(--lectura); font-size: 1rem; line-height: 1.25; color: var(--tinta);
+  transition: transform .12s var(--suave), opacity .25s;
+}
+.opcion:not(:disabled):active { transform: scale(.97); }
+.opciones[data-tipo='quien'] .opcion, .opciones[data-tipo='vf'] .opcion { font-family: var(--titulos); font-weight: 800; font-size: 1.2rem; }
+.opcion-letra {
+  flex: none; width: 28px; height: 28px; display: grid; place-items: center;
+  border: 2px solid currentColor; border-radius: 2px;
+  font-family: var(--titulos); font-weight: 800; font-size: .9rem;
+}
+.opcion[data-estado='bien'] { background: var(--tinta); color: var(--papel); animation: acierto .4s var(--rebote); }
+.opcion[data-estado='mal'] { border-style: dashed; animation: duda .4s var(--suave); }
+.opcion[data-estado='apagada'] { opacity: .45; }
+@keyframes acierto { 40% { transform: scale(1.04); } }
+@keyframes duda { 25% { transform: translateX(-5px); } 60% { transform: translateX(4px); } }
+
+.devolucion { scroll-margin-top: 10px; display: grid; gap: 10px; padding-top: 4px; animation: aparecer .35s var(--suave) .5s both; }
+.devolucion h3 { font-size: 1.5rem; }
+.devolucion p { font-size: .98rem; }
+.idea-clave { padding: 10px 12px; border: 2px solid var(--tinta); border-radius: 3px; }
+.fuentes { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: .78rem; color: var(--tinta-2); }
+.fuentes a { padding: 6px 0; }
+
+.termino {
+  display: inline; padding: 0; border: 0; background: none; font: inherit; color: inherit; text-align: inherit;
+  text-decoration: underline dotted 2px; text-underline-offset: 4px;
+}
+.glosa {
+  position: absolute; z-index: 20; left: 0; right: 0; bottom: 0;
+  display: grid; gap: 14px; padding: 16px 18px calc(18px + env(safe-area-inset-bottom));
+  background: var(--papel); border-top: 3px solid var(--tinta); box-shadow: 0 -40px 60px -30px rgb(0 0 0 / .35);
+  animation: sube .28s var(--suave) both;
+}
+.glosa > div { display: grid; gap: 6px; }
+.glosa .rotulo { color: var(--tinta-2); }
+.glosa h3 { font-size: 1.45rem; }
+.glosa h3::first-letter { text-transform: uppercase; }
+@keyframes sube { from { transform: translateY(100%); } }
+
+/* La frase en disputa es un globo: al responder se inclina hacia quien la dijo. */
+.cita { border: 2.5px solid var(--tinta); border-radius: 14px; background: var(--papel-2); }
+.cita[data-de='nadie'] { border-style: dashed; }
+.cita[data-de='a'] { border-left: 10px solid var(--a); border-bottom-left-radius: 2px; }
+.cita[data-de='b'] { border-right: 10px solid var(--b); border-bottom-right-radius: 2px; }
+.idea-clave { display: grid; gap: 4px; background: var(--papel-2); border: 0; }
+.idea-clave .rotulo { color: var(--tinta-2); }

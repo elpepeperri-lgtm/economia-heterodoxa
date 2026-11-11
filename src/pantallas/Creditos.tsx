@@ -1,16 +1,6 @@
 import './inicio.css';
-import { creditos, economistas } from '../datos/contenido.ts';
+import { creditos, economistas, indiceDuelos } from '../datos/contenido.ts';
 import { Avatar, traducir } from './Avatar.tsx';
-
-const FUENTES = [
-  ['Karl Marx, «El capital», tomo I (1867), caps. 1, 6 y 7', 'https://www.marxists.org/archive/marx/works/1867-c1/'],
-  ['Alfred Marshall, «Principios de economía» (1890), libro V, cap. III', 'https://www.econlib.org/library/Marshall/marP.html?chapter_num=31'],
-  ['W. S. Jevons, «La teoría de la economía política» (1871), cap. I', 'https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5'],
-  ['Adam Smith, «La riqueza de las naciones» (1776), libro I, caps. IV y V', 'https://www.econlib.org/library/Smith/smWN.html?chapter_num=7'],
-  ['Exploring Economics: economía neoclásica', 'https://www.exploring-economics.org/es/orientacion/economia-neoclasica/'],
-  ['Exploring Economics: economía política marxista', 'https://www.exploring-economics.org/en/orientation/marxist-political-economy/'],
-  ['Econlib, «Marginalism» (Steven E. Rhoads)', 'https://www.econlib.org/library/Enc/Marginalism.html'],
-];
 
 export function Creditos({ volver }: { volver: () => void }) {
   return (
@@ -44,10 +34,15 @@ export function Creditos({ volver }: { volver: () => void }) {
       </section>
 
       <section>
-        <h2>Fuentes del duelo</h2>
-        <ul className="creditos-fuentes">
-          {FUENTES.map(([t, u]) => <li key={u}><a href={u} target="_blank" rel="noopener noreferrer">{t}</a></li>)}
-        </ul>
+        <h2>Fuentes</h2>
+        {indiceDuelos.map((d) => (
+          <div key={d.id}>
+            <h3 style={{ margin: '10px 0 6px' }}>{d.titulo}</h3>
+            <ul className="creditos-fuentes">
+              {d.bibliografia.map((b) => <li key={b.url}><a href={b.url} target="_blank" rel="noopener noreferrer">{b.titulo}</a></li>)}
+            </ul>
+          </div>
+        ))}
       </section>
 
       <section>

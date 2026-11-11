@@ -1,4 +1,8 @@
-// Ambientación de cada escuela y objetos de los casos. Todo decorativo: oculto a lectores de pantalla.
+import type { ReactElement } from 'react';
+import type { EscuelaId, ObjetoId } from '../motor/catalogo.ts';
+
+// Ambientación de cada escuela, objetos de los casos y proyectiles. Todo decorativo: oculto a lectores de pantalla.
+// Para agregar una escuela: su escena en ESCENAS y su proyectil en PROYECTILES (más motor/catalogo.ts).
 
 function engranaje(dientes: number, r: number) {
   const pts: string[] = [];
@@ -12,9 +16,9 @@ function engranaje(dientes: number, r: number) {
 const ENGRANAJE = engranaje(10, 40);
 
 /** Escuela marxista: fábrica, chimeneas y engranajes que no paran. */
-export function Fabrica() {
+function Fabrica({ ancla }: { ancla: string }) {
   return (
-    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio="xMinYMax slice" aria-hidden="true">
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
       <g className="esc-tinta">
         <path d="M0 300V170L28 150V170L56 150V170L84 150V300Z" />
         <path d="M12 150V70H30V150Z" />
@@ -32,9 +36,9 @@ export function Fabrica() {
 }
 
 /** Escuela neoclásica: pizarra con las curvas de oferta y demanda, y una balanza. */
-export function Pizarra() {
+function Pizarra({ ancla }: { ancla: string }) {
   return (
-    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio="xMaxYMax slice" aria-hidden="true">
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
       <g className="esc-tiza">
         <path d="M70 30V130H186" />
         <path className="esc-curva" d="M84 44C104 92 136 112 176 118" />
@@ -50,7 +54,7 @@ export function Pizarra() {
   );
 }
 
-export function Objeto({ tipo }: { tipo: 'tinto' | 'diamante' | 'costura' }) {
+export function Objeto({ tipo }: { tipo: ObjetoId }) {
   return (
     <svg className="objeto-dibujo" viewBox="0 0 80 80" aria-hidden="true">
       {tipo === 'tinto' && (
@@ -81,10 +85,10 @@ export function Objeto({ tipo }: { tipo: 'tinto' | 'diamante' | 'costura' }) {
 }
 
 /** Los golpes son argumentos: Marx lanza un reloj de fábrica; Marshall, sus curvas cruzadas. */
-export function Proyectil({ lado }: { lado: 'a' | 'b' }) {
+export function Proyectil({ escuela }: { escuela: EscuelaId }) {
   return (
     <svg viewBox="0 0 48 48" aria-hidden="true">
-      {lado === 'a' ? (
+      {escuela === 'marxista' ? (
         <g className="ob">
           <circle className="ob-papel" cx="24" cy="26" r="17" />
           <path d="M24 14V26L32 31M19 4H29M24 4V9" />
@@ -97,4 +101,12 @@ export function Proyectil({ lado }: { lado: 'a' | 'b' }) {
       )}
     </svg>
   );
+}
+
+const ESCENAS: Record<EscuelaId, (p: { ancla: string }) => ReactElement> = { marxista: Fabrica, neoclasica: Pizarra };
+
+/** La escena de una escuela, anclada al lado del ring que le toque. */
+export function Escena({ escuela, lado }: { escuela: EscuelaId; lado: 'a' | 'b' }) {
+  const Dibujo = ESCENAS[escuela];
+  return <Dibujo ancla={lado === 'a' ? 'xMinYMax slice' : 'xMaxYMax slice'} />;
 }

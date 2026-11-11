@@ -1,7 +1,10 @@
+import type { ReactElement } from 'react';
 import './personajes.css';
+import { colorEscuela } from '../motor/catalogo.ts';
 
 export type Estado = 'reposo' | 'hablar' | 'pensar' | 'atacar' | 'golpe' | 'celebrar' | 'mano';
-export type Quien = 'marx' | 'marshall';
+/** Hacia dónde mira: quien va a la izquierda del ring mira a la derecha, y al revés. */
+export type Mira = 'der' | 'izq';
 
 /** Marx: barba y melena descomunales; su tic es fruncir el ceño. Mira hacia la derecha. */
 function Marx() {
@@ -76,10 +79,25 @@ function Marshall() {
   );
 }
 
-export function Personaje({ quien, estado = 'reposo' }: { quien: Quien; estado?: Estado }) {
+/**
+ * Registro de caricaturas. Para agregar un personaje: dibujar sus piezas con las clases
+ * pj-todo, pj-cuerpo, pj-cabeza, pj-cejas, pj-ojos, pj-boca y pj-brazo (lienzo de 200 × 240),
+ * decir hacia dónde mira el dibujo y añadirlo aquí y en CON_CARICATURA (motor/catalogo.ts).
+ * Los estados y animaciones salen solos de personajes.css; el tic propio va con data-quien.
+ */
+const PERSONAJES: Record<string, { Piezas: () => ReactElement; nativo: Mira }> = {
+  marx: { Piezas: Marx, nativo: 'der' },
+  marshall: { Piezas: Marshall, nativo: 'izq' },
+};
+
+export function Personaje({ id, mira, escuela, estado = 'reposo' }: { id: string; mira: Mira; escuela: string; estado?: Estado }) {
+  const { Piezas, nativo } = PERSONAJES[id];
   return (
-    <svg className="pj" data-quien={quien} data-estado={estado} viewBox="0 0 200 240" aria-hidden="true" focusable="false">
-      {quien === 'marx' ? <Marx /> : <Marshall />}
+    <svg
+      className="pj" data-quien={id} data-nativo={nativo} data-voltear={mira !== nativo || undefined} data-estado={estado}
+      style={{ ['--pj-acento' as string]: colorEscuela(escuela) }} viewBox="0 0 200 240" aria-hidden="true" focusable="false"
+    >
+      <Piezas />
     </svg>
   );
 }

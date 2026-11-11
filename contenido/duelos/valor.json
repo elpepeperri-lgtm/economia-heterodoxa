@@ -2,15 +2,17 @@
   "id": "valor",
   "titulo": "Marx contra los neoclásicos",
   "pregunta": "¿De dónde sale el valor de las cosas?",
+  "resumen": "Tres casos: un tinto, un diamante y un taller de costura.",
+  "minutos": 4,
   "a": {
     "economista": "marx",
-    "escuela": "Escuela marxista",
+    "escuelaId": "marxista",
     "nombreCorto": "Marx",
     "lema": "Sigan el rastro del trabajo."
   },
   "b": {
     "economista": "marshall",
-    "escuela": "Escuela neoclásica",
+    "escuelaId": "neoclasica",
     "nombreCorto": "Marshall",
     "lema": "Hacen falta las dos hojas de la tijera."
   },
@@ -475,6 +477,36 @@
     {
       "termino": "supuesto",
       "significado": "Algo que un argumento da por cierto sin decirlo."
+    }
+  ],
+  "bibliografia": [
+    {
+      "titulo": "Karl Marx, «El capital», tomo I (1867), caps. 1, 6 y 7",
+      "url": "https://www.marxists.org/archive/marx/works/1867-c1/"
+    },
+    {
+      "titulo": "Alfred Marshall, «Principios de economía» (1890), libro V, cap. III",
+      "url": "https://www.econlib.org/library/Marshall/marP.html?chapter_num=31"
+    },
+    {
+      "titulo": "W. S. Jevons, «La teoría de la economía política» (1871), cap. I",
+      "url": "https://www.econlib.org/library/YPDBooks/Jevons/jvnPE.html?chapter_num=5"
+    },
+    {
+      "titulo": "Adam Smith, «La riqueza de las naciones» (1776), libro I, caps. IV y V",
+      "url": "https://www.econlib.org/library/Smith/smWN.html?chapter_num=7"
+    },
+    {
+      "titulo": "Exploring Economics: economía neoclásica",
+      "url": "https://www.exploring-economics.org/es/orientacion/economia-neoclasica/"
+    },
+    {
+      "titulo": "Exploring Economics: economía política marxista",
+      "url": "https://www.exploring-economics.org/en/orientation/marxist-political-economy/"
+    },
+    {
+      "titulo": "Econlib, «Marginalism» (Steven E. Rhoads)",
+      "url": "https://www.econlib.org/library/Enc/Marginalism.html"
     }
   ]
 }

@@ -13,8 +13,7 @@
 .pj .t-brazo-borde { fill: none; stroke: var(--pj-papel); stroke-width: 23; stroke-linecap: round; }
 .pj .t-hoja { fill: none; stroke: var(--pj-papel); stroke-width: 5; stroke-linecap: round; }
 .pj .pj-ojos ellipse, .pj .pj-boca { fill: var(--pj-tinta); }
-.pj[data-quien='marx'] { --pj-acento: #c5382b; }
-.pj[data-quien='marshall'] { --pj-acento: #1d5c86; }
+.pj[data-voltear] { transform: scaleX(-1); }
 
 .pj-todo { transform-origin: 50% 100%; }
 .pj-cuerpo { transform-origin: 50% 100%; }
@@ -22,8 +21,8 @@
 .pj-ojos { transform-origin: 50% 50%; }
 .pj-boca { transform-origin: 50% 50%; }
 .pj-cejas { transform-origin: 50% 50%; }
-.pj[data-quien='marx'] .pj-brazo { transform-origin: 0% 0%; }
-.pj[data-quien='marshall'] .pj-brazo { transform-origin: 100% 0%; }
+.pj[data-nativo='der'] .pj-brazo { transform-origin: 0% 0%; }
+.pj[data-nativo='izq'] .pj-brazo { transform-origin: 100% 0%; }
 .pj-hoja-2 { transform-origin: 100% 100%; }
 
 /* Reposo: respira, parpadea y hace su tic. */
@@ -75,8 +74,8 @@
 .pj[data-estado='mano'] .pj-todo { animation: apreton .5s ease-in-out 3 .6s; }
 @keyframes apreton { 50% { transform: translateY(-4px); } }
 
-.pj[data-quien='marx'] { --dir: 1; }
-.pj[data-quien='marshall'] { --dir: -1; }
+.pj[data-nativo='der'] { --dir: 1; }
+.pj[data-nativo='izq'] { --dir: -1; }
 
 /* El cuerpo también respira un poco. */
 .pj-cuerpo { animation: mecer 4.8s ease-in-out infinite; }

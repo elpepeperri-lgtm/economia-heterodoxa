@@ -4,8 +4,37 @@ Bitácora para retomar el proyecto sin releer todo. Lo más reciente va arriba.
 
 ## Estado actual
 
-- **Etapa 1 (un duelo completo): entregada, esperando comentarios de Andrés.** Este duelo define el nivel de calidad del resto.
-- Etapa 0 (plan): aprobada. Ver PLAN.md.
+- **Etapa 2 (motor reutilizable): entregada el 2026-11-11, esperando a Andrés para empezar la etapa 3.**
+- Etapa 1 (un duelo completo): aprobada y publicada. Etapa 0 (plan): aprobada. Ver PLAN.md.
+
+## Etapa 2: cómo quedó el motor
+
+El juego se ve y se juega igual; lo que cambió es que ya nada está amarrado a Marx y Marshall.
+
+- **Catálogo** (`src/motor/catalogo.ts`): escuelas, objetos del ring, economistas con caricatura, niveles con nombre y valores de XP. El validador lo usa: un duelo que nombre una escuela u objeto que no existe no compila.
+- **Personaje** (`src/personajes/Personaje.tsx`): `<Personaje id mira escuela estado>`. Registro `PERSONAJES`; cada dibujo declara hacia dónde mira y el motor lo voltea si hace falta. Los 7 estados salen de `personajes.css`.
+- **Escena, Objeto, Proyectil** (`src/escenas/Escenas.tsx`): por id de escuela u objeto.
+- **Pregunta** (`src/motor/Pregunta.tsx`): tipos quien, opcion, vf y supuesto, con devolución. No sabe de duelos; sirve para los próximos modos. `Avance` son las rayitas.
+- **Glosario** (`src/motor/Glosario.tsx`): `<Glosario terminos>` envuelve una pantalla, `<T>` vuelve tocables las palabras.
+- **Estilos**: `diseno/base.css` (tokens, botones, avatar; color por escuela en `--esc-<id>`), `motor/piezas.css` (pregunta y glosario), `pantallas/duelo.css` (ring; usa `--a` y `--b`).
+- **Progreso** (`src/motor/progreso.ts`): guardados en fila, historial por pregunta con cajas de Leitner (ya se registra; el repaso es de la etapa 4), duelos, XP y herramientas.
+- **Duelo genérico** (`src/pantallas/Duelo.tsx`): recibe un `id` y descarga `contenido/duelos/<id>.json` solo al entrar.
+- **Índice** (`contenido/indice.json`): lo genera `scripts/validar.mjs`; el inicio y los créditos se arman con él.
+
+### Receta para agregar un duelo (etapa 3)
+
+1. Escuela nueva: entrada en `ESCUELAS` (catalogo.ts), color `--esc-<id>` en base.css (claro y oscuro), escena y proyectil en Escenas.tsx.
+2. Personaje nuevo: piezas SVG en Personaje.tsx, registro `PERSONAJES` y `CON_CARICATURA`. Solo fallecidos.
+3. Economistas en `contenido/economistas.json`; correr `npm run fotos`.
+4. Objetos nuevos del ring: `OBJETOS` y su dibujo en `Objeto`.
+5. Crear `contenido/duelos/<id>.json` siguiendo `valor.json`. `npm run build` valida y actualiza el índice.
+
+### Flojo o pendiente de la etapa 2
+
+- Solo hay un duelo, así que lo genérico se probó con una sola pareja: el volteo de personajes y las escenas al lado contrario no se han visto en la práctica.
+- Los tipos de pregunta que faltan (unir, ordenar, completar, arrastrar, intruso) se harán en la etapa 3 junto con los modos que los usan.
+- Los textos de los globos del veredicto y la tregua son fijos para todos los duelos.
+- Los archivos pasaron a saltos de línea LF (`.gitattributes`).
 
 ## Segunda vuelta del duelo (2026-11-11, tras comentarios de Andrés)
 
@@ -69,6 +98,6 @@ Pendiente de esta vuelta: que Andrés confirme si ahora sí tiene el nivel que q
 - El proyecto sigue dentro de OneDrive (Andrés no pidió moverlo). Si la sincronización molesta, mover a `C:\proyectos\economia-heterodoxa`.
 - Git instalado; repositorio local en la rama `main`, sin remoto.
 
-## Siguiente: etapa 2 (motor reutilizable)
+## Siguiente: etapa 3 (núcleo)
 
-Convertir lo validado en piezas reutilizables: personaje genérico, escena, tipos de pregunta, sistema de progreso y sistema de diseño. Incorporar antes los comentarios de Andrés sobre este duelo.
+Unas 12 escuelas núcleo, 6 duelos y los modos «¿Quién es?», «Unir» y «Lecturas cortas». Hacerlo por tandas (un duelo con sus dos escuelas por tanda) y parar entre tandas. Antes, recoger lo que Andrés diga tras probar en el celular.

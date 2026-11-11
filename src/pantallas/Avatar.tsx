@@ -1,11 +1,12 @@
-import { acento, creditos, economista, urlFoto } from '../datos/contenido.ts';
+import { creditos, economista, urlFoto } from '../datos/contenido.ts';
+import { colorEscuela } from '../motor/catalogo.ts';
 
 /** Foto real con su crédito debajo; si no hay foto libre, iniciales con el color de la escuela. */
 export function Avatar({ id, lado = 160, credito = true }: { id: string; lado?: 160 | 480; credito?: boolean }) {
   const e = economista(id);
   const c = creditos[id];
   return (
-    <figure className="avatar" style={{ margin: 0, ['--acento' as string]: acento[e.escuela] }}>
+    <figure className="avatar" style={{ margin: 0, ['--acento' as string]: colorEscuela(e.escuela) }}>
       <div className="avatar-marco">
         {c ? (
           <img src={urlFoto(id, lado)} width={lado} height={lado} loading="lazy" decoding="async" alt={`Retrato de ${e.nombre}`} />

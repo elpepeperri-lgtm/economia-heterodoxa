@@ -4,15 +4,15 @@
 .inicio-cabeza .rotulo { color: var(--tinta-2); max-width: 22em; }
 .inicio-cabeza h1 { font-size: clamp(2.6rem, 15.6vw, 5rem); line-height: .84; letter-spacing: -.05em; text-transform: uppercase; }
 .inicio-cabeza h1 span { display: block; }
-.inicio-cabeza h1 span:first-child { color: var(--marx); }
-.inicio-cabeza h1 span:last-child { color: var(--neo); padding-left: .55em; }
+.inicio-cabeza h1 span:first-child { color: var(--esc-marxista); }
+.inicio-cabeza h1 span:last-child { color: var(--esc-neoclasica); padding-left: .55em; }
 .inicio-bajada { font-size: 1.08rem; max-width: 26em; }
 
 .cartel { border: 3px solid var(--tinta); border-radius: 3px; background: var(--papel); box-shadow: 7px 7px 0 var(--tinta); }
 .cartel-ring { position: relative; height: 172px; overflow: hidden; background: var(--tinta); border-bottom: 3px solid var(--tinta); }
 .cartel-mitad { position: absolute; inset: 0; }
-.cartel-a { background: var(--marx); clip-path: polygon(0 0, 57% 0, 43% 100%, 0 100%); }
-.cartel-b { background: var(--neo); clip-path: polygon(58% 0, 100% 0, 100% 100%, 44% 100%); }
+.cartel-a { background: var(--a); clip-path: polygon(0 0, 57% 0, 43% 100%, 0 100%); }
+.cartel-b { background: var(--b); clip-path: polygon(58% 0, 100% 0, 100% 100%, 44% 100%); }
 .cartel-mitad .pj { position: absolute; bottom: -6px; width: 142px; }
 .cartel-a .pj { left: 4%; }
 .cartel-b .pj { right: 4%; }
@@ -22,7 +22,7 @@
   background: var(--pj-papel); color: var(--pj-tinta); border: 3px solid var(--pj-tinta);
   font-family: var(--titulos); font-weight: 800; font-size: 1.6rem; letter-spacing: -.04em;
 }
-.cartel-texto { display: grid; gap: 10px; padding: 16px 16px 20px; --acento: var(--marx); }
+.cartel-texto { display: grid; gap: 10px; padding: 16px 16px 20px; --acento: var(--esc-marxista); }
 .cartel-texto .rotulo { color: var(--tinta-2); }
 .cartel-texto h2 { font-size: clamp(1.8rem, 8.5vw, 2.3rem); }
 .cartel-texto .boton { margin-top: 4px; width: calc(100% - 5px); }
@@ -48,3 +48,6 @@
 .creditos-lista h3 { font-size: 1.1rem; margin-bottom: 4px; }
 .creditos-lista p, .creditos > section > p { font-size: .9rem; }
 .creditos-fuentes { margin: 0; padding-left: 18px; font-size: .86rem; display: grid; gap: 6px; word-break: break-word; }
+
+.caja-nivel { font-size: .95rem; }
+.inicio .cartel + .cartel { margin-top: -6px; }

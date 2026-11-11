@@ -5,10 +5,10 @@ import { Inicio } from './pantallas/Inicio.tsx';
 const Duelo = lazy(() => import('./pantallas/Duelo.tsx'));
 const Creditos = lazy(() => import('./pantallas/Creditos.tsx').then((m) => ({ default: m.Creditos })));
 
-type Pantalla = 'inicio' | 'duelo' | 'creditos';
+type Pantalla = { ver: 'inicio' } | { ver: 'creditos' } | { ver: 'duelo'; id: string };
 
 export function App() {
-  const [pantalla, setPantalla] = useState<Pantalla>('inicio');
+  const [pantalla, setPantalla] = useState<Pantalla>({ ver: 'inicio' });
   const [cortina, setCortina] = useState<'fuera' | 'entra' | 'sale'>('fuera');
   const ocupado = useRef(false);
 
@@ -25,9 +25,9 @@ export function App() {
   return (
     <>
       <Suspense fallback={<p style={{ padding: 24 }}>Cargando…</p>}>
-        {pantalla === 'inicio' && <Inicio ir={ir} />}
-        {pantalla === 'duelo' && <Duelo alSalir={() => ir('inicio')} />}
-        {pantalla === 'creditos' && <Creditos volver={() => ir('inicio')} />}
+        {pantalla.ver === 'inicio' && <Inicio irADuelo={(id) => ir({ ver: 'duelo', id })} irACreditos={() => ir({ ver: 'creditos' })} />}
+        {pantalla.ver === 'duelo' && <Duelo id={pantalla.id} alSalir={() => ir({ ver: 'inicio' })} />}
+        {pantalla.ver === 'creditos' && <Creditos volver={() => ir({ ver: 'inicio' })} />}
       </Suspense>
       <div className="cortina" data-paso={cortina} aria-hidden="true" />
     </>

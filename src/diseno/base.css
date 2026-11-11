@@ -4,8 +4,8 @@
   --papel-2: #e6dbc3;
   --tinta: #1c1a17;
   --tinta-2: #5a5348;
-  --marx: #c5382b;
-  --neo: #1d5c86;
+  --esc-marxista: #c5382b;
+  --esc-neoclasica: #1d5c86;
   --acento: var(--tinta);
   /* Los personajes se imprimen siempre con las mismas tintas, en tema claro u oscuro. */
   --pj-tinta: #1c1a17;
@@ -20,12 +20,12 @@
 @media (prefers-color-scheme: dark) {
   :root:not([data-tema='claro']) {
     --papel: #171511; --papel-2: #26221b; --tinta: #efe6d3; --tinta-2: #aba291;
-    --marx: #d9503f; --neo: #3f86b8; color-scheme: dark;
+    --esc-marxista: #d9503f; --esc-neoclasica: #3f86b8; color-scheme: dark;
   }
 }
 :root[data-tema='oscuro'] {
   --papel: #171511; --papel-2: #26221b; --tinta: #efe6d3; --tinta-2: #aba291;
-  --marx: #d9503f; --neo: #3f86b8; color-scheme: dark;
+  --esc-marxista: #d9503f; --esc-neoclasica: #3f86b8; color-scheme: dark;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -122,3 +122,5 @@ button { font: inherit; color: inherit; cursor: pointer; }
     transition-duration: .01ms !important;
   }
 }
+
+.cargando { padding: 40px 24px; font-family: var(--titulos); font-weight: 700; font-size: 1.2rem; }

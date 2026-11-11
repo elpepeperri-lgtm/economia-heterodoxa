@@ -1,4 +1,5 @@
 import { z } from 'zod';
+import { CON_CARICATURA, ESCUELA_IDS, OBJETOS } from '../motor/catalogo.ts';
 
 const url = z.string().url();
 const lado = z.enum(['a', 'b']);
@@ -38,7 +39,7 @@ export const Pregunta = z.object({
 
 export const Caso = z.object({
   id: z.string(),
-  objeto: z.enum(['tinto', 'diamante', 'costura']),
+  objeto: z.enum(OBJETOS),
   titulo: z.string(),
   mecanica: z.string(),
   historia: z.string().max(420),
@@ -49,8 +50,8 @@ export const Caso = z.object({
 });
 
 export const Luchador = z.object({
-  economista: z.string(),
-  escuela: z.string(),
+  economista: z.enum(CON_CARICATURA),
+  escuelaId: z.enum(ESCUELA_IDS),
   nombreCorto: z.string(),
   lema: z.string(),
 });
@@ -59,6 +60,9 @@ export const Duelo = z.object({
   id: z.string(),
   titulo: z.string(),
   pregunta: z.string(),
+  /** Texto corto para el cartel del inicio. */
+  resumen: z.string().max(140),
+  minutos: z.number().int(),
   a: Luchador,
   b: Luchador,
   casos: z.array(Caso).length(3),
@@ -71,6 +75,7 @@ export const Duelo = z.object({
   }),
   herramienta: z.object({ nombre: z.string(), uso: z.string() }),
   /** Palabras que se explican al tocarlas. */
+  bibliografia: z.array(z.object({ titulo: z.string(), url })).min(1),
   glosario: z.array(z.object({ termino: z.string(), significado: z.string().max(140) })),
 });
 
@@ -80,7 +85,7 @@ export const Economista = z.object({
   iniciales: z.string().length(2),
   nace: z.number().int(),
   muere: z.number().int().nullable(),
-  escuela: z.string(),
+  escuela: z.enum(ESCUELA_IDS),
   aporte: z.string(),
   wikidata: z.string().optional(),
   foto: z.boolean().optional(),
@@ -102,3 +107,10 @@ export type TPregunta = z.infer<typeof Pregunta>;
 export type TEconomista = z.infer<typeof Economista>;
 export type TCredito = z.infer<typeof Credito>;
 export type Lado = z.infer<typeof lado>;
+
+/** Resumen de cada duelo para el inicio y los créditos. Lo genera scripts/validar.mjs. */
+export type TIndiceDuelo = {
+  id: string; titulo: string; pregunta: string; resumen: string; minutos: number; preguntas: number;
+  a: z.infer<typeof Luchador>; b: z.infer<typeof Luchador>;
+  bibliografia: { titulo: string; url: string }[];
+};
