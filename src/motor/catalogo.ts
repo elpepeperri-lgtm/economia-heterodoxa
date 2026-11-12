@@ -7,16 +7,18 @@ export const ESCUELAS = {
   neoclasica: { nombre: 'Escuela neoclásica', golpe: '¡ZAS!' },
   keynesiana: { nombre: 'Escuela keynesiana', golpe: '¡SPLASH!' },
   austriaca: { nombre: 'Escuela austriaca', golpe: '¡CLIN!' },
+  estructuralista: { nombre: 'Estructuralismo latinoamericano', golpe: '¡CLANG!' },
+  clasica: { nombre: 'Escuela clásica', golpe: '¡TUUU!' },
 } as const;
 export type EscuelaId = keyof typeof ESCUELAS;
 export const ESCUELA_IDS = Object.keys(ESCUELAS) as [EscuelaId, ...EscuelaId[]];
 
 /** Objetos que pueden ir en el centro del ring (dibujados en escenas/Escenas.tsx). */
-export const OBJETOS = ['tinto', 'diamante', 'costura', 'plato', 'obra', 'papa'] as const;
+export const OBJETOS = ['tinto', 'diamante', 'costura', 'plato', 'obra', 'papa', 'barco', 'cafe', 'tractor'] as const;
 export type ObjetoId = (typeof OBJETOS)[number];
 
 /** Economistas con caricatura (dibujados en personajes/Personaje.tsx). Solo personas ya fallecidas. */
-export const CON_CARICATURA = ['marx', 'marshall', 'keynes', 'hayek'] as const;
+export const CON_CARICATURA = ['marx', 'marshall', 'keynes', 'hayek', 'prebisch', 'ricardo'] as const;
 
 export const colorEscuela = (id: string) => `var(--esc-${id})`;
 
@@ -37,3 +39,6 @@ export function nivel(xp: number) {
 
 export const XP_ACIERTO = 10;
 export const XP_FINAL = 20;
+
+/** Orden en que aparecen los duelos en el inicio; los que no estén aquí van al final. */
+export const ORDEN_DUELOS = ['valor', 'crisis', 'comercio'];

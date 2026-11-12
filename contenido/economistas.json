@@ -63,5 +63,31 @@
     "fuentes": [
       "https://www.econlib.org/library/Enc/bios/Hayek.html"
     ]
+  },
+  {
+    "id": "prebisch",
+    "nombre": "Raúl Prebisch",
+    "iniciales": "RP",
+    "nace": 1901,
+    "muere": 1986,
+    "escuela": "estructuralista",
+    "aporte": "Economista argentino. Dirigió la CEPAL desde 1949 y propuso la idea de centro y periferia.",
+    "wikidata": "Q982374",
+    "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/brief-biography"
+    ]
+  },
+  {
+    "id": "ricardo",
+    "nombre": "David Ricardo",
+    "iniciales": "DR",
+    "nace": 1772,
+    "muere": 1823,
+    "escuela": "clasica",
+    "aporte": "Autor de «Principios de economía política y tributación» (1817). Explicó el comercio con la ventaja comparativa.",
+    "wikidata": "Q160270",
+    "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Ricardo.html"
+    ]
   }
 ]

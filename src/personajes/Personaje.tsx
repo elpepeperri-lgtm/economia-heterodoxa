@@ -202,6 +202,94 @@ function Hayek() {
   );
 }
 
+/** Prebisch: calvo arriba, canas a los lados, gafas de marco grueso y cejas oscuras; su tic es levantar las cejas. Mira hacia la derecha. */
+function Prebisch() {
+  return (
+    <g className="pj-todo">
+      <g className="pj-cuerpo">
+        <path className="t f-traje" d="M18 280C16 216 52 182 120 178C188 182 224 216 222 280Z" />
+        <path className="f-traje-2" d="M32 276C32 228 54 202 92 190C64 208 50 234 48 276Z" />
+        <path className="t f-blanco" d="M120 182L96 202L111 280H129L144 202Z" />
+        <path className="t f-traje-2" d="M96 202L70 216L103 264L112 228Z" />
+        <path className="t f-traje-2" d="M144 202L170 216L137 264L128 228Z" />
+        <path className="t f-acento" d="M112 200H128L125 214L132 262L120 274L108 262L115 214Z" />
+      </g>
+      <g className="pj-cabeza">
+        <path className="t f-pelo" d="M90 124C62 122 60 82 82 70Z" />
+        <path className="t f-pelo" d="M150 124C178 122 180 82 158 70Z" />
+        <path className="t f-piel" d="M82 96C80 52 98 34 120 34C142 34 160 52 158 96C158 144 142 176 120 176C98 176 82 144 82 96Z" />
+        <path className="f-piel-2" d="M146 44C158 58 159 78 158 96C158 142 144 170 125 175C140 152 148 122 148 98C148 76 150 60 146 44Z" />
+        <path className="fina" style={{ stroke: 'var(--pj-piel-2)' }} d="M100 52C108 46 120 44 132 47" />
+        <g className="pj-cejas">
+          <path className="t ceja" style={{ stroke: '#3d3140' }} d="M86 86L113 84" />
+          <path className="t ceja" style={{ stroke: '#3d3140' }} d="M127 84L154 86" />
+        </g>
+        <g className="pj-ojos">
+          <Ojo x={101} y={105} mira={2} />
+          <Ojo x={140} y={105} mira={2} />
+        </g>
+        <path className="t linea" style={{ strokeWidth: 5 }} d="M85 94H116V112C116 118 111 120 100 120C90 120 85 118 85 112ZM124 94H155V112C155 118 150 120 140 120C129 120 124 118 124 112ZM116 100H124" />
+        <path className="t linea" d="M121 110C129 122 128 130 118 131" />
+        <path className="t linea" style={{ strokeWidth: 2.6 }} d="M98 136C96 144 98 150 102 154M142 136C144 144 142 150 138 154" />
+        <ellipse className="pj-boca" cx="120" cy="152" rx="10" ry="2.8" />
+      </g>
+      <g className="pj-brazo">
+        <path className="manga-borde" d="M186 206C216 218 220 242 202 262" />
+        <path className="manga" d="M186 206C216 218 220 242 202 262" />
+        <path className="manga-luz" d="M196 210C212 220 216 234 210 246" />
+        <path className="t f-blanco" d="M190 252L210 268L202 278L182 262Z" />
+        <path className="t f-piel" d="M184 262C176 266 174 280 184 286C196 292 210 284 208 272L226 268C232 266 230 258 224 259L204 262Z" />
+        <path className="t linea" d="M190 270C194 274 200 274 203 270" style={{ strokeWidth: 2.4 }} />
+      </g>
+    </g>
+  );
+}
+
+/** Ricardo: pelo oscuro ondulado con patillas, cuello alto y pañuelo blanco de 1817; su tic es mecer el pliego con sus cuentas. Mira hacia la izquierda. */
+function Ricardo() {
+  return (
+    <g className="pj-todo">
+      <g className="pj-cuerpo">
+        <path className="t f-traje" d="M22 280C22 218 56 184 120 180C184 184 218 218 218 280Z" />
+        <path className="f-traje-2" d="M210 276C210 228 188 202 150 190C178 208 192 234 194 276Z" />
+        <path className="t f-traje-2" d="M84 196L64 224L100 262L112 216Z" />
+        <path className="t f-traje-2" d="M156 196L176 224L140 262L128 216Z" />
+        <path className="t f-blanco" d="M92 176C96 196 104 206 120 208C136 206 144 196 148 176L156 196L128 232L132 280H108L112 232L84 196Z" />
+        <path className="t f-acento" d="M106 206L120 214L134 206V224L120 216L106 224Z" />
+      </g>
+      <g className="pj-cabeza">
+        <path className="t f-pelo" style={PELO_OSCURO} d="M120 22C84 14 62 44 72 76C62 96 70 126 90 132L96 96H144L150 132C170 126 178 96 168 76C178 44 156 14 120 22Z" />
+        <path className="t f-piel" d="M86 96C84 56 100 42 120 42C140 42 156 56 154 96C154 144 140 172 120 172C100 172 86 144 86 96Z" />
+        <path className="f-piel-2" d="M142 50C154 60 155 78 154 98C154 140 142 166 124 171C138 150 144 120 144 96C144 76 146 62 142 50Z" />
+        <path className="t f-pelo" style={PELO_OSCURO} d="M84 84C80 46 104 32 124 36C146 34 162 52 156 84C150 70 144 62 132 60C126 68 112 68 104 60C94 64 88 72 84 84Z" />
+        <path className="fina" style={{ stroke: '#6b5a6e' }} d="M96 48C104 42 114 42 120 46M128 44C138 44 146 50 150 58" />
+        <g className="pj-cejas">
+          <path className="t ceja" style={{ stroke: '#3d3140' }} d="M90 92Q101 86 113 91" />
+          <path className="t ceja" style={{ stroke: '#3d3140' }} d="M127 91Q139 86 150 92" />
+        </g>
+        <g className="pj-ojos">
+          <Ojo x={102} y={105} mira={-2} />
+          <Ojo x={138} y={105} mira={-2} />
+        </g>
+        <path className="t linea" d="M119 100C108 118 110 128 124 128" />
+        <path className="t linea" style={{ strokeWidth: 2.6 }} d="M104 144C102 148 102 150 104 153M136 144C138 148 138 150 136 153" />
+        <ellipse className="pj-boca" cx="120" cy="149" rx="8" ry="2.4" />
+      </g>
+      <g className="pj-brazo">
+        <path className="manga-borde" d="M54 210C24 222 20 246 38 264" />
+        <path className="manga" d="M54 210C24 222 20 246 38 264" />
+        <path className="manga-luz" d="M44 214C28 224 24 238 30 250" />
+        <g className="pj-etiqueta">
+          <path className="t f-blanco" d="M40 264L-2 250L8 204L50 218Z" />
+          <path className="t linea" style={{ strokeWidth: 2.6, stroke: 'var(--pj-acento)' }} d="M14 218L40 227M11 230L37 239M8 242L24 247" />
+        </g>
+        <path className="t f-blanco" d="M50 254L30 270L38 280L58 264Z" />
+        <circle className="t f-piel" cx="42" cy="270" r="12" />
+      </g>
+    </g>
+  );
+}
+
 /**
  * Registro de caricaturas. Para agregar un personaje: dibujar sus piezas con las clases
  * pj-todo, pj-cuerpo, pj-cabeza, pj-cejas, pj-ojos, pj-boca y pj-brazo (lienzo de 240 × 280),
@@ -213,6 +301,8 @@ const PERSONAJES: Record<string, { Piezas: () => ReactElement; nativo: Mira }> =
   marshall: { Piezas: Marshall, nativo: 'izq' },
   keynes: { Piezas: Keynes, nativo: 'der' },
   hayek: { Piezas: Hayek, nativo: 'izq' },
+  prebisch: { Piezas: Prebisch, nativo: 'der' },
+  ricardo: { Piezas: Ricardo, nativo: 'izq' },
 };
 
 export function Personaje({ id, mira, escuela, estado = 'reposo' }: { id: string; mira: Mira; escuela: string; estado?: Estado }) {

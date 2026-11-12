@@ -107,7 +107,44 @@ function Cafe({ ancla }: { ancla: string }) {
   );
 }
 
-const ESCENAS: Record<EscuelaId, (p: { ancla: string }) => ReactElement> = { marxista: Fabrica, neoclasica: Pizarra, keynesiana: Obra, austriaca: Cafe };
+/** Estructuralismo latinoamericano: cordillera nevada y una fábrica que apenas arranca. */
+function Cordillera({ ancla }: { ancla: string }) {
+  return (
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
+      <path className="esc-monte" d="M-20 300L52 96L104 210L140 148L220 300Z" />
+      <path className="esc-nieve" d="M52 96L36 142L50 132L60 146L70 134ZM140 148L128 170L140 164L150 174Z" />
+      <g className="esc-humo">
+        <circle cx="150" cy="150" r="9" />
+        <circle cx="162" cy="134" r="12" />
+      </g>
+      <path className="esc-muro" d="M96 300V226L120 208V226L144 208V226L168 208V300Z" />
+      <path className="esc-muro" d="M142 210V168H156V210Z" />
+      <path className="esc-muro-luz" d="M142 168H156V176H142Z" />
+      <path className="esc-ventanas" d="M106 244H122V264H106ZM134 244H150V264H134Z" />
+      <Bandera x={30} y={184} alto={116} />
+    </svg>
+  );
+}
+
+/** Escuela clásica: puerto inglés con un velero cargado que cabecea en el muelle. */
+function Puerto({ ancla }: { ancla: string }) {
+  return (
+    <svg className="esc-dibujo" viewBox="0 0 200 300" preserveAspectRatio={ancla} aria-hidden="true">
+      <path className="esc-lejos" d="M0 300V190H34V166H60V190H84V300Z" />
+      <g className="esc-barco">
+        <path className="esc-asta" d="M132 96V246" />
+        <path className="esc-vela" d="M138 104C166 128 172 176 168 226H138Z" />
+        <path className="esc-vela" d="M126 118C104 142 98 184 100 226H126Z" />
+        <path className="esc-color" d="M132 96L156 104L132 112Z" />
+        <path className="esc-muro" d="M82 240H186L172 280H98Z" />
+        <path className="esc-muro-luz" d="M86 246H182L180 252H89Z" />
+      </g>
+      <path className="esc-mar" d="M60 300V278C74 270 88 286 102 278C116 270 130 286 144 278C158 270 172 286 186 278C194 274 200 276 204 278V300Z" />
+    </svg>
+  );
+}
+
+const ESCENAS: Record<EscuelaId, (p: { ancla: string }) => ReactElement> = { marxista: Fabrica, neoclasica: Pizarra, keynesiana: Obra, austriaca: Cafe, estructuralista: Cordillera, clasica: Puerto };
 
 /** La escena de una escuela, anclada al lado del ring que le toque. */
 export function Escena({ escuela, lado }: { escuela: EscuelaId; lado: 'a' | 'b' }) {
@@ -158,6 +195,33 @@ export function Objeto({ tipo }: { tipo: ObjetoId }) {
           <circle className="ob-papel" cx="19" cy="34" r="5" />
         </g>
       )}
+      {tipo === 'barco' && (
+        <g className="ob">
+          <path d="M38 10V52" />
+          <path className="ob-papel" d="M43 14C58 24 62 38 60 50H43Z" />
+          <path className="ob-papel" d="M33 20C22 30 19 40 20 50H33Z" />
+          <path className="ob-color" d="M10 56H70L62 72H18Z" />
+        </g>
+      )}
+      {tipo === 'cafe' && (
+        <g className="ob">
+          <path className="ob-color" d="M20 24C12 42 12 62 22 72H58C68 62 68 42 60 24Z" />
+          <path d="M22 24C30 18 50 18 58 24M25 22L19 11M55 22L61 11" />
+          <ellipse className="ob-lleno" cx="40" cy="48" rx="9" ry="13" />
+          <path d="M40 36C35 44 45 52 40 60" style={{ stroke: '#b9783f', strokeWidth: 2.4 }} />
+        </g>
+      )}
+      {tipo === 'tractor' && (
+        <g className="ob">
+          <path className="ob-color" d="M12 44H38V24H56L60 44V56H12Z" />
+          <path className="ob-papel" d="M43 29H53L55 42H43Z" />
+          <path d="M20 44V30M16 30H24" />
+          <circle className="ob-lleno" cx="52" cy="58" r="14" />
+          <circle className="ob-papel" cx="52" cy="58" r="5" />
+          <circle className="ob-lleno" cx="20" cy="62" r="9" />
+          <circle className="ob-papel" cx="20" cy="62" r="3" />
+        </g>
+      )}
       {tipo === 'plato' && (
         <g className="ob">
           <circle className="ob-papel" cx="40" cy="44" r="23" />
@@ -206,6 +270,22 @@ const PROYECTILES: Record<EscuelaId, ReactElement> = {
     <g className="ob">
       <circle className="ob-color" cx="24" cy="24" r="21" />
       <path className="ob-agua" d="M24 9C17 20 13 26 13 30A11 11 0 0 0 35 30C35 26 31 20 24 9Z" />
+    </g>
+  ),
+  estructuralista: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="24" r="21" />
+      <g transform="translate(24 24) scale(.42)"><path className="ob-papel" d={ENGRANAJE} style={{ strokeWidth: 7 }} /></g>
+      <circle cx="24" cy="24" r="4" />
+    </g>
+  ),
+  clasica: (
+    <g className="ob">
+      <circle className="ob-color" cx="24" cy="24" r="21" />
+      <path d="M24 9V33" />
+      <path className="ob-papel" d="M27 11C35 17 37 25 36 31H27Z" />
+      <path className="ob-papel" d="M21 15C15 21 13 26 14 31H21Z" />
+      <path className="ob-lleno" d="M10 34H38L34 40H14Z" />
     </g>
   ),
   austriaca: (

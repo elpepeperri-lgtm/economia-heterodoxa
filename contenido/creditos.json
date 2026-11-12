@@ -30,5 +30,21 @@
     "licenciaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
     "terminos": "Creative Commons Attribution-Share Alike 3.0",
     "enlace": "https://commons.wikimedia.org/wiki/File:Friedrich_Hayek_portrait.jpg"
+  },
+  "prebisch": {
+    "autor": "UnknownUnknown",
+    "credito": "Arquivo Nacional",
+    "licencia": "Public domain",
+    "licenciaUrl": null,
+    "terminos": "Public domain",
+    "enlace": "https://commons.wikimedia.org/wiki/File:Raul_Prebisch_(cropped).tif"
+  },
+  "ricardo": {
+    "autor": "Thomas Phillips",
+    "credito": "one or more third parties have made copyright claims against Wikimedia Commons in relation to the work from which this is sourced or a purely mechanical reproduction thereof. This may be due to recognition of the \"sweat of the brow\" doctrine, allowing works to be eligible for protection through skill and labour, and not purely by originality as is the case in the United States (where this website is hosted). These claims may or may not be valid in all jurisdictions. As such, use of this image in the jurisdiction of the claimant or other countries may be regarded as copyright infringement. Please see Commons:When to use the PD-Art tag for more information.",
+    "licencia": "Public domain",
+    "licenciaUrl": null,
+    "terminos": "Public domain",
+    "enlace": "https://commons.wikimedia.org/wiki/File:Portrait_of_David_Ricardo_by_Thomas_Phillips.jpg"
   }
 }

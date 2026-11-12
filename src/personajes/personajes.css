@@ -97,3 +97,8 @@
 .pj[data-quien='hayek'] .pj-etiqueta { animation: mecer-etiqueta 4.4s ease-in-out infinite; }
 @keyframes ceja-sube { 0%, 84%, 100% { transform: none; } 88%, 95% { transform: translateY(-5px); } }
 @keyframes mecer-etiqueta { 50% { transform: rotate(-9deg); } }
+
+/* Tics de Prebisch (levanta las cejas) y Ricardo (mece su pliego). */
+.pj[data-quien='prebisch'] .pj-cejas { animation: ceja-sube 7.2s -3s infinite; }
+.pj[data-quien='ricardo'] .pj-etiqueta { animation: mecer-etiqueta 5s ease-in-out infinite; }
+.pj[data-quien='ricardo'] .pj-ojos { animation-duration: 5.1s; animation-delay: -3s; }

@@ -1,5 +1,43 @@
 [
   {
+    "id": "comercio",
+    "titulo": "Prebisch contra Ricardo",
+    "pregunta": "¿Conviene dedicarse solo a lo que hoy sabes hacer mejor?",
+    "resumen": "Tres casos: el vino y el paño, los bultos de café y la fábrica de tractores.",
+    "minutos": 4,
+    "preguntas": 10,
+    "a": {
+      "economista": "prebisch",
+      "escuelaId": "estructuralista",
+      "nombreCorto": "Prebisch",
+      "lema": "No da igual qué produce un país."
+    },
+    "b": {
+      "economista": "ricardo",
+      "escuelaId": "clasica",
+      "nombreCorto": "Ricardo",
+      "lema": "Que cada cual haga lo que mejor le rinde."
+    },
+    "bibliografia": [
+      {
+        "titulo": "David Ricardo, «Principios de economía política y tributación» (1817), cap. 7",
+        "url": "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8"
+      },
+      {
+        "titulo": "Econlib, biografía de David Ricardo",
+        "url": "https://www.econlib.org/library/Enc/bios/Ricardo.html"
+      },
+      {
+        "titulo": "Biblioteca de la CEPAL, guía «Raúl Prebisch y los desafíos del desarrollo del siglo XXI»",
+        "url": "https://biblioguias.cepal.org/prebisch_en"
+      },
+      {
+        "titulo": "Biblioteca de la CEPAL, «Terms of trade» (la tesis de Prebisch y Singer)",
+        "url": "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade"
+      }
+    ]
+  },
+  {
     "id": "crisis",
     "titulo": "Keynes contra Hayek",
     "pregunta": "¿Cómo se sale de una crisis?",

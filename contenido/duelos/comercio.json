@@ -1,0 +1,480 @@
+{
+ "id": "comercio",
+ "titulo": "Prebisch contra Ricardo",
+ "pregunta": "¿Conviene dedicarse solo a lo que hoy sabes hacer mejor?",
+ "resumen": "Tres casos: el vino y el paño, los bultos de café y la fábrica de tractores.",
+ "minutos": 4,
+ "a": {
+  "economista": "prebisch",
+  "escuelaId": "estructuralista",
+  "nombreCorto": "Prebisch",
+  "lema": "No da igual qué produce un país."
+ },
+ "b": {
+  "economista": "ricardo",
+  "escuelaId": "clasica",
+  "nombreCorto": "Ricardo",
+  "lema": "Que cada cual haga lo que mejor le rinde."
+ },
+ "casos": [
+  {
+   "id": "vino",
+   "objeto": "barco",
+   "titulo": "El vino y el paño",
+   "mecanica": "¿Quién lo diría?",
+   "historia": "Es el ejemplo de Ricardo. En Portugal hacer el vino cuesta el trabajo de 80 hombres al año y el paño, el de 90. En Inglaterra, el paño cuesta 100 y el vino 120. Portugal hace las dos cosas con menos trabajo. ¿Para qué comerciar?",
+   "dicen": {
+    "a": "¿Y quién se queda haciendo solo vino?",
+    "b": "Aun así, a los dos les conviene comerciar."
+   },
+   "preguntas": [
+    {
+     "id": "comercio-01",
+     "tipo": "quien",
+     "dificultad": 1,
+     "enunciado": "¿Quién diría esto?",
+     "cita": {
+      "texto": "Bajo un sistema de comercio perfectamente libre, cada país dedica naturalmente su capital y su trabajo a los empleos que le son más beneficiosos.",
+      "tipo": "cita",
+      "autor": "David Ricardo",
+      "obra": "Principios de economía política y tributación, cap. 7",
+      "anio": 1817,
+      "nota": "Traducción propia del inglés"
+     },
+     "opciones": [
+      {
+       "texto": "Prebisch",
+       "correcta": false,
+       "porque": "Tentaba porque Prebisch también habla de comercio. Pero él justamente duda de que ese reparto «natural» beneficie igual a todos los países."
+      },
+      {
+       "texto": "Ricardo",
+       "correcta": true,
+       "porque": "Es su defensa del libre comercio: si nadie pone trabas, cada país termina haciendo lo que más le rinde y lo cambia por lo demás."
+      }
+     ],
+     "explicacion": "Para Ricardo, ese principio explica que el vino se haga en Portugal y las manufacturas en Inglaterra. El comercio libre acomoda a cada país en lo suyo.",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-02",
+     "tipo": "opcion",
+     "dificultad": 2,
+     "enunciado": "Portugal hace el vino y el paño con menos trabajo que Inglaterra. Según Ricardo, ¿qué le conviene?",
+     "opciones": [
+      {
+       "texto": "Dedicarse al vino, donde su ventaja es más grande, y comprarle el paño a Inglaterra.",
+       "correcta": true,
+       "porque": "Esa es la ventaja comparativa: no importa ser mejor en todo, sino en qué eres mejor por más diferencia. El trabajo rinde más en el vino."
+      },
+      {
+       "texto": "Producir las dos cosas y no comprarle nada a Inglaterra.",
+       "correcta": false,
+       "porque": "Tentaba porque Portugal es mejor en ambas. Pero cada hombre puesto a hacer paño es uno que deja de hacer vino, que es donde más rinde."
+      },
+      {
+       "texto": "Dedicarse al paño, que es lo que vende Inglaterra.",
+       "correcta": false,
+       "porque": "Tentaba copiar al país rico. Pero en el ejemplo de Ricardo el paño es justo donde la ventaja de Portugal es más pequeña."
+      }
+     ],
+     "explicacion": "Es como la abogada que escribe a máquina más rápido que su secretario: igual le conviene dedicarse a los casos y pagar por la mecanografía.",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8",
+      "https://www.econlib.org/library/Enc/bios/Ricardo.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-03",
+     "tipo": "quien",
+     "dificultad": 2,
+     "enunciado": "¿Y esto otro, quién lo diría?",
+     "cita": {
+      "texto": "El mundo quedó partido en dos: un centro que hace industria y una periferia que le vende alimentos y materias primas. Y ese reparto no beneficia a los dos por igual.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Prebisch",
+       "correcta": true,
+       "porque": "Es su idea de centro y periferia, que presentó en 1949 en el informe conocido como el «manifiesto de la CEPAL»."
+      },
+      {
+       "texto": "Ricardo",
+       "correcta": false,
+       "porque": "Tentaba porque Ricardo también reparte tareas entre países. Pero para él ese reparto conviene a todos; el que ve un lado ganador y otro perdedor es Prebisch."
+      }
+     ],
+     "explicacion": "Prebisch no mira el ejemplo desde Inglaterra sino desde el país que se quedó con el vino. Su pregunta es qué le pasa a ese país con los años.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 0
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/brief-biography",
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Este caso es de Ricardo: su cuenta es correcta y sorprende. Aunque un país sea mejor en todo, a los dos les conviene comerciar. Pero es una foto de un solo día, y Prebisch pregunta por la película."
+  },
+  {
+   "id": "cafe",
+   "objeto": "cafe",
+   "titulo": "Los bultos de café",
+   "mecanica": "Elige el contraataque",
+   "historia": "Imagina una finca cafetera. Hace años, con 10 bultos de café pagaba un tractor importado. Hoy necesita 15 bultos para el mismo tractor. Don Efraín trabaja igual o más, pero su café le alcanza para menos.",
+   "dicen": {
+    "a": "Vendemos barato y compramos caro.",
+    "b": "Los precios suben y bajan para todos."
+   },
+   "preguntas": [
+    {
+     "id": "comercio-04",
+     "tipo": "opcion",
+     "dificultad": 2,
+     "enunciado": "¿Qué sostiene la tesis de Prebisch y Singer?",
+     "opciones": [
+      {
+       "texto": "Que los precios de las materias primas tienden a caer frente a los de los productos industriales.",
+       "correcta": true,
+       "porque": "A eso se le llama deterioro de los términos de intercambio: con lo mismo que exportas, cada vez compras menos de lo que importas."
+      },
+      {
+       "texto": "Que comerciar con otros países siempre empobrece.",
+       "correcta": false,
+       "porque": "Tentaba porque suena a crítica dura. Pero la tesis no habla de todo comercio, sino de vender materias primas y comprar manufacturas."
+      },
+      {
+       "texto": "Que el café se va a acabar.",
+       "correcta": false,
+       "porque": "Tentaba por el ejemplo. Pero la tesis no es sobre escasez: es sobre cuánto vale lo que vendes frente a lo que compras."
+      }
+     ],
+     "explicacion": "Hans Singer propuso una idea parecida casi al mismo tiempo que Prebisch; por eso la tesis lleva los dos apellidos. Es de las ideas más famosas y más discutidas de Prebisch.",
+     "ataca": "a",
+     "mueve": {
+      "a": 30,
+      "b": 0
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-05",
+     "tipo": "opcion",
+     "dificultad": 3,
+     "enunciado": "Cuando mejora la técnica y se produce más con menos, ¿quién se queda con la ganancia, según Prebisch?",
+     "opciones": [
+      {
+       "texto": "En el centro se queda en salarios y ganancias; en la periferia se va en precios más bajos.",
+       "correcta": true,
+       "porque": "Esa es su explicación: los países de la periferia compiten bajando precios, y la mejora termina regalada al comprador de afuera."
+      },
+      {
+       "texto": "Se reparte igual entre todos los países que comercian.",
+       "correcta": false,
+       "porque": "Tentaba porque es lo que uno esperaría del ejemplo de Ricardo. Prebisch dice que en la práctica no pasó así."
+      },
+      {
+       "texto": "Siempre se la queda el país que vende materias primas.",
+       "correcta": false,
+       "porque": "Tentaba por llevar la contraria. Pero Prebisch dice lo opuesto: la periferia es la que menos retiene."
+      }
+     ],
+     "explicacion": "Hay otra razón: cuando la gente gana más, no toma el doble de café, pero sí compra más carros y aparatos. La demanda de materias primas crece más despacio que el ingreso.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 0
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade",
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-06",
+     "tipo": "vf",
+     "dificultad": 3,
+     "enunciado": "Está demostrado que los precios de las materias primas siempre caen frente a los industriales.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": false,
+       "porque": "Tentaba después de dos golpes seguidos de Prebisch. Pero la propia biblioteca de la CEPAL cuenta que a finales del siglo XX esos precios subieron frente a los demás."
+      },
+      {
+       "texto": "Falso",
+       "correcta": true,
+       "porque": "La tesis sigue en discusión. Hubo décadas de caída y también épocas en que las materias primas subieron. «Siempre» es demasiado."
+      }
+     ],
+     "explicacion": "Este es el contraataque del lado de Ricardo: no hay una ley que condene a un producto para siempre. Lo que sí queda es otro problema: esos precios suben y bajan con fuerza.",
+     "ataca": "b",
+     "mueve": {
+      "a": -5,
+      "b": 20
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Este caso es de Prebisch: muestra algo que la cuenta de Ricardo no mira, quién se queda con las mejoras. Pero su tesis no es una ley: los datos se siguen discutiendo."
+  },
+  {
+   "id": "tractores",
+   "objeto": "tractor",
+   "titulo": "La fábrica de tractores",
+   "mecanica": "Detecta el supuesto escondido",
+   "historia": "Un país que vive del café discute si montar su propia fábrica de tractores con ayuda del Estado. Al comienzo saldrán más caros y más malos que los importados. ¿Vale la pena?",
+   "dicen": {
+    "a": "Sin industria seguiremos en el mismo sitio.",
+    "b": "Compren el tractor donde salga mejor."
+   },
+   "preguntas": [
+    {
+     "id": "comercio-07",
+     "tipo": "opcion",
+     "dificultad": 2,
+     "enunciado": "¿Qué proponía Prebisch para los países de la periferia?",
+     "opciones": [
+      {
+       "texto": "Que el Estado impulse la industria, porque ese cambio no llega solo.",
+       "correcta": true,
+       "porque": "Para él la periferia tenía que cambiar lo que produce, y eso no iba a ocurrir de manera espontánea: hacía falta una acción firme del Estado."
+      },
+      {
+       "texto": "Que dejen de sembrar café.",
+       "correcta": false,
+       "porque": "Tentaba por lo de los bultos. Pero Prebisch no pedía abandonar lo que se exporta, sino sumar industria para no depender de eso."
+      },
+      {
+       "texto": "Que esperen a que el mercado los vuelva industriales.",
+       "correcta": false,
+       "porque": "Tentaba porque es la respuesta del libre comercio. Prebisch creía justo lo contrario: las señales del mercado empujan a seguir en lo mismo."
+      }
+     ],
+     "explicacion": "La idea es producir adentro parte de lo que se importaba, y pasar a bienes cuya demanda crece más y donde hay más espacio para mejorar la técnica.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 0
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-08",
+     "tipo": "vf",
+     "dificultad": 3,
+     "enunciado": "Prebisch quería que América Latina se cerrara al comercio con el resto del mundo.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": false,
+       "porque": "Tentaba porque pedía proteger la industria. Pero para él el mercado común latinoamericano era una ruta de acceso al mercado mundial, no un encierro."
+      },
+      {
+       "texto": "Falso",
+       "correcta": true,
+       "porque": "Prebisch discutía el papel del comercio, no el comercio. Quería llegar al mercado mundial vendiendo algo más que materias primas."
+      }
+     ],
+     "explicacion": "Además vio un límite: cada país por separado tiene un mercado muy pequeño para una fábrica. Por eso insistió en integrar a la región.",
+     "ataca": "a",
+     "mueve": {
+      "a": 10,
+      "b": 5
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought",
+      "https://biblioguias.cepal.org/prebisch_en/prebisch-and-eclac"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-09",
+     "tipo": "supuesto",
+     "dificultad": 4,
+     "enunciado": "El lado de Ricardo dice esto. ¿Qué da por sentado sin decirlo?",
+     "cita": {
+      "texto": "Que cada país se dedique a lo que hoy hace mejor y compre lo demás. Todos salen ganando.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Que da lo mismo en qué se especializa un país, y que su ventaja de hoy no puede cambiar.",
+       "correcta": true,
+       "porque": "Ahí golpea Prebisch: no es igual especializarse en café que en máquinas. Unos productos dejan más espacio para aprender y mejorar que otros."
+      },
+      {
+       "texto": "Que los ingleses toman mucho vino.",
+       "correcta": false,
+       "porque": "Esta era para descansar. El argumento no depende de los gustos de nadie, sino de cuánto trabajo cuesta cada cosa."
+      },
+      {
+       "texto": "Que los países no deben comerciar.",
+       "correcta": false,
+       "porque": "Tentaba por confusión de bandos. Ricardo defiende justo lo contrario: comerciar sin trabas."
+      }
+     ],
+     "explicacion": "La cuenta de Ricardo compara un día con otro. No dice nada sobre en qué se convierte un país después de treinta años haciendo siempre lo mismo.",
+     "ataca": "a",
+     "mueve": {
+      "a": 15,
+      "b": -5
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8",
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "comercio-10",
+     "tipo": "supuesto",
+     "dificultad": 4,
+     "enunciado": "Ahora el lado de Prebisch dice esto. ¿Qué da por sentado?",
+     "cita": {
+      "texto": "Protejamos la fábrica nueva. Al comienzo será cara, pero ya aprenderá a competir.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Que la fábrica sí va a aprender, y que adentro hay suficientes compradores para sostenerla.",
+       "correcta": true,
+       "porque": "Ahí golpea el lado de Ricardo. La misma CEPAL reconoce que la industria chocó con mercados internos pequeños y con Estados débiles."
+      },
+      {
+       "texto": "Que los tractores importados son malos.",
+       "correcta": false,
+       "porque": "Tentaba, pero el argumento admite lo contrario: al comienzo el tractor propio será el más caro."
+      },
+      {
+       "texto": "Que el café no sirve para nada.",
+       "correcta": false,
+       "porque": "Tentaba por el contraste. Pero Prebisch no desprecia lo que se exporta; lo que critica es depender solo de eso."
+      }
+     ],
+     "explicacion": "Las dos posturas esconden una apuesta. Ricardo apuesta a que da igual qué se produce; Prebisch, a que la industria protegida un día caminará sola.",
+     "ataca": "b",
+     "mueve": {
+      "a": -5,
+      "b": 15
+     },
+     "fuentes": [
+      "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Caso peleado. Prebisch muestra por qué quedarse quieto tiene un costo. El lado de Ricardo muestra que proteger también lo tiene: lo paga quien compra el tractor caro. La pregunta no es si proteger o no, sino qué, cuánto y hasta cuándo."
+  }
+ ],
+ "tregua": {
+  "coinciden": [
+   "Los dos creen que comerciar puede dejar ganancias. Prebisch veía el mercado común latinoamericano como una ruta para entrar al mercado mundial, no como un encierro.",
+   "Los dos miran cuánto rinde el trabajo. Ricardo compara cuántos hombres cuesta cada producto; Prebisch pregunta quién se queda con la mejora cuando el trabajo rinde más.",
+   "Los dos escribieron para una pelea concreta de su tiempo: Ricardo contra las leyes que frenaban la importación de trigo en Inglaterra; Prebisch, para la América Latina de 1949."
+  ],
+  "choque": "Ricardo toma una foto: con lo que cada país sabe hacer hoy, comerciar les conviene a los dos. Prebisch mira la película: según lo que un país produce, con los años se acerca al centro o se queda en la periferia.",
+  "ve": {
+   "a": "Que no da igual qué produce un país, ni quién se queda con las mejoras de la técnica.",
+   "b": "Que hasta el país menos productivo tiene algo que ganar comerciando."
+  },
+  "noVe": {
+   "a": "Su tesis sobre los precios sigue en discusión, y la industria protegida chocó con mercados pequeños y Estados débiles.",
+   "b": "Su ejemplo es una foto quieta: no pregunta en qué se convierte un país que siempre hace lo mismo."
+  },
+  "fuentes": [
+   "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8",
+   "https://www.econlib.org/library/Enc/bios/Ricardo.html",
+   "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade",
+   "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought",
+   "https://biblioguias.cepal.org/prebisch_en/brief-biography"
+  ]
+ },
+ "herramienta": {
+  "nombre": "Foto y película",
+  "uso": "Ante un «dediquémonos a lo que sabemos hacer», hazte dos preguntas. Con la foto: ¿en qué rinde más mi trabajo hoy? Con la película: ¿en qué me convierto si hago solo eso durante treinta años?"
+ },
+ "glosario": [
+  {
+   "termino": "ventaja comparativa",
+   "significado": "Aquello en lo que eres mejor por más diferencia, o menos malo. Según Ricardo, a eso conviene dedicarse."
+  },
+  {
+   "termino": "términos de intercambio",
+   "significado": "Cuánto de lo que importas puedes comprar con lo que exportas. Si se deterioran, tu café compra menos tractor."
+  },
+  {
+   "termino": "materias primas",
+   "significado": "Productos casi como salen de la tierra o de la mina: café, petróleo, cobre, soya."
+  },
+  {
+   "termino": "periferia",
+   "significado": "Para la CEPAL, los países que venden alimentos y materias primas y compran productos industriales."
+  },
+  {
+   "termino": "centro",
+   "significado": "Para la CEPAL, los países industrializados, que venden manufacturas y concentran la técnica."
+  },
+  {
+   "termino": "manufacturas",
+   "significado": "Productos hechos en fábrica: telas, máquinas, aparatos."
+  },
+  {
+   "termino": "mercado común",
+   "significado": "Acuerdo entre países vecinos para venderse entre sí sin trabas, como si fueran un solo mercado grande."
+  },
+  {
+   "termino": "paño",
+   "significado": "Tela de lana. En tiempos de Ricardo era el gran producto industrial de Inglaterra."
+  }
+ ],
+ "bibliografia": [
+  {
+   "titulo": "David Ricardo, «Principios de economía política y tributación» (1817), cap. 7",
+   "url": "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8"
+  },
+  {
+   "titulo": "Econlib, biografía de David Ricardo",
+   "url": "https://www.econlib.org/library/Enc/bios/Ricardo.html"
+  },
+  {
+   "titulo": "Biblioteca de la CEPAL, guía «Raúl Prebisch y los desafíos del desarrollo del siglo XXI»",
+   "url": "https://biblioguias.cepal.org/prebisch_en"
+  },
+  {
+   "titulo": "Biblioteca de la CEPAL, «Terms of trade» (la tesis de Prebisch y Singer)",
+   "url": "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade"
+  }
+ ]
+}

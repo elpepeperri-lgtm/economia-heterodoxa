@@ -233,3 +233,11 @@
 .esc-tubo-borde { fill: none; stroke: var(--oscuro); stroke-width: 14; stroke-linejoin: round; }
 .esc-gota { transform-box: fill-box; animation: gota 1.8s ease-in infinite; }
 @keyframes gota { 0% { transform: translateY(-6px); opacity: 0; } 20% { opacity: 1; } 100% { transform: translateY(64px); opacity: 0; } }
+
+/* Piezas de las escenas estructuralista (cordillera y fábrica naciente) y clásica (puerto con velero). */
+.esc-monte { fill: #57509c; }
+.esc-nieve { fill: #e9e4f7; opacity: .85; }
+.esc-vela { fill: #f3ecdc; stroke: var(--oscuro); stroke-width: 2.5; stroke-linejoin: round; }
+.esc-mar { fill: #3d57b8; opacity: .8; }
+.esc-barco { transform-box: fill-box; transform-origin: 50% 100%; animation: cabeceo 4.5s ease-in-out infinite; }
+@keyframes cabeceo { 50% { transform: rotate(-2.5deg) translateY(-2px); } }
