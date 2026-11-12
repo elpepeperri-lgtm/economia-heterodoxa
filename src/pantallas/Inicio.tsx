@@ -1,11 +1,18 @@
 import { useEffect, useState } from 'react';
 import './inicio.css';
+import './modos.css';
 import { indiceDuelos } from '../datos/contenido.ts';
 import { colorEscuela, nivel } from '../motor/catalogo.ts';
 import { cargar, type Progreso } from '../motor/progreso.ts';
 import { Personaje } from '../personajes/Personaje.tsx';
 
-export function Inicio({ irADuelo, irACreditos }: { irADuelo: (id: string) => void; irACreditos: () => void }) {
+const MODOS = [
+  { id: 'quien', icono: '?', nombre: '¿Quién es?', texto: 'Adivina al economista con el menor número de pistas.', marca: (m: number) => `Tu mejor ronda: reconociste a ${m} de 6.` },
+  { id: 'unir', icono: '⇄', nombre: 'Unir', texto: 'Junta cada autor con su escuela, su libro y su ejemplo.', marca: (m: number) => `Tableros sin fallar, tu mejor marca: ${m} de 4.` },
+  { id: 'lecturas', icono: '¶', nombre: 'Lecturas cortas', texto: 'Dos minutos por escuela: tres pantallas y una pregunta.', marca: () => '' },
+] as const;
+
+export function Inicio({ irADuelo, irACreditos, irAModo }: { irADuelo: (id: string) => void; irACreditos: () => void; irAModo: (m: 'quien' | 'unir' | 'lecturas') => void }) {
   const [prog, setProg] = useState<Progreso | null>(null);
   useEffect(() => { void cargar().then((p) => setProg({ ...p })); }, []);
   const niv = nivel(prog?.xp ?? 0);
@@ -38,6 +45,21 @@ export function Inicio({ irADuelo, irACreditos }: { irADuelo: (id: string) => vo
           </section>
         );
       })}
+
+      <section className="modos-inicio" aria-labelledby="modos-titulo">
+        <h2 id="modos-titulo">Más maneras de jugar</h2>
+        {MODOS.map((m) => {
+          const leidas = prog ? Object.keys(prog.modos).filter((k) => k.startsWith('lectura-')).length : 0;
+          const jugado = prog?.modos[m.id];
+          const nota = m.id === 'lecturas' ? (leidas ? `Llevas ${leidas} lecturas.` : '') : jugado ? m.marca(jugado.mejor) : '';
+          return (
+            <button className="modo-entrada" key={m.id} onClick={() => irAModo(m.id)}>
+              <span className="modo-icono" aria-hidden="true">{m.icono}</span>
+              <span><b>{m.nombre}</b><span>{m.texto}</span>{nota && <small>{nota}</small>}</span>
+            </button>
+          );
+        })}
+      </section>
 
       <section className="caja" aria-labelledby="caja-titulo">
         <div className="caja-fila">

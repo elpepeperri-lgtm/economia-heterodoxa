@@ -1,7 +1,7 @@
 // Valida todo el contenido contra el esquema antes de compilar. Si algo falla, no compila.
 import { readFile, readdir, writeFile } from 'node:fs/promises';
 import { z } from 'zod';
-import { Duelo, Economista, Credito } from '../src/datos/esquema.ts';
+import { Duelo, Economista, Credito, Modos } from '../src/datos/esquema.ts';
 
 const RAIZ = new URL('..', import.meta.url);
 const leer = async (ruta) => JSON.parse(await readFile(new URL(ruta, RAIZ), 'utf8'));
@@ -21,6 +21,16 @@ function revisar(nombre, esquema, dato) {
 
 revisar('contenido/economistas.json', z.array(Economista), await leer('contenido/economistas.json'));
 revisar('contenido/creditos.json', z.record(z.string(), Credito), await leer('contenido/creditos.json'));
+
+const modos = await leer('contenido/modos.json');
+if (revisar('contenido/modos.json', Modos, modos)) {
+  for (const t of modos.unir) {
+    if (new Set(t.pares.map((p) => p.der)).size !== t.pares.length) { errores++; console.error(`✗ modos.json · ${t.id}: hay parejas repetidas a la derecha`); }
+  }
+  for (const l of modos.lecturas) {
+    if (l.pregunta.estado !== 'ok') { errores++; console.error(`✗ modos.json · ${l.id}: la pregunta no está verificada`); }
+  }
+}
 
 for (const archivo of await readdir(new URL('contenido/duelos/', RAIZ))) {
   const duelo = await leer('contenido/duelos/' + archivo);

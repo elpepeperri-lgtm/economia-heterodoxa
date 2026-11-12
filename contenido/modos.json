@@ -1,0 +1,284 @@
+{
+ "quienes": [
+  {
+   "economista": "marx",
+   "pistas": [
+    "Nací en 1818 y morí en 1883. Para mí, lo que hace valer a una mercancía es el tiempo de trabajo que normalmente cuesta producirla.",
+    "Digo que la ganancia sale de la plusvalía: la parte de la jornada que al obrero no se le paga.",
+    "Publiqué «El capital» en 1867."
+   ],
+   "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm", "https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm"]
+  },
+  {
+   "economista": "marshall",
+   "pistas": [
+    "Nací en 1842 y morí en 1924. Junté dos tradiciones: la que explicaba el valor por el costo y la que lo explicaba por la utilidad.",
+    "Dije que discutir si manda la oferta o la demanda es como discutir cuál hoja de la tijera corta el papel.",
+    "Mi libro «Principios de economía» es de 1890."
+   ],
+   "fuentes": ["https://www.econlib.org/library/Marshall/marP.html?chapter_num=31"]
+  },
+  {
+   "economista": "keynes",
+   "pistas": [
+    "Nací en Cambridge en 1883. En 1919 escribí «Las consecuencias económicas de la paz».",
+    "Dije que hasta enterrar botellas con billetes bajaría el desempleo, aunque sería más sensato construir casas.",
+    "En mi «Teoría general» de 1936 pido que el Estado gaste cuando falta demanda."
+   ],
+   "fuentes": ["https://www.econlib.org/library/Enc/bios/Keynes.html", "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch10.htm"]
+  },
+  {
+   "economista": "hayek",
+   "pistas": [
+    "Nací en 1899. A comienzos de los años treinta llegué a enseñar a Londres, donde pasé dieciocho años.",
+    "Usé el ejemplo del estaño para explicar que los precios son avisos que reparten información.",
+    "Escribí «Camino de servidumbre» en 1944 y recibí el Nobel de economía en 1974."
+   ],
+   "fuentes": ["https://www.econlib.org/library/Enc/bios/Hayek.html", "https://www.econlib.org/library/Essays/hykKnw.html"]
+  },
+  {
+   "economista": "prebisch",
+   "pistas": [
+    "Soy argentino. El Banco Central de mi país, fundado en 1935, fue prácticamente una creación mía.",
+    "Presenté mi informe más famoso en La Habana en 1949. Terminaron llamándolo un «manifiesto».",
+    "Dirigí la CEPAL y dividí el mundo en centro y periferia."
+   ],
+   "fuentes": ["https://biblioguias.cepal.org/prebisch_en/brief-biography"]
+  },
+  {
+   "economista": "ricardo",
+   "pistas": [
+    "Nací en 1772 y morí en 1823. Me opuse a las leyes que frenaban la importación de trigo en Inglaterra.",
+    "Mi ejemplo más famoso tiene vino de Portugal y paño de Inglaterra.",
+    "Expliqué el comercio con la ventaja comparativa en mis «Principios» de 1817."
+   ],
+   "fuentes": ["https://www.econlib.org/library/Enc/bios/Ricardo.html", "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8"]
+  }
+ ],
+ "unir": [
+  {
+   "id": "unir-escuelas",
+   "titulo": "Cada quien con su escuela",
+   "pares": [
+    { "izq": "Marx", "der": "Marxista" },
+    { "izq": "Marshall", "der": "Neoclásica" },
+    { "izq": "Keynes", "der": "Keynesiana" },
+    { "izq": "Hayek", "der": "Austriaca" },
+    { "izq": "Prebisch", "der": "Estructuralista" },
+    { "izq": "Ricardo", "der": "Clásica" }
+   ],
+   "explicacion": "Una escuela es una familia de ideas, no un club cerrado. Ricardo es clásico, pero Marx aprendió de él; Marshall es neoclásico, pero conservó el costo de producción de los clásicos.",
+   "fuentes": ["https://www.exploring-economics.org/es/orientacion/economia-neoclasica/", "https://www.exploring-economics.org/en/orientation/austrian-economics/", "https://biblioguias.cepal.org/prebisch_en/brief-biography"]
+  },
+  {
+   "id": "unir-libros",
+   "titulo": "Cada libro con su autor",
+   "pares": [
+    { "izq": "El capital (1867)", "der": "Marx" },
+    { "izq": "Principios de economía (1890)", "der": "Marshall" },
+    { "izq": "Teoría general (1936)", "der": "Keynes" },
+    { "izq": "Camino de servidumbre (1944)", "der": "Hayek" },
+    { "izq": "Principios de economía política y tributación (1817)", "der": "Ricardo" }
+   ],
+   "explicacion": "Mira las fechas: van de 1817 a 1944. Cada libro le responde a los problemas de su época, y muchas veces a los libros anteriores.",
+   "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/", "https://www.econlib.org/library/Marshall/marP.html?chapter_num=31", "https://www.econlib.org/library/Enc/bios/Keynes.html", "https://www.econlib.org/library/Enc/bios/Hayek.html", "https://www.econlib.org/library/Enc/bios/Ricardo.html"]
+  },
+  {
+   "id": "unir-ideas",
+   "titulo": "Cada idea con su escuela",
+   "pares": [
+    { "izq": "Plusvalía", "der": "Marxista" },
+    { "izq": "Utilidad marginal", "der": "Neoclásica" },
+    { "izq": "Demanda efectiva", "der": "Keynesiana" },
+    { "izq": "Los precios son avisos", "der": "Austriaca" },
+    { "izq": "Centro y periferia", "der": "Estructuralista" },
+    { "izq": "Ventaja comparativa", "der": "Clásica" }
+   ],
+   "explicacion": "Cada idea es un lente. La plusvalía enfoca el taller; la utilidad marginal, la decisión de comprar; la demanda efectiva, el gasto de todos; los precios, la información; centro y periferia, el mapa; la ventaja comparativa, el intercambio.",
+   "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm", "https://www.econlib.org/library/Enc/Marginalism.html", "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch03.htm", "https://www.econlib.org/library/Essays/hykKnw.html", "https://biblioguias.cepal.org/prebisch_en/brief-biography", "https://www.econlib.org/library/Enc/bios/Ricardo.html"]
+  },
+  {
+   "id": "unir-ejemplos",
+   "titulo": "Cada ejemplo con su dueño",
+   "pares": [
+    { "izq": "Las dos hojas de una tijera", "der": "Marshall" },
+    { "izq": "Botellas con billetes enterradas", "der": "Keynes" },
+    { "izq": "El estaño que se vuelve escaso", "der": "Hayek" },
+    { "izq": "El vino y el paño", "der": "Ricardo" },
+    { "izq": "La jornada de doce horas", "der": "Marx" }
+   ],
+   "explicacion": "Los economistas piensan con ejemplos. Un buen ejemplo sirve para entender una idea, y también para ver qué deja por fuera.",
+   "fuentes": ["https://www.econlib.org/library/Marshall/marP.html?chapter_num=31", "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch10.htm", "https://www.econlib.org/library/Essays/hykKnw.html", "https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8", "https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm"]
+  }
+ ],
+ "lecturas": [
+  {
+   "id": "lectura-marxista",
+   "escuelaId": "marxista",
+   "economista": "marx",
+   "titulo": "El reloj del taller",
+   "pantallas": [
+    { "titulo": "El valor es tiempo", "texto": "Para Marx, lo que hace valer a una mercancía es el trabajo que normalmente cuesta producirla. No el de cada persona: si doña Rosa se demora el doble colando el tinto, su tinto no vale el doble." },
+    { "titulo": "La jornada partida", "texto": "El obrero vende su capacidad de trabajar por un día. En el ejemplo de Marx, en 6 horas produce lo que vale su salario, pero la jornada dura 12. Las otras 6 son trabajo que nadie le paga. A eso lo llama plusvalía." },
+    { "titulo": "Libre, pero obligado", "texto": "El contrato parece un trato entre iguales. Marx responde que el obrero es libre en dos sentidos: libre de vender su trabajo a quien quiera, y «libre» de cualquier otro medio para vivir. O sea, tiene que venderlo." }
+   ],
+   "pregunta": {
+    "id": "lectura-marxista-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "Según Marx, ¿de dónde sale la ganancia del dueño del taller?",
+    "opciones": [
+     { "texto": "Del trabajo que el obrero hace después de haber producido lo que vale su salario.", "correcta": true, "porque": "Esa es la plusvalía: en su ejemplo, las 6 horas de la jornada que van más allá de lo que cuesta el salario." },
+     { "texto": "De vender las cosas más caras de lo que valen.", "correcta": false, "porque": "Tentaba porque suena a sentido común. Pero Marx busca la ganancia en el taller, no en un sobreprecio a la hora de vender." },
+     { "texto": "De que el producto sea escaso.", "correcta": false, "porque": "Tentaba porque la escasez sí mueve precios. Pero esa es la explicación neoclásica; Marx mira el trabajo." }
+    ],
+    "explicacion": "Marx no dice que el patrón haga trampa en el contrato. Dice que la ganancia aparece dentro de la jornada, aunque todo se pague a su precio.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://www.marxists.org/archive/marx/works/1867-c1/ch01.htm", "https://www.marxists.org/archive/marx/works/1867-c1/ch06.htm", "https://www.marxists.org/archive/marx/works/1867-c1/ch07.htm"]
+  },
+  {
+   "id": "lectura-neoclasica",
+   "escuelaId": "neoclasica",
+   "economista": "marshall",
+   "titulo": "Las dos hojas de la tijera",
+   "pantallas": [
+    { "titulo": "Una unidad más", "texto": "Con sed, el primer vaso de agua vale oro; el décimo, casi nada. Lo que cuenta no es qué tan útil es el agua en general, sino cuánto te aporta un vaso más. Por eso el agua, que es vital, es barata: hay mucha." },
+    { "titulo": "La tijera", "texto": "Marshall dijo que discutir si el valor lo fija la utilidad o el costo es como discutir cuál hoja de la tijera corta el papel. Cortan las dos: la demanda (cuánto se desea) y la oferta (cuánto cuesta producir)." },
+    { "titulo": "El plazo importa", "texto": "Hoy, si llueve y todos quieren paraguas, manda la demanda. Pero Marshall advierte que, cuanto más largo es el plazo, más pesa el costo de producción en el valor de las cosas." }
+   ],
+   "pregunta": {
+    "id": "lectura-neoclasica-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "¿Por qué el agua, siendo vital, cuesta menos que un diamante?",
+    "opciones": [
+     { "texto": "Porque lo que cuenta es lo que aporta una unidad más, y agua hay mucha.", "correcta": true, "porque": "Es la utilidad marginal: el décimo vaso aporta poco. De diamantes hay tan pocos que uno más todavía se desea mucho." },
+     { "texto": "Porque el diamante es más útil que el agua.", "correcta": false, "porque": "Tentaba porque el diamante es caro. Pero nadie vive sin agua: la utilidad total del agua es mucho mayor." },
+     { "texto": "Porque el agua no la produce nadie.", "correcta": false, "porque": "Tentaba porque el agua cae del cielo. Pero llevarla hasta tu casa sí cuesta trabajo, y aun así es barata." }
+    ],
+    "explicacion": "Adam Smith dejó planteada esta paradoja en 1776. La respuesta de los marginalistas, un siglo después, fue mirar la última unidad y no el total.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://www.econlib.org/library/Enc/Marginalism.html", "https://www.econlib.org/library/Smith/smWN.html?chapter_num=7"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://www.econlib.org/library/Marshall/marP.html?chapter_num=31", "https://www.econlib.org/library/Enc/Marginalism.html"]
+  },
+  {
+   "id": "lectura-keynesiana",
+   "escuelaId": "keynesiana",
+   "economista": "keynes",
+   "titulo": "El restaurante vacío",
+   "pantallas": [
+    { "titulo": "La demanda manda", "texto": "Antes de Keynes se creía que todo lo que se produce encuentra comprador. Él dijo que no: cuánto empleo hay depende de cuánto se está dispuesto a gastar. Y ese gasto puede quedarse corto por mucho tiempo." },
+    { "titulo": "No cenar hoy", "texto": "Keynes escribió que ahorrar es decidir no cenar hoy. El problema es que eso no le avisa al restaurante que cenarás otro día. Si todo el barrio ahorra a la vez, el restaurante despide, y los despedidos tampoco salen a comer." },
+    { "titulo": "El gasto da vueltas", "texto": "Si el Estado contrata obreros, ellos gastan su sueldo en la tienda, y la tienda vuelve a contratar. Un gasto inicial genera varias rondas de ingreso. Por eso Keynes pide que el Estado gaste cuando nadie más lo hace." }
+   ],
+   "pregunta": {
+    "id": "lectura-keynesiana-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "¿Qué pasa, según Keynes, si todo el barrio decide ahorrar al mismo tiempo?",
+    "opciones": [
+     { "texto": "Caen las ventas, cae el ingreso y al final hay menos de dónde ahorrar.", "correcta": true, "porque": "Lo que es prudente para una familia puede hundir a todas si lo hacen a la vez: el gasto de uno es el ingreso de otro." },
+     { "texto": "El barrio se vuelve más rico, porque todos tienen más guardado.", "correcta": false, "porque": "Tentaba porque así funciona para una sola familia. Pero si nadie compra, nadie vende, y los ingresos de todos bajan." },
+     { "texto": "Suben los precios.", "correcta": false, "porque": "Tentaba porque en las crisis se habla de precios. Pero cuando falta quien compre, lo normal es que sobre mercancía, no que suba." }
+    ],
+    "explicacion": "Los críticos de Keynes, como Hayek, responden que sin ahorro no hay con qué invertir, y que sostener el empleo a punta de gasto puede terminar en inflación.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch16.htm", "https://www.econlib.org/library/Enc/bios/Hayek.html"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch03.htm", "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch10.htm", "https://www.marxists.org/reference/subject/economics/keynes/general-theory/ch16.htm"]
+  },
+  {
+   "id": "lectura-austriaca",
+   "escuelaId": "austriaca",
+   "economista": "hayek",
+   "titulo": "El aviso del precio",
+   "pantallas": [
+    { "titulo": "Nadie lo sabe todo", "texto": "Para Hayek, lo que hay que saber para que la economía funcione no está en ninguna oficina. Está repartido: cada tendero, cada agricultor y cada chofer conoce su pedacito, las circunstancias de su lugar y su momento." },
+    { "titulo": "El estaño", "texto": "Si el estaño se vuelve escaso, su precio sube. Quien lo usa no necesita saber por qué: le basta con ver el precio para gastar menos estaño. Así el precio lleva el aviso a millones de personas que nunca se hablaron." },
+    { "titulo": "El aviso dañado", "texto": "El interés también es un precio: el de pedir prestado. Si se lo abarata a la fuerza, da un aviso falso y se arrancan obras que el ahorro no respalda. Cuando el aviso se corrige, quedan a medias. Para Hayek, así nacen las crisis." }
+   ],
+   "pregunta": {
+    "id": "lectura-austriaca-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "Sube el precio del estaño. Según Hayek, ¿qué necesita saber quien lo usa?",
+    "opciones": [
+     { "texto": "Solo que ahora es más caro: con eso ya sabe que debe gastar menos.", "correcta": true, "porque": "Ese es el punto: el precio resume la información. No hace falta conocer la causa para reaccionar bien." },
+     { "texto": "Por qué se volvió escaso y en qué país pasó.", "correcta": false, "porque": "Tentaba porque parece lo responsable. Pero Hayek dice justo que la mayoría no necesita saberlo, y aun así se coordinan." },
+     { "texto": "Lo que ordene el gobierno sobre el estaño.", "correcta": false, "porque": "Tentaba porque alguien tendría que organizar. Para Hayek, el precio organiza sin que nadie dé la orden." }
+    ],
+    "explicacion": "Sus críticos señalan que su teoría de las crisis tiene problemas lógicos, y Keynes le respondería que esperar a que el mercado se acomode también tiene un costo.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://www.econlib.org/library/Essays/hykKnw.html", "https://www.exploring-economics.org/en/orientation/austrian-economics/"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://www.econlib.org/library/Essays/hykKnw.html", "https://www.econlib.org/library/Enc/bios/Hayek.html", "https://www.exploring-economics.org/en/orientation/austrian-economics/"]
+  },
+  {
+   "id": "lectura-estructuralista",
+   "escuelaId": "estructuralista",
+   "economista": "prebisch",
+   "titulo": "Centro y periferia",
+   "pantallas": [
+    { "titulo": "Un mapa partido", "texto": "Prebisch miró el comercio mundial desde América Latina y vio dos lados: un centro que hace industria y una periferia que le vende alimentos y materias primas. Lo presentó en 1949, en el informe conocido como el «manifiesto de la CEPAL»." },
+    { "titulo": "El café compra menos", "texto": "Su tesis más famosa dice que los precios de las materias primas tienden a caer frente a los de los productos industriales. Con los mismos bultos de café, cada vez se compra menos tractor. Es una tesis que se sigue discutiendo." },
+    { "titulo": "Industria, y juntos", "texto": "Su salida era cambiar lo que se produce, con un Estado que impulse la industria. Como cada país es un mercado pequeño, propuso integrar a la región. No para encerrarse: el mercado común era una ruta hacia el mercado mundial." }
+   ],
+   "pregunta": {
+    "id": "lectura-estructuralista-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "¿Qué significa «centro y periferia» para Prebisch?",
+    "opciones": [
+     { "texto": "Que el comercio mundial reparte tareas distintas: unos países hacen industria y otros venden materias primas.", "correcta": true, "porque": "Y ese reparto, para él, no beneficia a los dos lados por igual: el centro retiene mejor las ganancias de la técnica." },
+     { "texto": "Que las capitales son más ricas que el campo.", "correcta": false, "porque": "Tentaba por la palabra «centro». Pero Prebisch habla de países dentro del comercio mundial, no de ciudades dentro de un país." },
+     { "texto": "Que la periferia no debe comerciar con el centro.", "correcta": false, "porque": "Tentaba porque suena a ruptura. Pero Prebisch quería cambiar qué se vende, no dejar de vender." }
+    ],
+    "explicacion": "La propia CEPAL reconoce que la industrialización chocó con mercados internos pequeños y Estados débiles. Y Ricardo respondería que hasta el país menos productivo gana comerciando.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://biblioguias.cepal.org/prebisch_en/brief-biography", "https://biblioguias.cepal.org/prebisch_en/XXIcentury/terms-trade", "https://biblioguias.cepal.org/prebisch_en/raul-prebisch-historic-importance-and-validity-his-thought"]
+  },
+  {
+   "id": "lectura-clasica",
+   "escuelaId": "clasica",
+   "economista": "ricardo",
+   "titulo": "El vino y el paño",
+   "pantallas": [
+    { "titulo": "Una pelea por el trigo", "texto": "David Ricardo escribió en una Inglaterra que discutía si dejar entrar trigo extranjero. Unas leyes lo frenaban. Ricardo se opuso a ellas y defendió el libre comercio: para él, cada país debía dedicarse a lo que más le rinde." },
+    { "titulo": "Las cuentas", "texto": "Su ejemplo: en Portugal, el vino cuesta el trabajo de 80 hombres y el paño, el de 90. En Inglaterra, el paño cuesta 100 y el vino 120. Portugal es mejor en las dos cosas, pero su ventaja es más grande en el vino." },
+    { "titulo": "La sorpresa", "texto": "Conclusión: a Portugal le conviene dedicarse al vino y comprarle el paño a Inglaterra. Y a Inglaterra también le conviene. Aun el país menos productivo tiene algo que ganar. A esa idea se le llama ventaja comparativa." }
+   ],
+   "pregunta": {
+    "id": "lectura-clasica-p",
+    "tipo": "opcion",
+    "dificultad": 2,
+    "enunciado": "¿Qué dice la ventaja comparativa?",
+    "opciones": [
+     { "texto": "Que conviene dedicarse a aquello en lo que uno es mejor por más diferencia, aunque otro sea mejor en todo.", "correcta": true, "porque": "No se compara quién es mejor, sino en qué rinde más el trabajo de cada uno. Por eso hasta el menos productivo gana comerciando." },
+     { "texto": "Que solo debe exportar el país que es mejor en todo.", "correcta": false, "porque": "Tentaba porque parece lógico. Pero el ejemplo muestra lo contrario: Inglaterra es peor en las dos cosas y aun así vende paño." },
+     { "texto": "Que cada país debe producir de todo para no depender de nadie.", "correcta": false, "porque": "Tentaba porque suena prudente. Pero es justo lo que Ricardo discute: producir de todo desperdicia trabajo." }
+    ],
+    "explicacion": "Prebisch respondería que la cuenta es una foto de un día: no pregunta en qué se convierte un país que pasa décadas haciendo solo vino.",
+    "ataca": "a",
+    "mueve": { "a": 0, "b": 0 },
+    "fuentes": ["https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8", "https://www.econlib.org/library/Enc/bios/Ricardo.html"],
+    "estado": "ok"
+   },
+   "fuentes": ["https://www.econlib.org/library/Ricardo/ricP.html?chapter_num=8", "https://www.econlib.org/library/Enc/bios/Ricardo.html"]
+  }
+ ]
+}

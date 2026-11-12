@@ -5,12 +5,14 @@ export type Progreso = {
   xp: number;
   herramientas: string[];
   duelos: Record<string, { veces: number; mejor: number }>;
+  /** Modos cortos y lecturas: veces jugadas y mejor marca. */
+  modos: Record<string, { veces: number; mejor: number }>;
   /** Historial por pregunta, listo para el repaso espaciado (cajas de Leitner, 1 a 5). */
   preguntas: Record<string, { caja: number; vista: number; fallos: number }>;
 };
 
 const CLAVE = 'eh-progreso';
-const vacio = (): Progreso => ({ xp: 0, herramientas: [], duelos: {}, preguntas: {} });
+const vacio = (): Progreso => ({ xp: 0, herramientas: [], duelos: {}, modos: {}, preguntas: {} });
 
 function abrir(): Promise<IDBDatabase> {
   return new Promise((ok, mal) => {
@@ -73,5 +75,14 @@ export function registrarDuelo(id: string, xp: number, aciertos: number, herrami
     p.duelos[id] = { veces: previo.veces + 1, mejor: Math.max(previo.mejor, aciertos) };
     p.xp += xp;
     if (!p.herramientas.includes(herramienta)) p.herramientas.push(herramienta);
+  });
+}
+
+/** Registra una partida de un modo corto o una lectura terminada. */
+export function registrarModo(id: string, xp: number, marca: number) {
+  return cambiar((p) => {
+    const previo = p.modos[id] ?? { veces: 0, mejor: 0 };
+    p.modos[id] = { veces: previo.veces + 1, mejor: Math.max(previo.mejor, marca) };
+    p.xp += xp;
   });
 }

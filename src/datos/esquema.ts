@@ -101,6 +101,34 @@ export const Credito = z.object({
   enlace: url,
 });
 
+/** Contenido de los modos cortos: «¿Quién es?», «Unir» y «Lecturas cortas». */
+export const Modos = z.object({
+  quienes: z.array(z.object({
+    economista: z.enum(CON_CARICATURA),
+    /** De la más difícil a la más fácil. */
+    pistas: z.array(z.string().min(20).max(170)).length(3),
+    fuentes: z.array(url).min(1),
+  })).min(4),
+  unir: z.array(z.object({
+    id: z.string(),
+    titulo: z.string(),
+    pares: z.array(z.object({ izq: z.string(), der: z.string() })).min(3).max(6),
+    explicacion: z.string().min(20),
+    fuentes: z.array(url).min(1),
+  })).min(1),
+  lecturas: z.array(z.object({
+    id: z.string(),
+    escuelaId: z.enum(ESCUELA_IDS),
+    economista: z.enum(CON_CARICATURA),
+    titulo: z.string(),
+    /** Una idea por pantalla. */
+    pantallas: z.array(z.object({ titulo: z.string(), texto: z.string().min(40).max(330) })).min(2).max(4),
+    pregunta: Pregunta,
+    fuentes: z.array(url).min(1),
+  })).min(1),
+});
+
+export type TModos = z.infer<typeof Modos>;
 export type TDuelo = z.infer<typeof Duelo>;
 export type TCaso = z.infer<typeof Caso>;
 export type TPregunta = z.infer<typeof Pregunta>;

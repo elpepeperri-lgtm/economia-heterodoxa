@@ -1,0 +1,98 @@
+/* Modos cortos: «¿Quién es?», «Unir» y «Lecturas cortas». Reutilizan las piezas de motor/piezas.css. */
+
+.modo { min-height: 100dvh; display: flex; flex-direction: column; background: radial-gradient(130% 50% at 50% 0, #3a3478, var(--papel)); }
+.modo-barra {
+  position: sticky; top: 0; z-index: 5; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 12px;
+  padding: 10px 14px; background: var(--oscuro); border-bottom: 3px solid #4d4680;
+}
+.modo-salir {
+  width: 44px; height: 44px; display: grid; place-items: center; padding: 0;
+  background: var(--papel); border: 2px solid #4d4680; border-radius: 8px; font-size: 1.2rem; font-weight: 700;
+}
+.modo-cuerpo { flex: 1; }
+.modo-paso { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; padding: 18px 16px calc(28px + env(safe-area-inset-bottom)); animation: aparecer .32s var(--suave) both; }
+.modo-paso [tabindex='-1']:focus { outline: none; }
+.modo .devolucion { scroll-margin-top: 76px; }
+.modo-titulo { font-size: 2.2rem; text-transform: uppercase; text-wrap: balance; }
+.modo-nota { font-size: .95rem; color: var(--tinta-2); }
+.modo-cierre { text-align: center; padding-top: 44px; }
+.modo-xp { font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 4rem; line-height: 1; color: var(--amarillo); font-variant-numeric: tabular-nums; animation: acierto .5s var(--rebote); }
+.modo-xp span { font-size: 1.5rem; }
+.modo-cierre .fuentes { justify-content: center; }
+
+/* ¿Quién es? */
+.pistas { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.pistas li {
+  display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 12px; align-items: start; padding: 12px 14px;
+  background: var(--pergamino-2); color: var(--oscuro); border: 3px solid var(--oscuro); border-radius: 14px; box-shadow: 0 4px 0 var(--oscuro);
+  font-size: 1.08rem; font-weight: 600; line-height: 1.28; animation: aparecer .3s var(--suave) both;
+}
+.pista-num {
+  width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--rojo-2); color: #fff;
+  font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.15rem;
+}
+.ficha-quien { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 14px; align-items: start; }
+.ficha-quien > div { display: grid; gap: 5px; }
+.ficha-nombre { font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.6rem; line-height: 1; text-transform: uppercase; }
+
+/* Unir */
+.unir { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 12px; }
+.unir-col { display: grid; gap: 10px; align-content: start; }
+.ficha-unir {
+  position: relative; min-height: 64px; padding: 8px 10px; display: grid; place-items: center; text-align: center;
+  background: var(--pergamino); color: var(--oscuro); border: 3px solid var(--oscuro); border-radius: 12px; box-shadow: 0 4px 0 var(--oscuro);
+  font-family: var(--lectura); font-weight: 700; font-size: 1rem; line-height: 1.15;
+  transition: transform .12s var(--suave), opacity .2s;
+}
+.ficha-unir[data-lado='der'] { background: #e4dcf5; }
+.ficha-unir[data-lado='der']:disabled:not([data-estado]) { opacity: .6; }
+.ficha-unir[data-estado='elegida'] { background: var(--amarillo); transform: translateX(6px); box-shadow: 0 4px 0 var(--oscuro), 0 0 0 3px var(--amarillo); }
+.ficha-unir[data-estado='hecha'] { background: var(--verde); box-shadow: none; transform: translateY(4px); }
+.ficha-unir[data-estado='mal'] { background: #e8cdc6; border-style: dashed; animation: duda .4s var(--suave); }
+.unir-num {
+  position: absolute; top: -9px; left: -7px; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--oscuro); color: #fff; font-family: var(--titulos); font-weight: 800; font-size: 1rem;
+}
+
+/* Lecturas cortas */
+.lecturas { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+.lectura-tarjeta {
+  width: 100%; display: grid; grid-template-columns: 76px minmax(0, 1fr); align-items: stretch; padding: 0; overflow: hidden; text-align: left;
+  background: var(--pergamino); color: var(--oscuro); border: 3px solid var(--oscuro); border-radius: 12px; box-shadow: 0 5px 0 var(--oscuro);
+  transition: transform .12s var(--suave);
+}
+.lectura-tarjeta:active { transform: translateY(3px); }
+.lectura-cara { position: relative; background: var(--acento); border-right: 3px solid var(--oscuro); overflow: hidden; min-height: 76px; }
+.lectura-cara .pj { position: absolute; left: -14px; bottom: -22px; width: 104px; }
+.lectura-texto { display: grid; gap: 4px; padding: 10px 12px 12px; align-content: center; }
+.lectura-texto .rotulo { color: var(--rojo-2); }
+.lectura-nombre { font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.45rem; line-height: 1; text-transform: uppercase; }
+.lectura-leida { font-size: .85rem; font-weight: 700; color: #1c7a36; }
+.hoja {
+  display: grid; gap: 12px; padding: 20px 18px 24px; background: var(--pergamino); color: var(--oscuro);
+  border: 3px solid var(--oscuro); border-left: 12px solid var(--acento); border-radius: 12px; box-shadow: 0 5px 0 var(--oscuro);
+}
+.hoja .rotulo { color: var(--rojo-2); }
+.hoja h2 { font-size: 2rem; text-transform: uppercase; text-wrap: balance; }
+.hoja > p:last-child { font-size: 1.18rem; line-height: 1.45; font-weight: 500; }
+
+/* Entradas a los modos en el inicio */
+.modos-inicio { display: grid; gap: 12px; }
+.modos-inicio > h2 { font-size: 1.5rem; text-transform: uppercase; }
+.modo-entrada {
+  width: 100%; display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 12px; align-items: center; padding: 12px 14px; text-align: left;
+  background: var(--pergamino); color: var(--oscuro); border: 3px solid var(--oscuro); border-radius: 12px; box-shadow: 0 5px 0 var(--oscuro);
+  transition: transform .12s var(--suave);
+}
+.modo-entrada:active { transform: translateY(3px); }
+.modo-icono {
+  width: 58px; height: 58px; display: grid; place-items: center; rotate: -5deg; background: var(--rojo); color: #fff; clip-path: var(--rasgado);
+  font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 2rem;
+}
+.modo-entrada b { display: block; font-family: var(--titulos); font-weight: 800; font-style: italic; font-size: 1.5rem; line-height: 1; text-transform: uppercase; }
+.modo-entrada span span { display: block; font-size: .95rem; font-weight: 600; line-height: 1.25; margin-top: 3px; }
+.modo-entrada small { display: block; margin-top: 3px; font-size: .82rem; color: #5a5475; }
+
+@media (min-width: 560px) {
+  .modo-paso { padding: 26px 26px 36px; gap: 18px; }
+}
