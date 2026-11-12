@@ -290,6 +290,51 @@ function Ricardo() {
   );
 }
 
+/** Polanyi: pelo gris peinado hacia atrás, frente amplia, cejas pobladas y corbatín; su tic es levantar las cejas. Mira hacia la derecha. */
+function Polanyi() {
+  return (
+    <g className="pj-todo">
+      <g className="pj-cuerpo">
+        <path className="t f-traje" d="M18 280C16 216 52 182 120 178C188 182 224 216 222 280Z" />
+        <path className="f-traje-2" d="M32 276C32 228 54 202 92 190C64 208 50 234 48 276Z" />
+        <path className="t f-blanco" d="M120 182L96 202L111 280H129L144 202Z" />
+        <path className="t f-traje-2" d="M96 202L70 216L103 264L112 228Z" />
+        <path className="t f-traje-2" d="M144 202L170 216L137 264L128 228Z" />
+        <path className="t f-acento" d="M98 198L120 208L142 198V222L120 212L98 222Z" />
+        <circle className="t f-acento" cx="120" cy="210" r="5" />
+      </g>
+      <g className="pj-cabeza">
+        <path className="t f-pelo-2" d="M120 18C86 10 66 36 74 70C66 88 72 108 86 116L92 84H148L154 116C168 108 174 88 166 70C174 36 154 10 120 18Z" />
+        <circle className="t f-piel" cx="83" cy="108" r="9" />
+        <circle className="t f-piel-2" cx="157" cy="108" r="9" />
+        <path className="t f-piel" d="M84 94C82 56 98 40 120 40C142 40 158 56 156 94C156 142 142 174 120 174C98 174 84 142 84 94Z" />
+        <path className="f-piel-2" d="M144 50C155 62 157 78 156 96C156 140 143 168 125 173C139 150 146 120 146 96C146 76 148 64 144 50Z" />
+        <path className="t f-pelo-2" d="M84 74C82 40 102 26 124 28C146 28 160 44 156 74C150 62 142 54 130 52C112 48 96 56 84 74Z" />
+        <path className="fina" style={{ stroke: '#f1eef8' }} d="M96 46C106 38 120 36 132 38M138 42C146 46 150 54 152 62" />
+        <g className="pj-cejas">
+          <path className="t ceja" style={{ stroke: '#6d6885', strokeWidth: 9 }} d="M88 90Q100 82 113 90" />
+          <path className="t ceja" style={{ stroke: '#6d6885', strokeWidth: 9 }} d="M127 90Q140 82 152 90" />
+        </g>
+        <g className="pj-ojos">
+          <Ojo x={102} y={106} mira={2} />
+          <Ojo x={140} y={106} mira={2} />
+        </g>
+        <path className="t linea" d="M121 102C132 118 131 128 118 129" />
+        <path className="t linea" style={{ strokeWidth: 2.6 }} d="M100 138C98 146 100 152 104 156M140 138C142 146 140 152 136 156M114 166Q120 170 126 166" />
+        <ellipse className="pj-boca" cx="120" cy="151" rx="10" ry="2.8" />
+      </g>
+      <g className="pj-brazo">
+        <path className="manga-borde" d="M186 206C216 218 220 242 202 262" />
+        <path className="manga" d="M186 206C216 218 220 242 202 262" />
+        <path className="manga-luz" d="M196 210C212 220 216 234 210 246" />
+        <path className="t f-blanco" d="M190 252L210 268L202 278L182 262Z" />
+        <path className="t f-piel" d="M184 262C176 266 174 280 184 286C196 292 210 284 208 272L226 268C232 266 230 258 224 259L204 262Z" />
+        <path className="t linea" d="M190 270C194 274 200 274 203 270" style={{ strokeWidth: 2.4 }} />
+      </g>
+    </g>
+  );
+}
+
 /**
  * Registro de caricaturas. Para agregar un personaje: dibujar sus piezas con las clases
  * pj-todo, pj-cuerpo, pj-cabeza, pj-cejas, pj-ojos, pj-boca y pj-brazo (lienzo de 240 × 280),
@@ -303,6 +348,7 @@ const PERSONAJES: Record<string, { Piezas: () => ReactElement; nativo: Mira }> =
   hayek: { Piezas: Hayek, nativo: 'izq' },
   prebisch: { Piezas: Prebisch, nativo: 'der' },
   ricardo: { Piezas: Ricardo, nativo: 'izq' },
+  polanyi: { Piezas: Polanyi, nativo: 'der' },
 };
 
 export function Personaje({ id, mira, escuela, estado = 'reposo' }: { id: string; mira: Mira; escuela: string; estado?: Estado }) {

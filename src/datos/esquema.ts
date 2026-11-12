@@ -112,7 +112,7 @@ export const Modos = z.object({
   unir: z.array(z.object({
     id: z.string(),
     titulo: z.string(),
-    pares: z.array(z.object({ izq: z.string(), der: z.string() })).min(3).max(6),
+    pares: z.array(z.object({ izq: z.string(), der: z.string() })).min(3).max(8),
     explicacion: z.string().min(20),
     fuentes: z.array(url).min(1),
   })).min(1),

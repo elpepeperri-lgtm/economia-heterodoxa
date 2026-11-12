@@ -7,8 +7,8 @@ import { cargar, type Progreso } from '../motor/progreso.ts';
 import { Personaje } from '../personajes/Personaje.tsx';
 
 const MODOS = [
-  { id: 'quien', icono: '?', nombre: '¿Quién es?', texto: 'Adivina al economista con el menor número de pistas.', marca: (m: number) => `Tu mejor ronda: reconociste a ${m} de 6.` },
-  { id: 'unir', icono: '⇄', nombre: 'Unir', texto: 'Junta cada autor con su escuela, su libro y su ejemplo.', marca: (m: number) => `Tableros sin fallar, tu mejor marca: ${m} de 4.` },
+  { id: 'quien', icono: '?', nombre: '¿Quién es?', texto: 'Adivina al economista con el menor número de pistas.', marca: (m: number) => `Tu mejor ronda: reconociste a ${m}.` },
+  { id: 'unir', icono: '⇄', nombre: 'Unir', texto: 'Junta cada autor con su escuela, su libro y su ejemplo.', marca: (m: number) => `Tableros sin fallar, tu mejor marca: ${m}.` },
   { id: 'lecturas', icono: '¶', nombre: 'Lecturas cortas', texto: 'Dos minutos por escuela: tres pantallas y una pregunta.', marca: () => '' },
 ] as const;
 

@@ -1,6 +1,6 @@
 # Informe de fotos
 
-Con foto libre: 6
+Con foto libre: 7
 
 ## Sin foto (usan avatar de iniciales)
 

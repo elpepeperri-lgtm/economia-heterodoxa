@@ -102,3 +102,6 @@
 .pj[data-quien='prebisch'] .pj-cejas { animation: ceja-sube 7.2s -3s infinite; }
 .pj[data-quien='ricardo'] .pj-etiqueta { animation: mecer-etiqueta 5s ease-in-out infinite; }
 .pj[data-quien='ricardo'] .pj-ojos { animation-duration: 5.1s; animation-delay: -3s; }
+
+/* Tic de Polanyi: levanta las cejas. */
+.pj[data-quien='polanyi'] .pj-cejas { animation: ceja-sube 5.6s -1.5s infinite; }

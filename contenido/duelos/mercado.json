@@ -1,0 +1,475 @@
+{
+ "id": "mercado",
+ "titulo": "Polanyi contra Hayek",
+ "pregunta": "¿El mercado nace solo o alguien lo construye?",
+ "resumen": "Tres casos: la plaza de mercado, el jornal de don Chepe y la libertad de Yolanda.",
+ "minutos": 4,
+ "a": {
+  "economista": "polanyi",
+  "escuelaId": "institucionalista",
+  "nombreCorto": "Polanyi",
+  "lema": "Todo mercado tiene andamios."
+ },
+ "b": {
+  "economista": "hayek",
+  "escuelaId": "austriaca",
+  "nombreCorto": "Hayek",
+  "lema": "Nadie lo diseñó, y funciona."
+ },
+ "casos": [
+  {
+   "id": "plaza",
+   "objeto": "puesto",
+   "titulo": "La plaza de mercado",
+   "mecanica": "¿Quién lo diría?",
+   "historia": "En la plaza del pueblo nadie reparte órdenes: cada quien llega con lo suyo y los precios se van acomodando. Pero mira mejor: hay pesas revisadas, permisos, escrituras, un inspector y un policía en la esquina.",
+   "dicen": {
+    "a": "Sin leyes ni Estado, esa plaza no existe.",
+    "b": "Nadie la diseñó. Fue saliendo sola."
+   },
+   "preguntas": [
+    {
+     "id": "mercado-01",
+     "tipo": "quien",
+     "dificultad": 1,
+     "enunciado": "¿Quién diría esto?",
+     "cita": {
+      "texto": "No había nada natural en el laissez-faire; los mercados libres jamás habrían surgido con solo dejar que las cosas siguieran su curso.",
+      "tipo": "cita",
+      "autor": "Karl Polanyi",
+      "obra": "La gran transformación, cap. 12",
+      "anio": 1944,
+      "nota": "Traducción propia del inglés"
+     },
+     "opciones": [
+      {
+       "texto": "Polanyi",
+       "correcta": true,
+       "porque": "Es su tesis central: el mercado libre de Inglaterra se montó con leyes, impuestos y una burocracia nueva. Lo impuso el Estado."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": false,
+       "porque": "Tentaba porque Hayek también critica el «dejar hacer» a secas. Pero para él el mercado sí brota de lo que hace la gente, sin plan de nadie."
+      }
+     ],
+     "explicacion": "«Laissez-faire» quiere decir «dejar hacer». Polanyi responde que hasta para dejar hacer hubo que hacer muchísimo: leyes, funcionarios y fuerza.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 5
+     },
+     "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-02",
+     "tipo": "quien",
+     "dificultad": 1,
+     "enunciado": "¿Y esto otro, quién lo diría?",
+     "cita": {
+      "texto": "Al mercado no lo diseñó nadie. Fue saliendo poco a poco de lo que hace muchísima gente, sin que ninguno se lo propusiera.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Polanyi",
+       "correcta": false,
+       "porque": "Tentaba porque Polanyi también habla de cosas que brotan sin plan. Pero para él lo que brota sola es la protección contra el mercado, no el mercado."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": true,
+       "porque": "Es su idea de orden espontáneo: un orden que resulta de las acciones de la gente, pero no del diseño de nadie."
+      }
+     ],
+     "explicacion": "Hayek pide aprovechar las «fuerzas espontáneas» de una sociedad libre, en vez de reemplazarlas por una dirección consciente de todo.",
+     "ataca": "b",
+     "mueve": {
+      "a": 5,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Enc/bios/Hayek.html",
+      "https://archive.org/details/in.ernet.dli.2015.97402"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-03",
+     "tipo": "vf",
+     "dificultad": 2,
+     "enunciado": "Hayek pensaba que, para que el mercado funcione, el Estado no debe hacer nada.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": false,
+       "porque": "Tentaba porque así lo pintan a veces. Pero Hayek escribió que en ningún sistema defendible el Estado se quedaría sin hacer nada."
+      },
+      {
+       "texto": "Falso",
+       "correcta": true,
+       "porque": "Para Hayek la competencia necesita un marco legal bien diseñado y ajustado todo el tiempo, empezando por impedir el fraude y el engaño."
+      }
+     ],
+     "explicacion": "Aquí los dos se acercan: las pesas revisadas y el inspector de la plaza no le molestan a Hayek. Lo que discuten es otra cosa: de dónde viene el mercado y hasta dónde debe llegar.",
+     "ataca": "b",
+     "mueve": {
+      "a": 5,
+      "b": 15
+     },
+     "fuentes": [
+      "https://archive.org/details/in.ernet.dli.2015.97402"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Caso parejo. Hayek explica bien cómo se acomodan los precios sin que nadie mande. Polanyi explica bien lo que no se ve a primera vista: las leyes y la fuerza que sostienen la plaza."
+  },
+  {
+   "id": "jornal",
+   "objeto": "azadon",
+   "titulo": "El jornal de don Chepe",
+   "mecanica": "Elige el contraataque",
+   "historia": "Don Chepe vende yuca, arrienda una parcela y jornalea en fincas vecinas. La yuca la sembró para venderla. Pero su trabajo es su vida misma, y la tierra ya estaba ahí antes que todos. ¿Se pueden tratar igual que la yuca?",
+   "dicen": {
+    "a": "El trabajo y la tierra no son yuca.",
+    "b": "Sus precios también avisan dónde hacen falta."
+   },
+   "preguntas": [
+    {
+     "id": "mercado-04",
+     "tipo": "opcion",
+     "dificultad": 2,
+     "enunciado": "¿Por qué Polanyi llama «mercancías ficticias» al trabajo, la tierra y el dinero?",
+     "opciones": [
+      {
+       "texto": "Porque ninguna de las tres fue producida para venderse, aunque se compren y se vendan.",
+       "correcta": true,
+       "porque": "Para él, el trabajo es otro nombre de la actividad humana, que va con la vida misma; y la tierra es otro nombre de la naturaleza."
+      },
+      {
+       "texto": "Porque en realidad nadie las compra ni las vende.",
+       "correcta": false,
+       "porque": "Tentaba por la palabra «ficticias». Pero Polanyi dice que sí se compran y se venden de verdad; lo ficticio es tratarlas como si fueran yuca."
+      },
+      {
+       "texto": "Porque son demasiado caras.",
+       "correcta": false,
+       "porque": "Tentaba porque la tierra suele ser cara. Pero el argumento no es sobre el precio, sino sobre de dónde salen esas tres cosas."
+      }
+     ],
+     "explicacion": "Polanyi advierte que dejar el destino de la gente y de la naturaleza solo en manos del mercado termina demoliendo a la sociedad.",
+     "ataca": "a",
+     "mueve": {
+      "a": 30,
+      "b": 0
+     },
+     "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-05",
+     "tipo": "opcion",
+     "dificultad": 3,
+     "enunciado": "Polanyi escribió: «El laissez-faire fue planeado; la planificación no». ¿Qué quería decir?",
+     "opciones": [
+      {
+       "texto": "Que el mercado libre se impuso desde el Estado, y que las protecciones contra él fueron brotando sin un plan.",
+       "correcta": true,
+       "porque": "Es su «doble movimiento»: el mercado avanza empujado por el Estado, y la sociedad se defiende con leyes laborales, de tierras y de moneda."
+      },
+      {
+       "texto": "Que planificar la economía es imposible.",
+       "correcta": false,
+       "porque": "Tentaba porque suena a Hayek. Pero Polanyi no habla aquí de si se puede planificar, sino de cómo surgieron las protecciones."
+      },
+      {
+       "texto": "Que el libre mercado surgió por accidente.",
+       "correcta": false,
+       "porque": "Tentaba por el juego de palabras. Pero dice justo lo contrario: lo que fue deliberado fue el mercado libre."
+      }
+     ],
+     "explicacion": "Polanyi le da la vuelta a la historia de siempre. Lo espontáneo no fue el mercado, sino la reacción de la gente para protegerse de él.",
+     "ataca": "a",
+     "mueve": {
+      "a": 20,
+      "b": 0
+     },
+     "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-06",
+     "tipo": "opcion",
+     "dificultad": 3,
+     "enunciado": "Polanyi pide sacar el trabajo y la tierra del mercado. Elige el contraataque de Hayek.",
+     "opciones": [
+      {
+       "texto": "El jornal y el arriendo también son avisos: si los fija una oficina, nadie sabe dónde hace falta la gente ni la tierra.",
+       "correcta": true,
+       "porque": "Es su argumento de siempre: el precio resume información repartida entre millones. Sin ese aviso, hay que adivinar."
+      },
+      {
+       "texto": "El trabajo de don Chepe no vale nada.",
+       "correcta": false,
+       "porque": "Tentaba por llevar la contraria. Pero Hayek no dice eso: dice que el precio del trabajo informa, no que el trabajo no valga."
+      },
+      {
+       "texto": "La tierra debería ser toda del Estado.",
+       "correcta": false,
+       "porque": "Tentaba por confusión de bandos. Hayek defiende lo contrario: que las decisiones queden repartidas."
+      }
+     ],
+     "explicacion": "Hayek no niega que el trabajo sea la vida de don Chepe. Pregunta otra cosa: si no es con precios, ¿cómo se entera alguien de dónde hacen falta brazos?",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 25
+     },
+     "fuentes": [
+      "https://www.econlib.org/library/Essays/hykKnw.html"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Este caso es de Polanyi: muestra que no todo lo que se vende nació para venderse, y por qué la gente termina pidiendo protección. Pero Hayek deja una pregunta sin responder: sin precios, ¿quién avisa?"
+  },
+  {
+   "id": "libertad",
+   "objeto": "candado",
+   "titulo": "La libertad de Yolanda",
+   "mecanica": "Detecta el supuesto escondido",
+   "historia": "Yolanda cose en un taller, sin contrato. Puede renunciar cuando quiera; nadie la obliga. Pero si renuncia, no come. El municipio discute poner un seguro de desempleo y un tope de horas. ¿Eso le quita libertad o se la da?",
+   "dicen": {
+    "a": "Sin seguridad, esa libertad es de papel.",
+    "b": "Si otro decide por ti, ya no eres libre."
+   },
+   "preguntas": [
+    {
+     "id": "mercado-07",
+     "tipo": "quien",
+     "dificultad": 2,
+     "enunciado": "¿Quién diría esto?",
+     "cita": {
+      "texto": "La regulación a la vez extiende y restringe la libertad; solo importa el balance entre las libertades perdidas y las ganadas.",
+      "tipo": "cita",
+      "autor": "Karl Polanyi",
+      "obra": "La gran transformación, cap. 21",
+      "anio": 1944,
+      "nota": "Traducción propia del inglés"
+     },
+     "opciones": [
+      {
+       "texto": "Polanyi",
+       "correcta": true,
+       "porque": "Para él, un tope de horas le quita una libertad al dueño del taller y le da otra a Yolanda. Hay que mirar la suma."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": false,
+       "porque": "Tentaba porque Hayek también acepta algunas reglas. Pero él no habla de balance: le teme a que las reglas vayan decidiendo por la gente."
+      }
+     ],
+     "explicacion": "Polanyi añade que las clases acomodadas ya disfrutan la libertad que da el descanso con seguridad, y por eso les urge menos extenderla a los demás.",
+     "ataca": "a",
+     "mueve": {
+      "a": 25,
+      "b": 0
+     },
+     "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-08",
+     "tipo": "quien",
+     "dificultad": 2,
+     "enunciado": "¿Y esto otro, quién lo diría?",
+     "cita": {
+      "texto": "Si una sola oficina planea toda la economía, tendrá que decidir por cada persona qué hace, dónde y por cuánto. Por ese camino se llega a la servidumbre.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Polanyi",
+       "correcta": false,
+       "porque": "Tentaba porque Polanyi también le teme a perder la libertad. Pero él cree que regular puede ampliarla; el que ve un camino a la servidumbre es Hayek."
+      },
+      {
+       "texto": "Hayek",
+       "correcta": true,
+       "porque": "Es la tesis de «Camino de servidumbre»: quien dirige toda la economía termina dirigiendo la vida de la gente."
+      }
+     ],
+     "explicacion": "Hayek escribió ese libro en plena guerra, mirando a los regímenes totalitarios. Su miedo no es a un inspector de pesas, sino a un plan que lo decida todo.",
+     "ataca": "b",
+     "mueve": {
+      "a": 0,
+      "b": 25
+     },
+     "fuentes": [
+      "https://archive.org/details/in.ernet.dli.2015.97402",
+      "https://www.econlib.org/library/Enc/bios/Hayek.html"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-09",
+     "tipo": "vf",
+     "dificultad": 3,
+     "enunciado": "Hayek se oponía a que a todo el mundo se le garantizara un mínimo para vivir.",
+     "opciones": [
+      {
+       "texto": "Verdadero",
+       "correcta": false,
+       "porque": "Tentaba porque Hayek desconfía del Estado. Pero en «Camino de servidumbre» dice que no hay duda de que se puede asegurar a todos un mínimo."
+      },
+      {
+       "texto": "Falso",
+       "correcta": true,
+       "porque": "Hayek escribió que un mínimo de comida, techo y ropa, suficiente para conservar la salud, puede asegurarse a todo el mundo."
+      }
+     ],
+     "explicacion": "Lo que Hayek rechaza es otra seguridad: la de garantizarle a cada uno un ingreso o un puesto fijo, porque eso exige dirigir toda la economía.",
+     "ataca": "b",
+     "mueve": {
+      "a": 5,
+      "b": 10
+     },
+     "fuentes": [
+      "https://archive.org/details/in.ernet.dli.2015.97402"
+     ],
+     "estado": "ok"
+    },
+    {
+     "id": "mercado-10",
+     "tipo": "supuesto",
+     "dificultad": 4,
+     "enunciado": "El lado de Hayek dice esto. ¿Qué da por sentado sin decirlo?",
+     "cita": {
+      "texto": "Yolanda es libre: nadie la obliga a quedarse en ese taller.",
+      "tipo": "idea",
+      "autor": "idea, no cita"
+     },
+     "opciones": [
+      {
+       "texto": "Que quien no tiene de qué vivir puede de verdad decir que no.",
+       "correcta": true,
+       "porque": "Ahí golpea Polanyi: para él hay libertades en el papel y libertades reales, y sin un mínimo de seguridad la de Yolanda es solo de papel."
+      },
+      {
+       "texto": "Que Yolanda cose mal.",
+       "correcta": false,
+       "porque": "Esta era para descansar. El argumento no dice nada sobre cómo trabaja Yolanda."
+      },
+      {
+       "texto": "Que el dueño del taller es el Estado.",
+       "correcta": false,
+       "porque": "Tentaba por confusión. En el caso, el taller es privado; justamente por eso Hayek dice que nadie la obliga."
+      }
+     ],
+     "explicacion": "Los dos hablan de libertad, pero no de la misma. Para Hayek es que nadie te mande; para Polanyi, además, es tener con qué decir que no.",
+     "ataca": "a",
+     "mueve": {
+      "a": 15,
+      "b": -5
+     },
+     "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf",
+      "https://archive.org/details/in.ernet.dli.2015.97402"
+     ],
+     "estado": "ok"
+    }
+   ],
+   "veredicto": "Caso peleado. Polanyi muestra que sin seguridad la libertad de Yolanda queda en el papel. Hayek muestra el riesgo del otro lado: que protegerla termine en que otro decida por ella. La pregunta es dónde poner la raya."
+  }
+ ],
+ "tregua": {
+  "coinciden": [
+   "Ninguno defiende el «dejar hacer» a secas. Hayek escribió que nada le hizo tanto daño a la causa liberal como la terca insistencia en el laissez-faire.",
+   "Los dos aceptan un piso. Hayek dice que a todos se les puede asegurar un mínimo de comida, techo y ropa; Polanyi pide proteger a la gente y a la naturaleza.",
+   "Publicaron el mismo año, 1944, pensando en lo mismo: cómo se había llegado al fascismo y a la guerra, y qué hacer para que no se repitiera."
+  ],
+  "choque": "Para Polanyi el mercado libre fue un proyecto impuesto por el Estado, y la sociedad se defiende de él. Para Hayek el mercado es un orden que nadie diseñó, y lo que amenaza a la sociedad es querer dirigirlo todo.",
+  "ve": {
+   "a": "Las leyes y la fuerza que sostienen un mercado, y lo que pasa cuando la vida y la naturaleza se tratan como mercancías.",
+   "b": "Lo que se coordina solo, sin que nadie mande, y el peligro de que una oficina decida por todos."
+  },
+  "noVe": {
+   "a": "No explica cómo se enterarían millones de personas de qué hace falta y dónde, si no es con precios.",
+   "b": "Le cuesta ver que una persona sin opciones puede firmar un trato «libre» que no eligió de verdad."
+  },
+  "fuentes": [
+   "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf",
+   "https://archive.org/details/in.ernet.dli.2015.97402",
+   "https://www.econlib.org/library/Essays/hykKnw.html",
+   "https://www.exploring-economics.org/en/orientation/institutionalist-economics/"
+  ]
+ },
+ "herramienta": {
+  "nombre": "Andamio y corriente",
+  "uso": "Ante cualquier mercado, hazte dos preguntas. Con el andamio: ¿qué leyes y qué fuerza lo sostienen, y a quién dejan protegido o sin protección? Con la corriente: ¿qué se está coordinando solo aquí, y qué se dañaría si alguien quisiera dirigirlo todo?"
+ },
+ "glosario": [
+  {
+   "termino": "laissez-faire",
+   "significado": "«Dejar hacer», en francés. La idea de que el Estado no debe meterse en la economía."
+  },
+  {
+   "termino": "mercancías ficticias",
+   "significado": "Para Polanyi: trabajo, tierra y dinero. Se compran y se venden, pero no se produjeron para la venta."
+  },
+  {
+   "termino": "doble movimiento",
+   "significado": "Para Polanyi: el mercado avanza y la sociedad responde protegiéndose con leyes y reglas."
+  },
+  {
+   "termino": "orden espontáneo",
+   "significado": "Para Hayek: un orden que resulta de lo que hace mucha gente, sin que nadie lo haya diseñado."
+  },
+  {
+   "termino": "jornalea",
+   "significado": "Trabaja por días para otro, a cambio de un pago diario llamado jornal."
+  },
+  {
+   "termino": "jornal",
+   "significado": "Lo que se paga por un día de trabajo."
+  },
+  {
+   "termino": "servidumbre",
+   "significado": "Vivir sometido a lo que otro decide. Hayek usa la palabra para el destino de una sociedad planificada del todo."
+  },
+  {
+   "termino": "fraude",
+   "significado": "Engaño para sacar provecho, como vender con una pesa trucada."
+  }
+ ],
+ "bibliografia": [
+  {
+   "titulo": "Karl Polanyi, «La gran transformación» (1944), caps. 4, 6, 12 y 21",
+   "url": "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+  },
+  {
+   "titulo": "Friedrich Hayek, «Camino de servidumbre» (1944), caps. 1, 3 y 9",
+   "url": "https://archive.org/details/in.ernet.dli.2015.97402"
+  },
+  {
+   "titulo": "Friedrich Hayek, «El uso del conocimiento en la sociedad» (1945)",
+   "url": "https://www.econlib.org/library/Essays/hykKnw.html"
+  },
+  {
+   "titulo": "Exploring Economics, «Institutionalist Economics»",
+   "url": "https://www.exploring-economics.org/en/orientation/institutionalist-economics/"
+  }
+ ]
+}

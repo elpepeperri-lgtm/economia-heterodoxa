@@ -4,6 +4,12 @@ Bitácora para retomar el proyecto sin releer todo. Lo más reciente va arriba.
 
 ## Estado actual
 
+- **Etapa 3, tanda 4 (2026-11-11): duelo «Polanyi contra Hayek» hecho** (contenido/duelos/mercado.json, 10 preguntas, 3 casos: la plaza de mercado, el jornal de don Chepe, la libertad de Yolanda). Escuela nueva: institucionalista (personaje Polanyi, escena de alcaldía con puesto de plaza, objetos puesto/azadon/candado, proyectil libro). Hayek se reutiliza. Polanyi quedó sumado a los tres modos (pistas, lectura y parejas de unir; el tope de parejas por tablero subió a 8). Jugado completo a 360 px sin errores ni desborde.
+- Fuentes de la tanda 4: las citas se comprobaron en el texto completo de los dos libros, bajados y buscados con grep: «La gran transformación» (inctpped.org, PDF) y «Camino de servidumbre» (archive.org, in.ernet.dli.2015.97402). Las críticas de historiadores a Polanyi (North, McCloskey) solo se vieron en Wikipedia y no entraron al juego.
+- scripts/fotos.mjs ahora salta las fotos ya bajadas: Wikidata responde 429 si se piden muchas seguidas; si pasa, esperar un par de minutos y repetir.
+- Error en el PDF de Andrés: en la lista de fotos Polanyi figura como «vivo»; murió en 1964.
+- Queda de la etapa 3: 2 duelos (sugeridos: Las dos Cambridges, Ostrom contra Hardin).
+
 - **Etapa 3, tanda 3 (2026-11-11): modos «¿Quién es?», «Unir» y «Lecturas cortas» hechos.** Código en src/pantallas/Modos.tsx y modos.css (un solo trozo que se descarga al entrar); contenido en contenido/modos.json (esquema Modos en datos/esquema.ts, lo revisa validar.mjs). «¿Quién es?»: 6 economistas, 3 pistas cada uno, 15/10/5 XP según pistas usadas. «Unir»: 4 tableros (escuelas, libros, ideas, ejemplos); se toca izquierda y luego derecha; las parejas hechas llevan número además de color. «Lecturas cortas»: 6 lecturas (una por escuela), 3 pantallas y una pregunta, 10 XP por leer + 10 por acertar. Progreso nuevo: campo modos y registrarModo (motor/progreso.ts). Entradas en el inicio bajo «Más maneras de jugar». Probados completos a 360 px sin errores ni desborde.
 - Para agregar contenido a los modos al sumar una escuela: una entrada en quienes, una lectura, y pares nuevos en los tableros de unir (máximo 6 pares por tablero).
 - Queda de la etapa 3: 3 duelos más (sugeridos: Polanyi contra Hayek, Las dos Cambridges, Ostrom contra Hardin). Los tipos de pregunta ordenar/completar/arrastrar/intruso siguen sin hacer.

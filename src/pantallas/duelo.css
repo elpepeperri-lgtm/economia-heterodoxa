@@ -241,3 +241,6 @@
 .esc-mar { fill: #3d57b8; opacity: .8; }
 .esc-barco { transform-box: fill-box; transform-origin: 50% 100%; animation: cabeceo 4.5s ease-in-out infinite; }
 @keyframes cabeceo { 50% { transform: rotate(-2.5deg) translateY(-2px); } }
+
+/* Piezas de la escena institucionalista (alcaldía con reloj y puesto de plaza). */
+.esc-reloj { fill: #fffaf0; stroke: var(--oscuro); stroke-width: 2.5; }

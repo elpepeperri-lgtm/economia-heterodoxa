@@ -89,5 +89,18 @@
     "fuentes": [
       "https://www.econlib.org/library/Enc/bios/Ricardo.html"
     ]
+  },
+  {
+    "id": "polanyi",
+    "nombre": "Karl Polanyi",
+    "iniciales": "KP",
+    "nace": 1886,
+    "muere": 1964,
+    "escuela": "institucionalista",
+    "aporte": "Autor de «La gran transformación» (1944). Sostiene que el mercado libre fue construido por el Estado y que la sociedad se defiende de él.",
+    "wikidata": "Q318029",
+    "fuentes": [
+      "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+    ]
   }
 ]

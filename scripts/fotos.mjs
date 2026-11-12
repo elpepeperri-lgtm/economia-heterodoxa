@@ -2,6 +2,7 @@
 // Busca la foto de cada economista en Wikidata -> Wikimedia Commons, revisa la licencia,
 // descarga, recorta a cuadrado y genera WebP de 160 y 480 px. Guarda créditos e informe.
 import { readFile, writeFile, mkdir } from 'node:fs/promises';
+import { existsSync } from 'node:fs';
 import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 
@@ -71,10 +72,13 @@ async function procesar(e) {
 
 const economistas = JSON.parse(await readFile(new URL('contenido/economistas.json', RAIZ), 'utf8'));
 await mkdir(new URL('public/fotos/', RAIZ), { recursive: true });
+// Lo que ya se bajó no se vuelve a pedir: así no se abusa de Wikidata ni se pierde un crédito por un error de red.
+const previos = JSON.parse(await readFile(new URL('contenido/creditos.json', RAIZ), 'utf8').catch(() => '{}'));
 const creditos = {};
 const sinFoto = [];
 for (const e of economistas) {
   if (e.foto === false) { sinFoto.push(`- ${e.nombre}: marcado para usar iniciales`); continue; }
+  if (previos[e.id] && existsSync(new URL(`public/fotos/${e.id}-160.webp`, RAIZ))) { creditos[e.id] = previos[e.id]; console.log('ya estaba:', e.nombre); continue; }
   try {
     const res = await procesar(e);
     if (res.credito) { creditos[e.id] = res.credito; console.log('foto lista:', e.nombre, '·', res.credito.licencia); }

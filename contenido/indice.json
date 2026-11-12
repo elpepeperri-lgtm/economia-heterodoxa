@@ -80,6 +80,44 @@
     ]
   },
   {
+    "id": "mercado",
+    "titulo": "Polanyi contra Hayek",
+    "pregunta": "¿El mercado nace solo o alguien lo construye?",
+    "resumen": "Tres casos: la plaza de mercado, el jornal de don Chepe y la libertad de Yolanda.",
+    "minutos": 4,
+    "preguntas": 10,
+    "a": {
+      "economista": "polanyi",
+      "escuelaId": "institucionalista",
+      "nombreCorto": "Polanyi",
+      "lema": "Todo mercado tiene andamios."
+    },
+    "b": {
+      "economista": "hayek",
+      "escuelaId": "austriaca",
+      "nombreCorto": "Hayek",
+      "lema": "Nadie lo diseñó, y funciona."
+    },
+    "bibliografia": [
+      {
+        "titulo": "Karl Polanyi, «La gran transformación» (1944), caps. 4, 6, 12 y 21",
+        "url": "https://www.inctpped.org/spiderweb/pdf_4/Great_Transformation.pdf"
+      },
+      {
+        "titulo": "Friedrich Hayek, «Camino de servidumbre» (1944), caps. 1, 3 y 9",
+        "url": "https://archive.org/details/in.ernet.dli.2015.97402"
+      },
+      {
+        "titulo": "Friedrich Hayek, «El uso del conocimiento en la sociedad» (1945)",
+        "url": "https://www.econlib.org/library/Essays/hykKnw.html"
+      },
+      {
+        "titulo": "Exploring Economics, «Institutionalist Economics»",
+        "url": "https://www.exploring-economics.org/en/orientation/institutionalist-economics/"
+      }
+    ]
+  },
+  {
     "id": "valor",
     "titulo": "Marx contra los neoclásicos",
     "pregunta": "¿De dónde sale el valor de las cosas?",
